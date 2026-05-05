@@ -926,15 +926,34 @@
       });
       if (!valid) return;
 
-      // Simulate async submission (replace with real fetch / FormSubmit / EmailJS, etc.)
       submitBtn.textContent = 'Sending…';
       submitBtn.disabled = true;
 
-      setTimeout(() => {
-        form.style.display = 'none';
-        successBox.classList.add('visible');
-        successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 900);
+      const data = new FormData(form);
+
+      fetch('https://formspree.io/f/xdabzkzp', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          successBox.classList.add('visible');
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          return response.json().then(data => {
+            submitBtn.textContent = 'Send Message';
+            submitBtn.disabled = false;
+            alert(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please try again.');
+          });
+        }
+      })
+      .catch(() => {
+        submitBtn.textContent = 'Send Message';
+        submitBtn.disabled = false;
+        alert('Network error. Please check your connection and try again.');
+      });
     });
   </script>
 
