@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>World Youth Initiative — Youth Policy Makers</title>
+  <title>World Youth Initiative | Youth-Led Global Policy Think Tank</title>
+  <meta name="description" content="The World Youth Initiative connects young researchers worldwide to develop evidence-based policy solutions. Join our global network of future policy leaders." />
+  <link rel="canonical" href="https://worldyouthinitiative.org/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
@@ -455,67 +457,43 @@
     }
     @media (max-width: 768px) {
       html { font-size: 16px; }
-
-      /* NAV — hide subtitle text on small screens */
       .nav-logo-sub { display: none; }
       .nav-logo-text { font-size: 0.95rem; }
-
-      /* DEV BANNER — allow wrapping */
       .dev-banner { flex-wrap: wrap; font-size: 0.68rem; padding: 0.5rem 1rem; }
-
-      /* HERO */
       #hero { padding: 6rem var(--pad) 4rem; min-height: auto; }
       .hero-geo { display: none; }
       .scroll-indicator { display: none; }
       .hero-badge { font-size: 0.65rem; }
       .btn-group { flex-direction: column; align-items: flex-start; }
       .btn-primary, .btn-secondary { width: auto; font-size: 0.78rem; padding: 0.75rem 1.4rem; }
-
-      /* ABOUT */
       .about-value { padding: 1.1rem 1rem; }
       .pillar { padding: 1.25rem 1rem; }
-
-      /* HOW IT WORKS */
       .step { padding: 1.5rem 1.25rem; }
       .step-num { font-size: 2.5rem; margin-bottom: 1rem; }
-
-      /* RESEARCH */
       .research-grid { grid-template-columns: 1fr; }
       .research-card { padding: 1.5rem 1.25rem; }
-
-      /* TEAMS / APPLY */
       .apply-card { padding: 1.5rem 1.25rem; }
       .apply-card-perks { display: none; }
       .apply-card-desc { margin-bottom: 1rem; }
       .apply-card-icon { width: 38px; height: 38px; margin-bottom: 1rem; font-size: 1.2rem; }
       .apply-card h3 { font-size: 1.1rem; }
-
-      /* POLICY BRIEFS — hide the blurred placeholder cards, keep only the overlay */
       .briefs-grid .brief-card { display: none; }
       .briefs-grid { min-height: 180px; }
       .briefs-coming-overlay { position: relative; inset: auto; border-radius: 10px; padding: 2rem 1.25rem; }
       .briefs-overlay-sub { display: none; }
-
-      /* POLICY BRIEFS overlay */
       .briefs-coming-overlay { inset: 0; border-radius: 10px; padding: 1.5rem; }
       .briefs-overlay-title { font-size: 1.2rem; }
       .briefs-overlay-sub { font-size: 0.78rem; max-width: 100%; }
-
-      /* NETWORK */
       .network-visual { display: none; }
       .network-inner { grid-template-columns: 1fr; }
-
-      /* JOIN */
       .join-card { padding: 1.5rem 1.25rem; }
       .join-header { margin-bottom: 2rem; }
       .section-lead { margin-bottom: 2rem; }
       .join-note { font-size: 0.72rem; }
-
-      /* FOOTER */
       .footer-inner { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
       .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
-      .footer-col { display: none; } /* hide link columns, keep brand block */
+      .footer-col { display: none; }
       .footer-brand { max-width: 100%; }
     }
     @media (max-width: 670px) {
@@ -531,10 +509,8 @@
       h3 { font-size: 1.1rem; }
     }
 
-    /* ─── MOBILE / DESKTOP TEXT SWITCHING ─── */
     .m-hide { display: block; }
     .m-show { display: none;  }
-    /* inline variant for spans inside buttons etc */
     span.m-hide { display: inline; }
     span.m-show { display: none;  }
     @media (max-width: 1100px) {
@@ -544,8 +520,6 @@
       span.m-show { display: inline; }
     }
 
-  
-    /* Coming-soon footer links */
     .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
     .footer-col a.coming-soon::after { content: ' ·'; }
 
@@ -604,20 +578,14 @@
   <div class="hero-content container">
     <div class="hero-badge reveal">Est. 2026 — Youth Policy Research</div>
     <h1 class="reveal reveal-delay-1">World<br/><em>Youth</em><br/>Initiative</h1>
-
-    <!-- ✏️ EDIT: Hero subtitle — one-line tagline displayed beneath the main title -->
     <p class="hero-sub reveal reveal-delay-2">A global network of young researchers developing policy insights for the future.</p>
-
-    <!-- ✏️ EDIT: Hero description — two-to-three sentence introduction shown below the subtitle -->
     <p class="hero-desc reveal reveal-delay-3 m-hide">The World Youth Initiative connects ambitious young thinkers from around the world to analyze major policy challenges and develop evidence-based solutions.</p>
     <p class="hero-desc reveal reveal-delay-3 m-show">Young researchers. Global policy. Real impact.</p>
-
     <div class="btn-group reveal reveal-delay-4">
       <a href="application/" class="btn-primary">Join the Network <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="research/" class="btn-secondary">Explore Research <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
-  <!-- ✏️ EDIT: Hero stats — replace placeholder values with real figures once available -->
   <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
@@ -628,35 +596,25 @@
       <div class="about-left">
         <p class="section-eyebrow reveal">About the Initiative</p>
         <div class="divider reveal reveal-delay-1"></div>
-
-        <!-- ✏️ EDIT: About headline — short two-line heading that describes WYC's core strength -->
         <h2 class="reveal reveal-delay-1">Rigorous analysis.<br/>Global perspectives.</h2>
-
-        <!-- ✏️ EDIT: About paragraph 1 — introductory paragraph, 2–3 sentences, describes what WYC is -->
         <p class="about-text reveal reveal-delay-2 m-hide">The World Youth Initiative is a youth-led global policy initiative bringing together talented students and young researchers from different countries.</p>
         <p class="about-text reveal reveal-delay-2 m-show">A youth-led policy initiative connecting researchers worldwide.</p>
-
-        <!-- ✏️ EDIT: About paragraph 2 — mission statement paragraph, 2–3 sentences -->
         <p class="about-text reveal reveal-delay-2 m-hide">Our mission is to promote rigorous policy analysis, cross-border collaboration, and the development of innovative solutions to global challenges.</p>
         <p class="about-text reveal reveal-delay-2 m-show">Rigorous analysis. Cross-border collaboration. Global solutions.</p>
-
         <div class="about-pillars">
           <div class="pillar reveal reveal-delay-1">
             <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
             <div class="pillar-name">Mission</div>
-            <!-- ✏️ EDIT: Mission pillar description — one sentence -->
             <div class="pillar-desc">Empowering young people to contribute meaningfully to global policy debates.</div>
           </div>
           <div class="pillar reveal reveal-delay-2">
             <div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
             <div class="pillar-name">Vision</div>
-            <!-- ✏️ EDIT: Vision pillar description — one sentence -->
             <div class="pillar-desc">Building a global network of future policy leaders and analytical thinkers.</div>
           </div>
           <div class="pillar reveal reveal-delay-3">
             <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <div class="pillar-name">Values</div>
-            <!-- ✏️ EDIT: Values pillar description — one sentence -->
             <div class="pillar-desc">Intellectual independence, analytical rigor, international collaboration, and youth empowerment.</div>
           </div>
         </div>
@@ -667,7 +625,6 @@
             <span class="value-num">01</span>
             <div class="value-text">
               <div class="value-title">Intellectual Independence</div>
-              <!-- ✏️ EDIT: Value 01 description — one to two sentences -->
               <div class="value-desc m-hide">We maintain complete independence in our research, free from political or institutional bias, allowing for honest and objective analysis.</div>
               <div class="value-desc m-show">Free from political bias. Always honest and objective.</div>
             </div>
@@ -676,7 +633,6 @@
             <span class="value-num">02</span>
             <div class="value-text">
               <div class="value-title">Analytical Rigor</div>
-              <!-- ✏️ EDIT: Value 02 description — one to two sentences -->
               <div class="value-desc m-hide">Our research is grounded in real data and honest analysis — we don't make recommendations we can't back up.</div>
               <div class="value-desc m-show">Evidence-based. No recommendations without data.</div>
             </div>
@@ -685,7 +641,6 @@
             <span class="value-num">03</span>
             <div class="value-text">
               <div class="value-title">International Collaboration</div>
-              <!-- ✏️ EDIT: Value 03 description — one to two sentences -->
               <div class="value-desc m-hide">We actively foster cross-border partnerships, believing that diverse perspectives yield stronger, more nuanced policy solutions.</div>
               <div class="value-desc m-show">Diverse perspectives. Stronger solutions.</div>
             </div>
@@ -694,7 +649,6 @@
             <span class="value-num">04</span>
             <div class="value-text">
               <div class="value-title">Youth Empowerment</div>
-              <!-- ✏️ EDIT: Value 04 description — one to two sentences -->
               <div class="value-desc m-hide">We champion young voices at every level of global discourse, giving the next generation tools to shape the policies that will define their world.</div>
               <div class="value-desc m-show">Young voices at the heart of global policy.</div>
             </div>
@@ -711,7 +665,6 @@
     <p class="section-eyebrow reveal">The Process</p>
     <div class="divider reveal reveal-delay-1"></div>
     <h2 class="reveal reveal-delay-1">How It Works</h2>
-    <!-- ✏️ EDIT: How It Works intro — one sentence describing the process flow -->
     <p class="section-lead reveal reveal-delay-2 m-hide">From national ambassadors to published policy briefs — a structured process designed to produce rigorous, actionable research.</p>
     <p class="section-lead reveal reveal-delay-2 m-show">Ambassadors. Teams. Research. Briefs.</p>
     <div class="steps-grid">
@@ -720,7 +673,6 @@
         <div class="step-icon-wrap"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div class="step-label">Ambassadors</div>
         <h3>National Representatives</h3>
-        <!-- ✏️ EDIT: Step 01 description -->
         <p class="step-desc m-hide">Country-level ambassadors coordinate research initiatives, recruit local talent, and represent WYC in national and regional policy forums.</p>
         <p class="step-desc m-show">Ambassadors lead local research and represent WYC nationally.</p>
       </div>
@@ -729,7 +681,6 @@
         <div class="step-icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
         <div class="step-label">Research Teams</div>
         <h3>Collaborative Groups</h3>
-        <!-- ✏️ EDIT: Step 02 description -->
         <p class="step-desc m-hide">Small, multidisciplinary teams of young researchers collaborate across borders on focused policy topics, combining diverse academic backgrounds.</p>
         <p class="step-desc m-show">Cross-border teams tackle focused policy topics together.</p>
       </div>
@@ -738,7 +689,6 @@
         <div class="step-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
         <div class="step-label">Case Studies</div>
         <h3>Real-World Analysis</h3>
-        <!-- ✏️ EDIT: Step 03 description -->
         <p class="step-desc m-hide">Teams select and analyze real policy challenges, conducting primary and secondary research to understand root causes and evaluate existing approaches.</p>
         <p class="step-desc m-show">Real challenges. Primary research. Root-cause analysis.</p>
       </div>
@@ -747,7 +697,6 @@
         <div class="step-icon-wrap"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <div class="step-label">Policy Briefs</div>
         <h3>Actionable Recommendations</h3>
-        <!-- ✏️ EDIT: Step 04 description -->
         <p class="step-desc m-hide">Research findings are distilled into concise, evidence-based policy briefs targeted at decision-makers, civil society, and the broader public.</p>
         <p class="step-desc m-show">Findings become concise briefs for decision-makers.</p>
       </div>
@@ -761,14 +710,12 @@
     <p class="section-eyebrow reveal">Areas of Inquiry</p>
     <div class="divider reveal reveal-delay-1"></div>
     <h2 class="reveal reveal-delay-1">Research Focus</h2>
-    <!-- ✏️ EDIT: Research Focus intro — one sentence summarising the six research pillars -->
     <p class="section-lead reveal reveal-delay-2 m-hide">Six priority areas where youth perspectives and rigorous analysis can meaningfully advance global discourse.</p>
     <p class="section-lead reveal reveal-delay-2 m-show">Six areas. Youth perspectives. Global impact.</p>
     <div class="research-grid">
       <div class="research-card reveal">
         <span class="research-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21"/><path d="M3 12h18"/><path d="M4.5 7.5h15M4.5 16.5h15"/></svg></span>
         <h3>Global Governance</h3>
-        <!-- ✏️ EDIT: Research card — Global Governance -->
         <p class="m-hide">Examining the architecture of multilateral institutions and how they can be reformed to better address 21st-century challenges.</p>
         <p class="m-show">Reforming multilateral institutions for the 21st century.</p>
         <span class="research-tag">Governance</span>
@@ -776,7 +723,6 @@
       <div class="research-card reveal reveal-delay-1">
         <span class="research-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
         <h3>Economic Development</h3>
-        <!-- ✏️ EDIT: Research card — Economic Development -->
         <p class="m-hide">Analyzing pathways for inclusive growth, trade policy, and financial systems that reduce inequality while fostering sustainable prosperity.</p>
         <p class="m-show">Inclusive growth, trade policy, and reducing inequality.</p>
         <span class="research-tag">Economics</span>
@@ -784,7 +730,6 @@
       <div class="research-card reveal reveal-delay-2">
         <span class="research-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
         <h3>Technology &amp; Society</h3>
-        <!-- ✏️ EDIT: Research card — Technology & Society -->
         <p class="m-hide">Assessing the regulatory and ethical implications of emerging technologies, from artificial intelligence to digital infrastructure and data governance.</p>
         <p class="m-show">Regulating AI, digital infrastructure, and data governance.</p>
         <span class="research-tag">Technology</span>
@@ -792,7 +737,6 @@
       <div class="research-card reveal reveal-delay-1">
         <span class="research-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 3a7 7 0 0 0 7 7 7 7 0 0 0 7-7"/><path d="M5 9a7 7 0 0 1 7 7 7 7 0 0 1-7-7"/></svg></span>
         <h3>Climate Policy</h3>
-        <!-- ✏️ EDIT: Research card — Climate Policy -->
         <p class="m-hide">Developing youth-informed frameworks for climate action, green transitions, and international environmental agreements.</p>
         <p class="m-show">Youth-led frameworks for climate action and green transitions.</p>
         <span class="research-tag">Environment</span>
@@ -800,7 +744,6 @@
       <div class="research-card reveal reveal-delay-2">
         <span class="research-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span>
         <h3>Democracy &amp; Institutions</h3>
-        <!-- ✏️ EDIT: Research card — Democracy & Institutions -->
         <p class="m-hide">Exploring how democratic norms, civil liberties, and accountable institutions can be strengthened against contemporary pressures.</p>
         <p class="m-show">Strengthening democracy and civil liberties worldwide.</p>
         <span class="research-tag">Politics</span>
@@ -808,7 +751,6 @@
       <div class="research-card reveal reveal-delay-3">
         <span class="research-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
         <h3>International Security</h3>
-        <!-- ✏️ EDIT: Research card — International Security -->
         <p class="m-hide">Examining conflict prevention, arms control, humanitarian law, and the evolving landscape of global security threats.</p>
         <p class="m-show">Conflict prevention, arms control, and global security.</p>
         <span class="research-tag">Security</span>
@@ -817,9 +759,7 @@
   </div>
 </section>
 
-<!-- ============================================================
-     NATIONAL RESEARCH TEAMS — Coming Soon
-     ============================================================ -->
+<!-- NATIONAL RESEARCH TEAMS -->
 <section id="teams">
   <div class="container">
     <div class="teams-header">
@@ -827,27 +767,21 @@
       <p class="section-eyebrow reveal">Our People</p>
       <div class="divider reveal reveal-delay-1"></div>
       <h2 class="reveal reveal-delay-1">National Research<br/>Teams</h2>
-      <!-- ✏️ EDIT: Teams intro — two to three sentences explaining the national teams concept -->
       <p class="section-lead reveal reveal-delay-2 m-hide" style="margin-bottom: 2rem;">Each national team is coordinated by a Country Ambassador and consists of researchers working on region-specific policy challenges. Teams collaborate internationally while staying rooted in their local contexts.</p>
       <p class="section-lead reveal reveal-delay-2 m-show" style="margin-bottom: 2rem;">Country teams led by ambassadors. Local roots, global reach.</p>
     </div>
-
     <div class="teams-notice reveal reveal-delay-2">
       <span class="m-hide">Our national teams are currently being established. Applications are now open — apply below to join your country's research team or become a national ambassador.</span>
       <span class="m-show">Teams forming now. Apply to join or become an ambassador.</span>
     </div>
-
     <div class="apply-cards">
-      <!-- RESEARCHER CARD -->
       <div class="apply-card researcher reveal">
         <div class="apply-card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
         <div class="apply-card-role">Open Role</div>
         <h3>Researcher</h3>
-        <!-- ✏️ EDIT: Researcher card description — 2–3 sentences explaining the researcher role -->
         <p class="apply-card-desc m-hide">Join a national research team as an analyst and contribute to policy briefs, case studies, and collaborative research projects. Researchers work under the guidance of Country Ambassadors and connect with a global network of peers.</p>
         <p class="apply-card-desc m-show">Contribute to policy briefs and collaborate with researchers globally.</p>
         <ul class="apply-card-perks">
-          <!-- ✏️ EDIT: Researcher perks — edit or extend this list as needed -->
           <li>Contribute to internationally published policy briefs</li>
           <li>Collaborate with researchers across multiple countries</li>
           <li>Develop analytical and policy writing skills</li>
@@ -860,17 +794,13 @@
           </a>
         </div>
       </div>
-
-      <!-- AMBASSADOR CARD -->
       <div class="apply-card ambassador reveal reveal-delay-1">
         <div class="apply-card-icon">Ψ</div>
         <div class="apply-card-role">Leadership Role</div>
         <h3>Ambassador Ψ</h3>
-        <!-- ✏️ EDIT: Ambassador card description — 2–3 sentences explaining the ambassador role -->
         <p class="apply-card-desc m-hide">Become a Country Ambassador and lead WYC's presence in your nation. Ambassadors build and coordinate local research teams, represent WYC in national forums, and serve as the primary liaison to the global WYC leadership.</p>
         <p class="apply-card-desc m-show">Lead WYC in your country. Build teams, represent, connect.</p>
         <ul class="apply-card-perks">
-          <!-- ✏️ EDIT: Ambassador perks — edit or extend this list as needed -->
           <li>Lead and build your country's WYC research team</li>
           <li>Represent WYC at national and regional events</li>
           <li>Shape WYC's research agenda for your region</li>
@@ -887,9 +817,7 @@
   </div>
 </section>
 
-<!-- ============================================================
-     POLICY BRIEFS — Coming Soon
-     ============================================================ -->
+<!-- POLICY BRIEFS -->
 <section id="briefs">
   <div class="container">
     <div class="briefs-header">
@@ -897,52 +825,31 @@
       <p class="section-eyebrow reveal">Publications</p>
       <div class="divider reveal reveal-delay-1"></div>
       <h2 class="reveal reveal-delay-1">Policy Briefs</h2>
-      <!-- ✏️ EDIT: Policy Briefs intro — one to two sentences describing what the briefs will cover -->
       <p class="section-lead reveal reveal-delay-2">Our research teams are currently working on the first series of policy briefs. Each brief offers evidence-based analysis and actionable recommendations on pressing global issues.</p>
     </div>
-
-    <!-- Blurred placeholder grid with coming soon overlay -->
     <div class="briefs-grid reveal reveal-delay-1">
-      <!-- OVERLAY -->
       <div class="briefs-coming-overlay">
         <div class="briefs-overlay-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
         <div class="briefs-overlay-title">Coming Soon</div>
-        <!-- ✏️ EDIT: Policy Briefs overlay subtitle — short line shown on the overlay -->
         <p class="briefs-overlay-sub">Our first policy briefs are in preparation. Check back here once our research teams are up and running.</p>
       </div>
-
-      <!-- Placeholder brief cards (blurred background decoration) -->
       <div class="brief-card">
         <span class="brief-card-tag">Governance</span>
         <h3>Reforming Multilateral Climate Finance Mechanisms</h3>
-        <!-- ✏️ EDIT: Brief card 1 — placeholder title and abstract -->
         <p style="font-size:0.85rem; color:var(--muted); line-height:1.6;">An analysis of current funding gaps in international climate finance and pathways for more equitable distribution.</p>
-        <div class="brief-card-meta">
-          <span>Q2 2026</span>
-          <span>WYC Research Team</span>
-        </div>
+        <div class="brief-card-meta"><span>Q2 2026</span><span>WYC Research Team</span></div>
       </div>
-
       <div class="brief-card">
         <span class="brief-card-tag">Technology</span>
         <h3>AI Governance Frameworks for Emerging Economies</h3>
-        <!-- ✏️ EDIT: Brief card 2 — placeholder title and abstract -->
         <p style="font-size:0.85rem; color:var(--muted); line-height:1.6;">Evaluating existing AI regulatory models and proposing adaptive governance frameworks suited to developing nations.</p>
-        <div class="brief-card-meta">
-          <span>Q3 2026</span>
-          <span>WYC Research Team</span>
-        </div>
+        <div class="brief-card-meta"><span>Q3 2026</span><span>WYC Research Team</span></div>
       </div>
-
       <div class="brief-card">
         <span class="brief-card-tag">Economics</span>
         <h3>Youth Unemployment and the Future of Work</h3>
-        <!-- ✏️ EDIT: Brief card 3 — placeholder title and abstract -->
         <p style="font-size:0.85rem; color:var(--muted); line-height:1.6;">Examining structural drivers of youth unemployment and policy levers to build more inclusive labour markets.</p>
-        <div class="brief-card-meta">
-          <span>Q3 2026</span>
-          <span>WYC Research Team</span>
-        </div>
+        <div class="brief-card-meta"><span>Q3 2026</span><span>WYC Research Team</span></div>
       </div>
     </div>
   </div>
@@ -1004,7 +911,6 @@
         <p class="section-eyebrow reveal">An International Community</p>
         <div class="divider reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-1">Connecting<br/>young minds<br/>worldwide.</h2>
-        <!-- ✏️ EDIT: Network section lead — one to two sentences on the global community -->
         <p class="section-lead reveal reveal-delay-2 m-hide">The World Youth Initiative brings together motivated young people from across continents to collaborate on policy research and exchange perspectives.</p>
         <p class="section-lead reveal reveal-delay-2 m-show">Young people from every continent. One shared mission.</p>
         <div class="region-list reveal reveal-delay-2">
@@ -1030,7 +936,6 @@
       <p class="section-eyebrow reveal">Get Involved</p>
       <div class="divider reveal reveal-delay-1" style="margin: 0 auto 2rem;"></div>
       <h2 class="reveal reveal-delay-1">Shape the policies<br/>of tomorrow.</h2>
-      <!-- ✏️ EDIT: Join section lead — one to two sentences inviting the reader to get involved -->
       <p class="section-lead reveal reveal-delay-2 m-hide">Whether you're a researcher, a student, or a future leader — there's a place for you in the World Youth Initiative.</p>
       <p class="section-lead reveal reveal-delay-2 m-show">Researcher, student, or future leader — join us.</p>
     </div>
@@ -1038,21 +943,18 @@
       <div class="join-card reveal">
         <div class="join-card-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h3>Become an Ambassador</h3>
-        <!-- ✏️ EDIT: Join card — Ambassador description -->
         <p class="m-hide">Lead research initiatives in your country. Represent WYC nationally, recruit researchers, and connect your community to the global network.</p>
         <p class="m-show">Lead local research. Represent WYC nationally.</p>
       </div>
       <div class="join-card reveal reveal-delay-1">
         <div class="join-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3>Join a Research Team</h3>
-        <!-- ✏️ EDIT: Join card — Research Team description -->
         <p class="m-hide">Collaborate with international peers on focused policy projects. Contribute your expertise and perspective to cross-border analytical work.</p>
         <p class="m-show">Work with peers on cross-border policy projects.</p>
       </div>
       <div class="join-card reveal reveal-delay-2">
         <div class="join-card-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
         <h3>Contribute Research</h3>
-        <!-- ✏️ EDIT: Join card — Contribute Research description -->
         <p class="m-hide">Publish analytical work and policy ideas through WYC's platform. Reach a global audience of policymakers, academics, and fellow researchers. <a href="contact/" style="color:var(--accent);text-decoration:none;">Get in touch to submit.</a></p>
         <p class="m-show">Publish your research. <a href="contact/" style="color:var(--accent);text-decoration:none;">Contact us to submit.</a></p>
       </div>
@@ -1073,7 +975,6 @@
           <div class="footer-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
           <span class="footer-brand-name">World Youth Initiative</span>
         </div>
-        <!-- ✏️ EDIT: Footer tagline — one sentence brand description -->
         <p class="footer-tagline m-hide">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
         <p class="footer-tagline m-show">Youth-driven policy research. Global reach.</p>
         <div class="footer-socials">
@@ -1122,7 +1023,6 @@
 </footer>
 
 <script>
-  // Intersection Observer for scroll animations
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1134,13 +1034,11 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   reveals.forEach(el => observer.observe(el));
 
-  // Navbar scroll effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 30);
   }, { passive: true });
 
-  // Mobile menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   hamburger.addEventListener('click', () => {
@@ -1156,7 +1054,6 @@
     });
   });
 
-  // Smooth anchor scroll with nav offset
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
@@ -1167,7 +1064,6 @@
     });
   });
 
-  // Hero reveal on load
   window.addEventListener('load', () => {
     document.querySelectorAll('#hero .reveal').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), 200 + i * 120);
