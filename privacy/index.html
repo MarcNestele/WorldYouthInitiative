@@ -3,77 +3,276 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — World Youth Initiative</title>
+  <title>Privacy Policy – World Youth Initiative</title>
+  <meta name="description" content="Privacy Policy of the World Youth Initiative" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 20.25px; }
-    body { font-family: 'DM Sans', sans-serif; background: #fff; color: #0B2A4A; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    /* ── Design tokens ─────────────────────────────────────── */
     :root {
-      --navy: #0B2A4A; --blue: #3B82F6; --light: #F5F5F5;
-      --muted: #6B7A8D; --border: #E2E8F0; --white: #ffffff;
-      --max: 1575px; --pad: clamp(1.5rem, 5vw, 5rem); --nav-h: 72px;
+      --navy:   #0B2A4A;
+      --blue:   #3B82F6;
+      --gray:   #F5F5F5;
+      --white:  #FFFFFF;
+      --muted:  #6B7280;
+      --border: #E5E7EB;
+      --text:   #1F2937;
+      --serif:  'DM Serif Display', serif;
+      --sans:   'DM Sans', sans-serif;
+      --max:    760px;
     }
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 999; padding: 1.25rem clamp(1rem, 3vw, 5rem); display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color 0.3s, box-shadow 0.3s; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Navbar ────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      padding: 1.25rem clamp(1rem, 3vw, 5rem);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
     nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
     .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
-    .nav-logo-mark { width: 34px; height: 34px; background: var(--navy); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .nav-logo-mark {
+      width: 34px; height: 34px; background: var(--navy); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+    }
     .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
     .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
     .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
     .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.875rem; font-weight: 500; color: var(--navy); opacity: 0.7; transition: opacity 0.2s; }
+    .nav-links a { text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); opacity: 0.7; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; }
-    .nav-cta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: white; background: var(--navy); padding: 0.65rem 1.4rem; border-radius: 4px; transition: background 0.2s; }
-    .nav-cta:hover { background: #0d3360; }
+    .nav-links a.nav-active { opacity: 1; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    .nav-cta {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      text-decoration: none; color: white; background: var(--navy);
+      padding: 0.65rem 1.4rem; border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu { position: fixed; top: 0; right: 0; z-index: 997; background: rgba(255,255,255,0.97); backdrop-filter: blur(20px); border-left: 1px solid var(--border); border-bottom: 1px solid var(--border); border-radius: 0 0 0 14px; padding: calc(var(--nav-h) + 1.25rem) 2rem 1.5rem; display: flex; flex-direction: column; align-items: flex-end; gap: 0; min-width: 200px; box-shadow: -4px 8px 24px rgba(11,42,74,0.08); transform: translateY(-110%); opacity: 0; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease; pointer-events: none; }
+    .mobile-menu {
+      position: fixed; top: 0; right: 0; z-index: 997;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
+      border-left: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      border-radius: 0 0 0 14px;
+      padding: calc(72px + 1.25rem) 2rem 1.5rem;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 0;
+      min-width: 200px; box-shadow: -4px 8px 24px rgba(11,42,74,0.08);
+      transform: translateY(-110%); opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+      pointer-events: none;
+    }
     .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-menu a { font-size: 0.85rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right; }
+    .mobile-menu a {
+      font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500;
+      color: var(--navy); text-decoration: none; padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06); letter-spacing: 0.02em;
+      opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right;
+    }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { opacity: 1; }
+    @media (max-width: 1100px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
 
-    /* PAGE HERO */
+    /* ── Dev Banner ────────────────────────────────────────────────── */
+    .dev-banner {
+      position: relative; z-index: 101; background: var(--navy);
+      padding: .6rem clamp(1.25rem, 5vw, 3rem);
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+      font-size: .72rem; font-weight: 500; letter-spacing: .06em;
+      color: rgba(255,255,255,.7); text-align: center;
+    }
+    .dev-banner strong { color: white; font-weight: 700; letter-spacing: .08em; }
+    .dev-banner-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #FBBF24;
+      display: inline-block; animation: blinkDot 1.8s ease-in-out infinite; flex-shrink: 0;
+    }
+    @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
+
+    /* ── Hero banner ────────────────────────────────────────── */
     .page-hero {
-      padding: calc(var(--nav-h) + 4rem) var(--pad) 3.5rem;
       background: var(--navy);
-      position: relative; overflow: hidden;
+      padding: clamp(3rem, 8vw, 6rem) 2rem clamp(2.5rem, 6vw, 4.5rem);
+      text-align: center;
     }
-    .page-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
-      background-size: 30px 30px;
+    .page-hero-label {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: rgba(59,130,246,.8);
+      margin-bottom: 1rem;
     }
-    .page-hero-inner { position: relative; max-width: 860px; }
-    .page-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(59,130,246,0.85); margin-bottom: 1.25rem; }
-    .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.1; letter-spacing: -0.025em; color: white; margin-bottom: 1rem; }
-    .page-hero p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
-    .page-hero-meta { margin-top: 2rem; font-size: 0.75rem; color: rgba(255,255,255,0.35); letter-spacing: 0.04em; }
+    .page-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .page-hero-meta {
+      font-size: .85rem; color: rgba(255,255,255,.45);
+      letter-spacing: .04em;
+    }
 
-    /* CONTENT */
-    .legal-body { padding: clamp(3rem, 6vw, 5rem) var(--pad); }
-    .legal-inner { max-width: 860px; }
-    .legal-section { margin-bottom: 3rem; }
-    .legal-section h2 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 1rem; letter-spacing: -0.015em; }
-    .legal-section p { font-size: 0.9rem; line-height: 1.85; color: #374151; margin-bottom: 0.9rem; }
-    .legal-section ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.9rem; }
-    .legal-section ul li { font-size: 0.9rem; line-height: 1.75; color: #374151; padding-left: 1.2rem; position: relative; }
-    .legal-section ul li::before { content: '–'; position: absolute; left: 0; color: var(--blue); }
-    .legal-section a { color: var(--blue); text-decoration: none; }
-    .legal-section a:hover { text-decoration: underline; }
-    .divider { width: 48px; height: 3px; background: var(--blue); border-radius: 2px; margin-bottom: 2.5rem; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 
-    /* FOOTER */
-    footer { background-color: var(--navy); background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px); background-size: 30px 30px; color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
+    /* ── Layout ─────────────────────────────────────────────── */
+    .page-body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(2rem, 5vw, 4rem) 2rem;
+      align-items: start;
+    }
+
+    /* ── Sidebar TOC ────────────────────────────────────────── */
+    .toc {
+      position: sticky; top: 80px;
+      padding-right: 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.25rem;
+    }
+    .toc ul { list-style: none; }
+    .toc ul li { margin-bottom: .1rem; }
+    .toc ul li a {
+      font-size: .8rem; color: var(--muted); text-decoration: none;
+      line-height: 1.5; display: block; padding: .25rem 0;
+      border-left: 2px solid transparent;
+      padding-left: .75rem;
+      transition: color .2s, border-color .2s;
+    }
+    .toc ul li a:hover,
+    .toc ul li a.active { color: var(--navy); border-color: var(--blue); }
+
+    /* ── Content ────────────────────────────────────────────── */
+    .content {
+      padding-left: clamp(1.5rem, 4vw, 3.5rem);
+      min-width: 0;
+    }
+
+    .content section { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .content section:last-child { border-bottom: none; margin-bottom: 0; }
+
+    .content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    .content h3 {
+      font-size: .95rem; font-weight: 600;
+      color: var(--navy);
+      margin: 1.5rem 0 .5rem;
+    }
+    .content p {
+      font-size: .95rem; color: #374151;
+      line-height: 1.8; margin-bottom: 1rem;
+    }
+    .content p:last-child { margin-bottom: 0; }
+
+    .content ul, .content ol {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .content li {
+      font-size: .95rem; color: #374151;
+      line-height: 1.8; margin-bottom: .4rem;
+    }
+    .content li strong { color: var(--navy); font-weight: 600; }
+
+    .content a { color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+    .content a:hover { border-color: var(--blue); }
+
+    /* ── Info boxes ─────────────────────────────────────────── */
+    .info-block {
+      background: #EFF6FF;
+      border-left: 3px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .info-block p { margin: 0; font-size: .9rem; color: #1E40AF; }
+
+    /* Provider card */
+    .provider-card {
+      background: var(--gray);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .provider-card strong {
+      display: block; font-size: .875rem; color: var(--navy);
+      margin-bottom: .5rem;
+    }
+    .provider-card p { margin: 0; font-size: .875rem; line-height: 1.7; }
+    .provider-card .tag {
+      display: inline-block;
+      font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      background: var(--blue); color: var(--white);
+      padding: .15rem .5rem; border-radius: 100px; margin-bottom: .5rem;
+    }
+
+    /* Rights list */
+    .rights-list { list-style: none; padding: 0; }
+    .rights-list li {
+      padding: .85rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1.5rem 1fr;
+      gap: .75rem;
+      align-items: start;
+    }
+    .rights-list li:last-child { border-bottom: none; }
+    .rights-list .icon {
+      width: 1.5rem; height: 1.5rem; border-radius: 50%;
+      background: #EFF6FF; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: .15rem;
+    }
+    .rights-list .icon svg { width: 12px; height: 12px; stroke: var(--blue); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Seal */
+    .seal-block {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--gray);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .seal-block p { font-size: .8rem; color: var(--muted); margin: 0; }
+    .seal-block a { color: var(--blue); }
+
+    /* ── Footer ────────────────────────────────────────────────────── */
+    footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
     .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
     .footer-logo-mark { width: 30px; height: 30px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
@@ -88,177 +287,1003 @@
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
     .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
     .footer-col a:hover { color: white; }
+    .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
     .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
     .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
     .footer-bottom-links { display: flex; gap: 1.5rem; list-style: none; }
     .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
     .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
-
-    @media (max-width: 1100px) { .footer-inner { grid-template-columns: 1fr 1fr; } .nav-links, .nav-cta { display: none; } .hamburger { display: flex; } }
-    @media (max-width: 768px) { html { font-size: 16px; } .nav-logo-sub { display: none; } .footer-col { display: none; } .footer-inner { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
+    @media (max-width: 1100px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } }
-  
-    /* Coming-soon footer links */
-    .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
-    .footer-col a.coming-soon::after { content: ' ·'; }
 
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .page-body { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding-left: 0; }
+    }
   </style>
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="../" class="nav-logo" aria-label="World Youth Initiative">
-    <div class="nav-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
-    <div>
-      <span class="nav-logo-text">World Youth Initiative</span>
-      <span class="nav-logo-sub">Global Policy Initiative</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="../about/">About</a></li>
-    <li><a href="../research/">Research</a></li>
-    <li><a href="../team/">Teams</a></li>
-    <li><a href="../policy/">Policy Briefs</a></li>
-  </ul>
-  <a href="../contact/" class="nav-cta">Contact</a>
-  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-</nav>
+  <!-- Dev Banner -->
+  <div class="dev-banner">
+    <span class="dev-banner-dot"></span>
+    <span><strong>Site Under Development</strong> — World Youth Initiative launches soon</span>
+  </div>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="../about/" class="mobile-link">About</a>
-  <a href="../research/" class="mobile-link">Research</a>
-  <a href="../team/" class="mobile-link">Teams</a>
-  <a href="../policy/" class="mobile-link">Policy Briefs</a>
-  <a href="../contact/" class="mobile-link">Contact</a>
-</div>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="../" class="nav-logo" aria-label="World Youth Initiative">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg>
+      </div>
+      <div>
+        <span class="nav-logo-text">World Youth Initiative</span>
+        <span class="nav-logo-sub">Act for Young Voices</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../about/">About</a></li>
+      <li><a href="../research/">Research</a></li>
+      <li><a href="../team/">Teams</a></li>
+      <li><a href="../policy/">Policy Briefs</a></li>
+    </ul>
+    <a href="../contact/" class="nav-cta">Contact</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <p class="page-eyebrow">Legal</p>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog">
+    <a href="../about/" class="mobile-link">About</a>
+    <a href="../research/" class="mobile-link">Research</a>
+    <a href="../team/" class="mobile-link">Teams</a>
+    <a href="../policy/" class="mobile-link">Policy Briefs</a>
+    <a href="../contact/" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <main>
+
+  <div class="page-hero">
+    <p class="page-hero-label">Legal</p>
     <h1>Privacy Policy</h1>
-    <p>How the World Youth Initiative collects, uses, and protects your personal data.</p>
-    <p class="page-hero-meta">Last updated: March 2026</p>
+    <p class="page-hero-meta">Last updated: 9 May 2026</p>
   </div>
-</section>
 
-<section class="legal-body">
-  <div class="legal-inner">
-    <div class="divider"></div>
+  <!-- Body -->
+  <div class="page-body">
 
-    <div class="legal-section">
-      <h2>1. Who We Are</h2>
-      <p>The World Youth Initiative (WYC) is a non-commercial, volunteer-run youth policy initiative. We operate this website at <a href="https://worldyouthcouncil.org">worldyouthcouncil.org</a> and collect limited personal data solely for the purposes described in this policy.</p>
-      <p>For any privacy-related questions, you can reach us at <a href="/cdn-cgi/l/email-protection#4e3e3c27382f2d370e39213c222a37213b3a262d213b202d272260213c29"><span class="__cf_email__" data-cfemail="bcccced5cadddfc5fccbd3ced0d8c5d3c9c8d4dfd3c9d2dfd5d092d3cedb">[email&#160;protected]</span></a>.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>2. What Data We Collect</h2>
-      <p>We only collect personal data that you provide to us voluntarily — primarily through our application form. This includes:</p>
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+      <p class="toc-title">Contents</p>
       <ul>
-        <li>First and last name</li>
-        <li>Email address</li>
-        <li>Country of residence and nationality</li>
-        <li>Academic institution, field of study, and academic level</li>
-        <li>Role preference (Researcher or Ambassador)</li>
-        <li>Motivation and background information submitted in the application</li>
+        <li><a href="#praembel">Preamble</a></li>
+        <li><a href="#verantwortlicher">Data Controller</a></li>
+        <li><a href="#rechtsgrundlagen">Legal Bases</a></li>
+        <li><a href="#sicherheit">Security Measures</a></li>
+        <li><a href="#uebermittlung">Data Transmission</a></li>
+        <li><a href="#international">International Transfers</a></li>
+        <li><a href="#speicherung">Storage & Deletion</a></li>
+        <li><a href="#rechte">Your Rights</a></li>
+        <li><a href="#hosting">Web Hosting</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#kontakt">Contact Forms</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#aenderungen">Changes</a></li>
+        <li><a href="#begriffe">Definitions</a></li>
       </ul>
-      <p>We do not collect any data through cookies, tracking scripts, or third-party analytics tools. This website is statically hosted and does not use behavioural tracking of any kind.</p>
-    </div>
+    </aside>
 
-    <div class="legal-section">
-      <h2>3. How We Use Your Data</h2>
-      <p>Data submitted through the application form is used exclusively for the following purposes:</p>
-      <ul>
-        <li>Evaluating your application to join WYC as a researcher or ambassador</li>
-        <li>Communicating with you about your application status</li>
-        <li>Onboarding you as a WYC member if your application is accepted</li>
-      </ul>
-      <p>We will never sell, share, or disclose your personal data to third parties for commercial purposes.</p>
-    </div>
+    <!-- Content -->
+    <main class="content">
 
-    <div class="legal-section">
-      <h2>4. Legal Basis for Processing (GDPR)</h2>
-      <p>If you are located in the European Economic Area (EEA), our legal basis for processing your personal data is your explicit consent, given when you submit your application. You may withdraw this consent at any time by contacting us.</p>
-    </div>
+      <section id="praembel">
+        <h2>Preamble</h2>
+        <p>This Privacy Policy explains which types of personal data we process, for what purposes, and to what extent. It applies to all personal data processing carried out by us — in connection with the provision of our services, on our website, and through external online presences such as our social media profiles.</p>
+        <p>The terms used in this policy are gender-neutral.</p>
+      </section>
 
-    <div class="legal-section">
-      <h2>5. Data Storage and Retention</h2>
-      <p>Application data is stored securely and accessed only by WYC's core team members involved in the admissions process. We retain application data for a maximum of 12 months after submission. After this period, data is permanently deleted unless you have joined WYC, in which case a minimal membership record is retained for as long as you remain a member.</p>
-    </div>
+      <section id="verantwortlicher">
+        <h2>Data Controller</h2>
+        <!-- ✏️ EDIT: Replace with real address once e.V. registration is complete -->
+        <p>
+          Marc Nestele<br>
+          <!-- ✏️ EDIT: Straße, Hausnr., PLZ Ort -->
+        </p>
+        <p>Email: <a href="mailto:contact@worldyouthinitiative.org">contact@worldyouthinitiative.org</a></p>
+        <p>Website: <a href="https://worldyouthinitiative.org">worldyouthinitiative.org</a></p>
+      </section>
 
-    <div class="legal-section">
-      <h2>6. Your Rights</h2>
-      <p>You have the right to:</p>
-      <ul>
-        <li>Request access to the personal data we hold about you</li>
-        <li>Request correction of inaccurate data</li>
-        <li>Request deletion of your data at any time</li>
-        <li>Withdraw consent for data processing</li>
-        <li>Lodge a complaint with your national data protection authority</li>
-      </ul>
-      <p>To exercise any of these rights, contact us at <a href="/cdn-cgi/l/email-protection#dbaba9b2adbab8a29bacb4a9b7bfa2b4aeafb3b8b4aeb5b8b2b7f5b4a9bc"><span class="__cf_email__" data-cfemail="2b5b59425d4a48526b5c4459474f52445e5f4348445e454842470544594c">[email&#160;protected]</span></a>.</p>
-    </div>
+      <section id="rechtsgrundlagen">
+        <h2>Legal Bases</h2>
+        <p>The following is an overview of the legal bases under the GDPR on which we process personal data.</p>
+        <ul>
+          <li><strong>Consent (Art. 6(1)(a) GDPR)</strong> – The data subject has given consent for a specific purpose.</li>
+          <li><strong>Contract performance and pre-contractual inquiries (Art. 6(1)(b) GDPR)</strong> – Processing is necessary for the performance of a contract or to take pre-contractual steps.</li>
+          <li><strong>Legal obligation (Art. 6(1)(c) GDPR)</strong> – Processing is necessary to comply with a legal obligation.</li>
+          <li><strong>Legitimate interests (Art. 6(1)(f) GDPR)</strong> – Processing is necessary for our legitimate interests, provided these are not overridden by the data subject's interests or fundamental rights.</li>
+        </ul>
+        <p>In addition, national regulations apply — in particular the German Federal Data Protection Act (BDSG).</p>
+      </section>
 
-    <div class="legal-section">
-      <h2>7. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. The most recent version will always be available on this page, with the date of last update noted at the top. Continued use of the website after changes constitutes acceptance of the updated policy.</p>
-    </div>
+      <section id="sicherheit">
+        <h2>Security Measures</h2>
+        <p>We implement appropriate technical and organisational measures to ensure a level of protection commensurate with the risk. This includes, in particular, safeguarding the confidentiality, integrity, and availability of data.</p>
+        <div class="info-block">
+          <p><strong>TLS/SSL Encryption:</strong> All data transmitted via our website is encrypted using HTTPS, protecting it from unauthorised access during transmission.</p>
+        </div>
+      </section>
 
+      <section id="uebermittlung">
+        <h2>Transmission of Personal Data</h2>
+        <p>In the course of our data processing, personal data may be transferred to third parties where necessary for the provision of our services — for example, to IT service providers or embedded service operators. In such cases, we conclude appropriate data processing agreements to protect your data.</p>
+      </section>
+
+      <section id="international">
+        <h2>International Data Transfers</h2>
+        <p>Where we transfer data to a third country (outside the EU/EEA), this is always done in compliance with applicable legal requirements.</p>
+        <p>For transfers to the United States, we rely primarily on the <strong>EU-U.S. Data Privacy Framework (DPF)</strong> (EU Commission adequacy decision of 10 July 2023), supplemented by <strong>Standard Contractual Clauses (SCCs)</strong>. This dual safeguard ensures your data remains adequately protected regardless of political or legal changes.</p>
+        <p>More information on the DPF: <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener">dataprivacyframework.gov</a></p>
+      </section>
+
+      <section id="speicherung">
+        <h2>Data Storage and Deletion</h2>
+        <p>We delete personal data once the purpose for processing has ceased or no legal basis remains. Statutory retention obligations are not affected. The following general retention periods apply under German law:</p>
+        <ul>
+          <li><strong>10 years</strong> – Books, annual accounts, inventories (§ 147 AO, § 257 HGB)</li>
+          <li><strong>8 years</strong> – Accounting vouchers, invoices (§ 147 AO)</li>
+          <li><strong>6 years</strong> – Other business documents (§ 147 AO, § 257 HGB)</li>
+          <li><strong>3 years</strong> – General claims (standard limitation period, §§ 195, 199 BGB)</li>
+        </ul>
+      </section>
+
+      <section id="rechte">
+        <h2>Your Rights</h2>
+        <p>As a data subject, you have the following rights under the GDPR (Art. 15–21):</p>
+        <ul class="rights-list">
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right of access</strong> – You may request confirmation of whether we process your personal data, and obtain a copy of it.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to rectification</strong> – You may request the correction of inaccurate or completion of incomplete data.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to erasure</strong> – You may request the immediate deletion of your data, unless retention obligations apply.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to restriction of processing</strong> – You may request that the processing of your data be restricted.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to data portability</strong> – You may receive your data in a structured, commonly used format, or have it transferred to another controller.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to object</strong> – You may object at any time to processing based on Art. 6(1)(e) or (f) GDPR.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to withdraw consent</strong> – You may withdraw any consent given at any time with effect for the future.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to lodge a complaint</strong> – You have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual residence.</span>
+          </li>
+        </ul>
+        <p style="margin-top:1rem;">To exercise your rights, contact us at: <a href="mailto:contact@worldyouthinitiative.org">contact@worldyouthinitiative.org</a></p>
+      </section>
+
+      <section id="hosting">
+        <h2>Online Services & Web Hosting</h2>
+        <p>We process users' IP addresses to provide our online services. Access is logged in server log files (page URL, date/time, browser, operating system, referrer URL, IP address). Log files are deleted after a maximum of 30 days.</p>
+        <div class="provider-card">
+          <span class="tag">Hosting</span>
+          <strong>GitHub Pages (Microsoft Corporation)</strong>
+          <p>Our website is hosted via GitHub Pages. IP addresses and access data may be processed on Microsoft servers.<br>
+          Anbieter: GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA<br>
+          Datenschutz: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a><br>
+          International transfer basis: Data Privacy Framework (DPF), Standard Contractual Clauses<br>
+          <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (Legitimate interests)</p>
+        </div>
+      </section>
+
+      <section id="cookies">
+        <h2>Use of Cookies</h2>
+        <p>Our website uses technically necessary cookies required for its operation. We do not currently use any cookies that require consent.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (Legitimate interests) for technically necessary cookies.</p>
+      </section>
+
+      <section id="kontakt">
+        <h2>Contact and Application Forms</h2>
+        <p>When you reach out via our forms or email, we process your details in order to respond to your enquiry. This includes name, email address, and message content. Application forms may additionally include details about your academic or professional background, institution, and motivation.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(b) and Art. 6(1)(f) GDPR</p>
+
+        <div class="provider-card">
+          <span class="tag">Form Processing</span>
+          <strong>Formspree Inc.</strong>
+          <p>We use Formspree to process contact and application submissions. Data you enter (name, email, message) is transmitted to Formspree and forwarded to us.<br>
+          Anbieter: Formspree, Inc., 2261 Market Street #4990, San Francisco, CA 94114, USA<br>
+          Datenschutz: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a><br>
+          International transfer basis: Standard Contractual Clauses (SCCs)<br>
+          <strong>Legal basis:</strong> Art. 6(1)(b) and Art. 6(1)(f) GDPR</p>
+        </div>
+      </section>
+
+      <section id="analytics">
+        <h2>Web Analytics & Monitoring</h2>
+        <!-- ✏️ EDIT: Update when analytics tool is implemented -->
+        <p>We do not currently use any web analytics tool. Should we implement one in the future, we will update this Privacy Policy accordingly and inform you in advance.</p>
+        <div class="info-block">
+          <p>We are evaluating privacy-friendly, cookie-free analytics services (e.g. Plausible Analytics or Fathom Analytics) that do not store personal data and do not require a cookie consent banner.</p>
+        </div>
+      </section>
+
+      
+
+      <section id="aenderungen">
+        <h2>Changes and Updates</h2>
+        <p>We will update this Privacy Policy whenever changes to our data processing practices require it. We recommend reviewing it regularly. Where any changes require action on your part, we will notify you separately.</p>
+      </section>
+
+      <section id="begriffe">
+        <h2>Definitions</h2>
+        <ul>
+          <li><strong>Personal data</strong> – Any information relating to an identified or identifiable natural person.</li>
+          <li><strong>Processing</strong> – Any operation carried out on personal data, such as collection, storage, transmission, or deletion.</li>
+          <li><strong>Controller</strong> – The person or entity that determines the purposes and means of processing.</li>
+          <li><strong>Processor</strong> – A person or entity that processes personal data on behalf of the controller (e.g. Formspree, GitHub).</li>
+          <li><strong>Consent</strong> – A freely given, informed, and unambiguous expression of will by the data subject.</li>
+          <li><strong>Legitimate interests</strong> – A legal basis under Art. 6(1)(f) GDPR permitting processing without consent, provided the data subject's interests do not override.</li>
+        </ul>
+
+        <div class="seal-block">
+          <p>Generated with the <a href="https://datenschutz-generator.de/" target="_blank" rel="noopener noreferrer nofollow">Privacy Policy Generator by Dr. Thomas Schwenke</a> and adapted for the World Youth Initiative.</p>
+        </div>
+      </section>
+
+    </main>
   </div>
-</section>
 
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
-          <span class="footer-brand-name">World Youth Initiative</span>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
+            <span class="footer-brand-name">World Youth Initiative</span>
+          </div>
+          <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
+          <div class="footer-socials">
+            <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+            <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          </div>
         </div>
-        <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
-        <div class="footer-socials">
-          <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
-          <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
-          <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        <div class="footer-col">
+          <div class="footer-col-title">Organization</div>
+          <ul>
+            <li><a href="../about/">About WYI</a></li>
+            <li><a href="#" class="coming-soon">How It Works</a></li>
+            <li><a href="#" class="coming-soon">Our Network</a></li>
+            <li><a href="#" class="coming-soon">Leadership</a></li>
+            <li><a href="#" class="coming-soon">Annual Report</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Research</div>
+          <ul>
+            <li><a href="../research/">Research Areas</a></li>
+            <li><a href="../policy/">Policy Briefs</a></li>
+            <li><a href="#" class="coming-soon">Working Papers</a></li>
+            <li><a href="#" class="coming-soon">Publications</a></li>
+            <li><a href="#" class="coming-soon">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Get Involved</div>
+          <ul>
+            <li><a href="../apply/">Join the Network</a></li>
+            <li><a href="../apply/">Become Ambassador</a></li>
+            <li><a href="../team/">Research Teams</a></li>
+            <li><a href="#" class="coming-soon">Submit Research</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Organization</div>
-        <ul>
-          <li><a href="../about/">About WYC</a></li>
-          <li><a href="../#how">How It Works</a></li>
-          <li><a href="../team/">Our Network</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Research</div>
-        <ul>
-          <li><a href="../research/">Research Areas</a></li>
-          <li><a href="../policy/">Policy Briefs</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Get Involved</div>
-        <ul>
-          <li><a href="../application/">Join the Network</a></li>
-          <li><a href="../contact/">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
-      <ul class="footer-bottom-links">
-        <li><a href="../privacy/">Privacy Policy</a></li>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
           <li><a href="../terms/">Terms of Use</a></li>
           <li><a href="../cookies/">Cookie Policy</a></li>
           <li><a href="../impressum/">Impressum</a></li>
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
-  const hamburger = document.getElementById('hamburger');
-  const mobi
+  </body>
+</html>  <script>
+    // Highlight active TOC link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const links    = document.querySelectorAll('.toc a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+E html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – World Youth Initiative</title>
+  <meta name="description" content="Privacy Policy of the World Youth Initiative" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Design tokens ─────────────────────────────────────── */
+    :root {
+      --navy:   #0B2A4A;
+      --blue:   #3B82F6;
+      --gray:   #F5F5F5;
+      --white:  #FFFFFF;
+      --muted:  #6B7280;
+      --border: #E5E7EB;
+      --text:   #1F2937;
+      --serif:  'DM Serif Display', serif;
+      --sans:   'DM Sans', sans-serif;
+      --max:    760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Navbar ────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      padding: 1.25rem clamp(1rem, 3vw, 5rem);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
+    .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
+    .nav-logo-mark {
+      width: 34px; height: 34px; background: var(--navy); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
+    .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
+    .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
+    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); opacity: 0.7; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links a.nav-active { opacity: 1; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    .nav-cta {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      text-decoration: none; color: white; background: var(--navy);
+      padding: 0.65rem 1.4rem; border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      position: fixed; top: 0; right: 0; z-index: 997;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
+      border-left: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      border-radius: 0 0 0 14px;
+      padding: calc(72px + 1.25rem) 2rem 1.5rem;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 0;
+      min-width: 200px; box-shadow: -4px 8px 24px rgba(11,42,74,0.08);
+      transform: translateY(-110%); opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+      pointer-events: none;
+    }
+    .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+    .mobile-menu a {
+      font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500;
+      color: var(--navy); text-decoration: none; padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06); letter-spacing: 0.02em;
+      opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { opacity: 1; }
+    @media (max-width: 1100px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ── Dev Banner ────────────────────────────────────────────────── */
+    .dev-banner {
+      position: relative; z-index: 101; background: var(--navy);
+      padding: .6rem clamp(1.25rem, 5vw, 3rem);
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+      font-size: .72rem; font-weight: 500; letter-spacing: .06em;
+      color: rgba(255,255,255,.7); text-align: center;
+    }
+    .dev-banner strong { color: white; font-weight: 700; letter-spacing: .08em; }
+    .dev-banner-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #FBBF24;
+      display: inline-block; animation: blinkDot 1.8s ease-in-out infinite; flex-shrink: 0;
+    }
+    @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
+
+    /* ── Hero banner ────────────────────────────────────────── */
+    .page-hero {
+      background: var(--navy);
+      padding: clamp(3rem, 8vw, 6rem) 2rem clamp(2.5rem, 6vw, 4.5rem);
+      text-align: center;
+    }
+    .page-hero-label {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: rgba(59,130,246,.8);
+      margin-bottom: 1rem;
+    }
+    .page-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .page-hero-meta {
+      font-size: .85rem; color: rgba(255,255,255,.45);
+      letter-spacing: .04em;
+    }
+
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .page-body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(2rem, 5vw, 4rem) 2rem;
+      align-items: start;
+    }
+
+    /* ── Sidebar TOC ────────────────────────────────────────── */
+    .toc {
+      position: sticky; top: 80px;
+      padding-right: 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.25rem;
+    }
+    .toc ul { list-style: none; }
+    .toc ul li { margin-bottom: .1rem; }
+    .toc ul li a {
+      font-size: .8rem; color: var(--muted); text-decoration: none;
+      line-height: 1.5; display: block; padding: .25rem 0;
+      border-left: 2px solid transparent;
+      padding-left: .75rem;
+      transition: color .2s, border-color .2s;
+    }
+    .toc ul li a:hover,
+    .toc ul li a.active { color: var(--navy); border-color: var(--blue); }
+
+    /* ── Content ────────────────────────────────────────────── */
+    .content {
+      padding-left: clamp(1.5rem, 4vw, 3.5rem);
+      min-width: 0;
+    }
+
+    .content section { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .content section:last-child { border-bottom: none; margin-bottom: 0; }
+
+    .content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    .content h3 {
+      font-size: .95rem; font-weight: 600;
+      color: var(--navy);
+      margin: 1.5rem 0 .5rem;
+    }
+    .content p {
+      font-size: .95rem; color: #374151;
+      line-height: 1.8; margin-bottom: 1rem;
+    }
+    .content p:last-child { margin-bottom: 0; }
+
+    .content ul, .content ol {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .content li {
+      font-size: .95rem; color: #374151;
+      line-height: 1.8; margin-bottom: .4rem;
+    }
+    .content li strong { color: var(--navy); font-weight: 600; }
+
+    .content a { color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+    .content a:hover { border-color: var(--blue); }
+
+    /* ── Info boxes ─────────────────────────────────────────── */
+    .info-block {
+      background: #EFF6FF;
+      border-left: 3px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .info-block p { margin: 0; font-size: .9rem; color: #1E40AF; }
+
+    /* Provider card */
+    .provider-card {
+      background: var(--gray);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .provider-card strong {
+      display: block; font-size: .875rem; color: var(--navy);
+      margin-bottom: .5rem;
+    }
+    .provider-card p { margin: 0; font-size: .875rem; line-height: 1.7; }
+    .provider-card .tag {
+      display: inline-block;
+      font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      background: var(--blue); color: var(--white);
+      padding: .15rem .5rem; border-radius: 100px; margin-bottom: .5rem;
+    }
+
+    /* Rights list */
+    .rights-list { list-style: none; padding: 0; }
+    .rights-list li {
+      padding: .85rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1.5rem 1fr;
+      gap: .75rem;
+      align-items: start;
+    }
+    .rights-list li:last-child { border-bottom: none; }
+    .rights-list .icon {
+      width: 1.5rem; height: 1.5rem; border-radius: 50%;
+      background: #EFF6FF; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: .15rem;
+    }
+    .rights-list .icon svg { width: 12px; height: 12px; stroke: var(--blue); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Seal */
+    .seal-block {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--gray);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .seal-block p { font-size: .8rem; color: var(--muted); margin: 0; }
+    .seal-block a { color: var(--blue); }
+
+    /* ── Footer ────────────────────────────────────────────────────── */
+    footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
+    .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
+    .footer-logo-mark { width: 30px; height: 30px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
+    .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
+    .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
+    .footer-socials { display: flex; gap: 0.75rem; }
+    .social-btn { width: 34px; height: 34px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+    .social-btn:hover { background: rgba(255,255,255,0.15); }
+    .social-btn svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.7); }
+    .footer-col-title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: white; }
+    .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
+    @media (max-width: 1100px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .page-body { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dev Banner -->
+  <div class="dev-banner">
+    <span class="dev-banner-dot"></span>
+    <span><strong>Site Under Development</strong> — World Youth Initiative launches soon</span>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="../" class="nav-logo" aria-label="World Youth Initiative">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg>
+      </div>
+      <div>
+        <span class="nav-logo-text">World Youth Initiative</span>
+        <span class="nav-logo-sub">Act for Young Voices</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../about/">About</a></li>
+      <li><a href="../research/">Research</a></li>
+      <li><a href="../team/">Teams</a></li>
+      <li><a href="../policy/">Policy Briefs</a></li>
+    </ul>
+    <a href="../contact/" class="nav-cta">Contact</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog">
+    <a href="../about/" class="mobile-link">About</a>
+    <a href="../research/" class="mobile-link">Research</a>
+    <a href="../team/" class="mobile-link">Teams</a>
+    <a href="../policy/" class="mobile-link">Policy Briefs</a>
+    <a href="../contact/" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <main>
+
+  <div class="page-hero">
+    <p class="page-hero-label">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="page-hero-meta">Last updated: 9 May 2026</p>
+  </div>
+
+  <!-- Body -->
+  <div class="page-body">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+      <p class="toc-title">Contents</p>
+      <ul>
+        <li><a href="#praembel">Preamble</a></li>
+        <li><a href="#verantwortlicher">Data Controller</a></li>
+        <li><a href="#rechtsgrundlagen">Legal Bases</a></li>
+        <li><a href="#sicherheit">Security Measures</a></li>
+        <li><a href="#uebermittlung">Data Transmission</a></li>
+        <li><a href="#international">International Transfers</a></li>
+        <li><a href="#speicherung">Storage & Deletion</a></li>
+        <li><a href="#rechte">Your Rights</a></li>
+        <li><a href="#hosting">Web Hosting</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#kontakt">Contact Forms</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#aenderungen">Changes</a></li>
+        <li><a href="#begriffe">Definitions</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+      <section id="praembel">
+        <h2>Preamble</h2>
+        <p>This Privacy Policy explains which types of personal data we process, for what purposes, and to what extent. It applies to all personal data processing carried out by us — in connection with the provision of our services, on our website, and through external online presences such as our social media profiles.</p>
+        <p>The terms used in this policy are gender-neutral.</p>
+      </section>
+
+      <section id="verantwortlicher">
+        <h2>Data Controller</h2>
+        <!-- ✏️ EDIT: Replace with real address once e.V. registration is complete -->
+        <p>
+          Marc Nestele<br>
+          <!-- ✏️ EDIT: Straße, Hausnr., PLZ Ort -->
+        </p>
+        <p>Email: <a href="mailto:contact@worldyouthinitiative.org">contact@worldyouthinitiative.org</a></p>
+        <p>Website: <a href="https://worldyouthinitiative.org">worldyouthinitiative.org</a></p>
+      </section>
+
+      <section id="rechtsgrundlagen">
+        <h2>Legal Bases</h2>
+        <p>The following is an overview of the legal bases under the GDPR on which we process personal data.</p>
+        <ul>
+          <li><strong>Consent (Art. 6(1)(a) GDPR)</strong> – The data subject has given consent for a specific purpose.</li>
+          <li><strong>Contract performance and pre-contractual inquiries (Art. 6(1)(b) GDPR)</strong> – Processing is necessary for the performance of a contract or to take pre-contractual steps.</li>
+          <li><strong>Legal obligation (Art. 6(1)(c) GDPR)</strong> – Processing is necessary to comply with a legal obligation.</li>
+          <li><strong>Legitimate interests (Art. 6(1)(f) GDPR)</strong> – Processing is necessary for our legitimate interests, provided these are not overridden by the data subject's interests or fundamental rights.</li>
+        </ul>
+        <p>In addition, national regulations apply — in particular the German Federal Data Protection Act (BDSG).</p>
+      </section>
+
+      <section id="sicherheit">
+        <h2>Security Measures</h2>
+        <p>We implement appropriate technical and organisational measures to ensure a level of protection commensurate with the risk. This includes, in particular, safeguarding the confidentiality, integrity, and availability of data.</p>
+        <div class="info-block">
+          <p><strong>TLS/SSL Encryption:</strong> All data transmitted via our website is encrypted using HTTPS, protecting it from unauthorised access during transmission.</p>
+        </div>
+      </section>
+
+      <section id="uebermittlung">
+        <h2>Transmission of Personal Data</h2>
+        <p>In the course of our data processing, personal data may be transferred to third parties where necessary for the provision of our services — for example, to IT service providers or embedded service operators. In such cases, we conclude appropriate data processing agreements to protect your data.</p>
+      </section>
+
+      <section id="international">
+        <h2>International Data Transfers</h2>
+        <p>Where we transfer data to a third country (outside the EU/EEA), this is always done in compliance with applicable legal requirements.</p>
+        <p>For transfers to the United States, we rely primarily on the <strong>EU-U.S. Data Privacy Framework (DPF)</strong> (EU Commission adequacy decision of 10 July 2023), supplemented by <strong>Standard Contractual Clauses (SCCs)</strong>. This dual safeguard ensures your data remains adequately protected regardless of political or legal changes.</p>
+        <p>More information on the DPF: <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener">dataprivacyframework.gov</a></p>
+      </section>
+
+      <section id="speicherung">
+        <h2>Data Storage and Deletion</h2>
+        <p>We delete personal data once the purpose for processing has ceased or no legal basis remains. Statutory retention obligations are not affected. The following general retention periods apply under German law:</p>
+        <ul>
+          <li><strong>10 years</strong> – Books, annual accounts, inventories (§ 147 AO, § 257 HGB)</li>
+          <li><strong>8 years</strong> – Accounting vouchers, invoices (§ 147 AO)</li>
+          <li><strong>6 years</strong> – Other business documents (§ 147 AO, § 257 HGB)</li>
+          <li><strong>3 years</strong> – General claims (standard limitation period, §§ 195, 199 BGB)</li>
+        </ul>
+      </section>
+
+      <section id="rechte">
+        <h2>Your Rights</h2>
+        <p>As a data subject, you have the following rights under the GDPR (Art. 15–21):</p>
+        <ul class="rights-list">
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right of access</strong> – You may request confirmation of whether we process your personal data, and obtain a copy of it.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to rectification</strong> – You may request the correction of inaccurate or completion of incomplete data.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to erasure</strong> – You may request the immediate deletion of your data, unless retention obligations apply.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to restriction of processing</strong> – You may request that the processing of your data be restricted.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to data portability</strong> – You may receive your data in a structured, commonly used format, or have it transferred to another controller.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to object</strong> – You may object at any time to processing based on Art. 6(1)(e) or (f) GDPR.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to withdraw consent</strong> – You may withdraw any consent given at any time with effect for the future.</span>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Right to lodge a complaint</strong> – You have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual residence.</span>
+          </li>
+        </ul>
+        <p style="margin-top:1rem;">To exercise your rights, contact us at: <a href="mailto:contact@worldyouthinitiative.org">contact@worldyouthinitiative.org</a></p>
+      </section>
+
+      <section id="hosting">
+        <h2>Online Services & Web Hosting</h2>
+        <p>We process users' IP addresses to provide our online services. Access is logged in server log files (page URL, date/time, browser, operating system, referrer URL, IP address). Log files are deleted after a maximum of 30 days.</p>
+        <div class="provider-card">
+          <span class="tag">Hosting</span>
+          <strong>GitHub Pages (Microsoft Corporation)</strong>
+          <p>Our website is hosted via GitHub Pages. IP addresses and access data may be processed on Microsoft servers.<br>
+          Anbieter: GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA<br>
+          Datenschutz: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a><br>
+          International transfer basis: Data Privacy Framework (DPF), Standard Contractual Clauses<br>
+          <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (Legitimate interests)</p>
+        </div>
+      </section>
+
+      <section id="cookies">
+        <h2>Use of Cookies</h2>
+        <p>Our website uses technically necessary cookies required for its operation. We do not currently use any cookies that require consent.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (Legitimate interests) for technically necessary cookies.</p>
+      </section>
+
+      <section id="kontakt">
+        <h2>Contact and Application Forms</h2>
+        <p>When you reach out via our forms or email, we process your details in order to respond to your enquiry. This includes name, email address, and message content. Application forms may additionally include details about your academic or professional background, institution, and motivation.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(b) and Art. 6(1)(f) GDPR</p>
+
+        <div class="provider-card">
+          <span class="tag">Form Processing</span>
+          <strong>Formspree Inc.</strong>
+          <p>We use Formspree to process contact and application submissions. Data you enter (name, email, message) is transmitted to Formspree and forwarded to us.<br>
+          Anbieter: Formspree, Inc., 2261 Market Street #4990, San Francisco, CA 94114, USA<br>
+          Datenschutz: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a><br>
+          International transfer basis: Standard Contractual Clauses (SCCs)<br>
+          <strong>Legal basis:</strong> Art. 6(1)(b) and Art. 6(1)(f) GDPR</p>
+        </div>
+      </section>
+
+      <section id="analytics">
+        <h2>Web Analytics & Monitoring</h2>
+        <!-- ✏️ EDIT: Update when analytics tool is implemented -->
+        <p>We do not currently use any web analytics tool. Should we implement one in the future, we will update this Privacy Policy accordingly and inform you in advance.</p>
+        <div class="info-block">
+          <p>We are evaluating privacy-friendly, cookie-free analytics services (e.g. Plausible Analytics or Fathom Analytics) that do not store personal data and do not require a cookie consent banner.</p>
+        </div>
+      </section>
+
+      <section id="social">
+        <h2>Social Media Presence</h2>
+        <p>We maintain presences on social networks to communicate with users and share information. Please note that user data may be processed outside the EU in this context.</p>
+
+        <div class="provider-card">
+          <span class="tag">Social Media</span>
+          <strong>LinkedIn</strong>
+          <p>Anbieter: LinkedIn Ireland Unlimited Company, Wilton Plaza, Dublin 2, Irland<br>
+          Datenschutz: <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">linkedin.com/legal/privacy-policy</a><br>
+          International transfer basis: DPF, Standard Contractual Clauses<br>
+          <strong>Legal basis:</strong> Art. 6(1)(f) GDPR</p>
+        </div>
+
+        <div class="provider-card">
+          <span class="tag">Social Media</span>
+          <strong>Instagram</strong>
+          <p>Anbieter: Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland<br>
+          Datenschutz: <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener">privacycenter.instagram.com/policy</a><br>
+          International transfer basis: Data Privacy Framework (DPF)<br>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO</p>
+        </div>
+      </section>
+
+      <section id="aenderungen">
+        <h2>Changes and Updates</h2>
+        <p>We will update this Privacy Policy whenever changes to our data processing practices require it. We recommend reviewing it regularly. Where any changes require action on your part, we will notify you separately.</p>
+      </section>
+
+      <section id="begriffe">
+        <h2>Definitions</h2>
+        <ul>
+          <li><strong>Personal data</strong> – Any information relating to an identified or identifiable natural person.</li>
+          <li><strong>Processing</strong> – Any operation carried out on personal data, such as collection, storage, transmission, or deletion.</li>
+          <li><strong>Controller</strong> – The person or entity that determines the purposes and means of processing.</li>
+          <li><strong>Processor</strong> – A person or entity that processes personal data on behalf of the controller (e.g. Formspree, GitHub).</li>
+          <li><strong>Consent</strong> – A freely given, informed, and unambiguous expression of will by the data subject.</li>
+          <li><strong>Legitimate interests</strong> – A legal basis under Art. 6(1)(f) GDPR permitting processing without consent, provided the data subject's interests do not override.</li>
+        </ul>
+
+        <div class="seal-block">
+          <p>Generated with the <a href="https://datenschutz-generator.de/" target="_blank" rel="noopener noreferrer nofollow">Privacy Policy Generator by Dr. Thomas Schwenke</a> and adapted for the World Youth Initiative.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
+            <span class="footer-brand-name">World Youth Initiative</span>
+          </div>
+          <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
+          <div class="footer-socials">
+            <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+            <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Organization</div>
+          <ul>
+            <li><a href="../about/">About WYI</a></li>
+            <li><a href="#" class="coming-soon">How It Works</a></li>
+            <li><a href="#" class="coming-soon">Our Network</a></li>
+            <li><a href="#" class="coming-soon">Leadership</a></li>
+            <li><a href="#" class="coming-soon">Annual Report</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Research</div>
+          <ul>
+            <li><a href="../research/">Research Areas</a></li>
+            <li><a href="../policy/">Policy Briefs</a></li>
+            <li><a href="#" class="coming-soon">Working Papers</a></li>
+            <li><a href="#" class="coming-soon">Publications</a></li>
+            <li><a href="#" class="coming-soon">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Get Involved</div>
+          <ul>
+            <li><a href="../apply/">Join the Network</a></li>
+            <li><a href="../apply/">Become Ambassador</a></li>
+            <li><a href="../team/">Research Teams</a></li>
+            <li><a href="#" class="coming-soon">Submit Research</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../terms/">Terms of Use</a></li>
+          <li><a href="../cookies/">Cookie Policy</a></li>
+          <li><a href="../impressum/">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
