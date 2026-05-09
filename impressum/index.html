@@ -3,41 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legal Notice — World Youth Initiative</title>
-  <meta name="description" content="Mandatory information pursuant to § 5 of the German Telemedia Act (TMG) for the website of the World Youth Initiative." />
+  <title>Legal Notice – World Youth Initiative</title>
+  <meta name="description" content="Mandatory information pursuant to § 5 TMG for the website of the World Youth Initiative." />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ── Reset & Variables ─────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    /* ── Design tokens ─────────────────────────────────────── */
     :root {
-      --blue:    #0B2A4A;
-      --navy:    #0B2A4A;
-      --gray:    #F5F5F5;
-      --light:   #F5F5F5;
-      --accent:  #3B82F6;
-      --white:   #ffffff;
-      --text:    #1a1a2e;
-      --muted:   #6b7280;
-      --border:  #e5e7eb;
-      --serif:   'DM Serif Display', Georgia, serif;
-      --sans:    'DM Sans', system-ui, sans-serif;
-      --max:     1575px;
-      --nav-h:   72px;
-      --pad:     clamp(1.5rem, 5vw, 5rem);
+      --navy:   #0B2A4A;
+      --blue:   #3B82F6;
+      --gray:   #F5F5F5;
+      --white:  #FFFFFF;
+      --muted:  #6B7280;
+      --border: #E5E7EB;
+      --text:   #1F2937;
+      --serif:  'DM Serif Display', serif;
+      --sans:   'DM Sans', sans-serif;
+      --max:    760px;
     }
 
-    html { scroll-behavior: smooth; font-size: 20.25px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: var(--sans);
-      background: var(--white);
+      font-size: 1rem;
+      line-height: 1.75;
       color: var(--text);
-      line-height: 1.6;
+      background: var(--white);
       -webkit-font-smoothing: antialiased;
     }
 
@@ -98,160 +94,183 @@
     }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { opacity: 1; }
-    .mobile-close { display: none; }
-
     @media (max-width: 1100px) {
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
     }
 
-    /* ── Page wrapper ──────────────────────────────────────────────── */
-    main { padding-top: var(--nav-h); }
+    /* ── Dev Banner ────────────────────────────────────────────────── */
+    .dev-banner {
+      position: relative; z-index: 101; background: var(--navy);
+      padding: .6rem clamp(1.25rem, 5vw, 3rem);
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+      font-size: .72rem; font-weight: 500; letter-spacing: .06em;
+      color: rgba(255,255,255,.7); text-align: center;
+    }
+    .dev-banner strong { color: white; font-weight: 700; letter-spacing: .08em; }
+    .dev-banner-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #FBBF24;
+      display: inline-block; animation: blinkDot 1.8s ease-in-out infinite; flex-shrink: 0;
+    }
+    @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
 
-    /* ── Hero ──────────────────────────────────────────────────────── */
-    .legal-hero {
-      position: relative;
-      background: var(--blue);
-      color: var(--white);
-      overflow: hidden;
-      padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem);
+    /* ── Hero banner ────────────────────────────────────────── */
+    .page-hero {
+      background: var(--navy);
+      padding: clamp(3rem, 8vw, 6rem) 2rem clamp(2.5rem, 6vw, 4.5rem);
+      text-align: center;
     }
-    .legal-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
+    .page-hero-label {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: rgba(59,130,246,.8);
+      margin-bottom: 1rem;
     }
-    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .75rem; font-weight: 600; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;
-    }
-    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); }
-    .legal-hero h1 {
+    .page-hero h1 {
       font-family: var(--serif);
-      font-size: clamp(2.75rem, 6vw, 5rem);
-      line-height: 1.08; max-width: 16ch; margin-bottom: 1.75rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1rem;
     }
-    .legal-hero p {
-      font-size: clamp(1rem, 2vw, 1.175rem);
-      font-weight: 300; line-height: 1.75; max-width: 54ch; opacity: .8;
-    }
-    .hero-orb {
-      position: absolute; right: -6rem; top: 50%; transform: translateY(-50%);
-      width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%;
-      border: 1px solid rgba(59,130,246,.2); pointer-events: none;
-    }
-    .hero-orb::before {
-      content: ''; position: absolute; inset: 2rem; border-radius: 50%;
-      border: 1px solid rgba(59,130,246,.12);
+    .page-hero-meta {
+      font-size: .85rem; color: rgba(255,255,255,.45);
+      letter-spacing: .04em;
     }
 
-    /* ── Section utility ───────────────────────────────────────────── */
-    .section { padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem); }
-    .section-inner { max-width: var(--max); margin: 0 auto; }
-    .section-label {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .7rem; font-weight: 600; letter-spacing: .15em;
-      text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
-    }
-    .section-label::before { content: ''; display: block; width: 22px; height: 1px; background: var(--accent); }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 
-    /* ── Impressum Layout ──────────────────────────────────────────── */
-    .impressum-section { background: var(--white); }
-
-    .impressum-grid {
+    /* ── Layout ─────────────────────────────────────────────── */
+    .page-body {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: clamp(3rem, 6vw, 6rem);
+      grid-template-columns: 220px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(2rem, 5vw, 4rem) 2rem;
       align-items: start;
     }
 
-    .impressum-sidebar {
-      position: sticky;
-      top: calc(var(--nav-h) + 2rem);
+    /* ── Sidebar TOC ────────────────────────────────────────── */
+    .toc {
+      position: sticky; top: 80px;
+      padding-right: 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.25rem;
+    }
+    .toc ul { list-style: none; }
+    .toc ul li { margin-bottom: .1rem; }
+    .toc ul li a {
+      font-size: .8rem; color: var(--muted); text-decoration: none;
+      line-height: 1.5; display: block; padding: .25rem 0;
+      border-left: 2px solid transparent;
+      padding-left: .75rem;
+      transition: color .2s, border-color .2s;
+    }
+    .toc ul li a:hover,
+    .toc ul li a.active { color: var(--navy); border-color: var(--blue); }
+
+    /* ── Content ────────────────────────────────────────────── */
+    .content {
+      padding-left: clamp(1.5rem, 4vw, 3.5rem);
+      min-width: 0;
     }
 
-    .impressum-sidebar h2 {
+    .content section { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .content section:last-child { border-bottom: none; margin-bottom: 0; }
+
+    .content h2 {
       font-family: var(--serif);
-      font-size: clamp(1.75rem, 3vw, 2.25rem);
-      line-height: 1.15; color: var(--blue); margin-bottom: 1.25rem;
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    .content h3 {
+      font-size: .95rem; font-weight: 600;
+      color: var(--navy);
+      margin: 1.5rem 0 .5rem;
+    }
+    .content p {
+      font-size: .95rem; color: #374151;
+      line-height: 1.8; margin-bottom: 1rem;
+    }
+    .content p:last-child { margin-bottom: 0; }
+
+    .content ul, .content ol {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .content li {
+      font-size: .95rem; color: #374151;
+      line-height: 1.8; margin-bottom: .4rem;
+    }
+    .content li strong { color: var(--navy); font-weight: 600; }
+
+    .content a { color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+    .content a:hover { border-color: var(--blue); }
+
+    /* ── Info boxes ─────────────────────────────────────────── */
+    .info-block {
+      background: #EFF6FF;
+      border-left: 3px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .info-block p { margin: 0; font-size: .9rem; color: #1E40AF; }
+
+    /* Provider card */
+    .provider-card {
+      background: var(--gray);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .provider-card strong {
+      display: block; font-size: .875rem; color: var(--navy);
+      margin-bottom: .5rem;
+    }
+    .provider-card p { margin: 0; font-size: .875rem; line-height: 1.7; }
+    .provider-card .tag {
+      display: inline-block;
+      font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      background: var(--blue); color: var(--white);
+      padding: .15rem .5rem; border-radius: 100px; margin-bottom: .5rem;
     }
 
-    .impressum-sidebar p {
-      font-size: .875rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.5rem;
-    }
-
-    .sidebar-nav {
-      list-style: none; display: flex; flex-direction: column; gap: .1rem;
-      border-left: 1.5px solid var(--border); padding-left: 1.25rem;
-    }
-    .sidebar-nav a {
-      display: block; font-size: .8rem; font-weight: 500; color: var(--muted);
-      text-decoration: none; padding: .35rem 0; letter-spacing: .02em; transition: color .2s;
-    }
-    .sidebar-nav a:hover { color: var(--blue); }
-
-    /* ── Impressum Blocks ──────────────────────────────────────────── */
-    .impressum-blocks { display: flex; flex-direction: column; gap: 0; }
-
-    .impressum-block {
-      padding: 2.5rem 0;
+    /* Rights list */
+    .rights-list { list-style: none; padding: 0; }
+    .rights-list li {
+      padding: .85rem 0;
       border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1.5rem 1fr;
+      gap: .75rem;
+      align-items: start;
     }
-    .impressum-block:first-child { padding-top: 0; }
-    .impressum-block:last-child { border-bottom: none; }
+    .rights-list li:last-child { border-bottom: none; }
+    .rights-list .icon {
+      width: 1.5rem; height: 1.5rem; border-radius: 50%;
+      background: #EFF6FF; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: .15rem;
+    }
+    .rights-list .icon svg { width: 12px; height: 12px; stroke: var(--blue); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 
-    .impressum-block h3 {
-      font-family: var(--serif); font-size: 1.3rem;
-      color: var(--blue); margin-bottom: 1.25rem;
+    /* Seal */
+    .seal-block {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--gray);
+      border-radius: 8px;
+      text-align: center;
     }
-    .impressum-block p {
-      font-size: .9rem; line-height: 1.85; color: #374151; margin-bottom: .6rem;
-    }
-    .impressum-block p:last-child { margin-bottom: 0; }
-    .impressum-block a {
-      color: var(--accent); text-decoration: none;
-      border-bottom: 1px solid rgba(59,130,246,.3); transition: border-color .2s;
-    }
-    .impressum-block a:hover { border-color: var(--accent); }
-
-    .contact-row { display: flex; flex-direction: column; gap: .75rem; margin-top: .5rem; }
-    .contact-item { display: flex; align-items: center; gap: .875rem; }
-    .contact-icon {
-      width: 36px; height: 36px; background: rgba(59,130,246,.08); border-radius: 8px;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .contact-icon svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 1.75; }
-    .contact-item span { font-size: .9rem; color: #374151; }
-
-    .legal-note {
-      background: rgba(59,130,246,.05); border: 1px solid rgba(59,130,246,.15);
-      border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1.25rem;
-    }
-    .legal-note p { font-size: .8rem; color: var(--muted); line-height: 1.7; margin-bottom: 0; }
-
-    .registration-badge {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-      background: rgba(251,191,36,.1); color: #B45309;
-      border: 1px solid rgba(251,191,36,.35);
-      padding: .35rem .9rem; border-radius: 100px; margin-bottom: 1rem;
-    }
-    .registration-badge::before {
-      content: ''; display: block; width: 6px; height: 6px;
-      border-radius: 50%; background: #FBBF24;
-    }
-
-    @media (max-width: 900px) {
-      .impressum-grid { grid-template-columns: 1fr; }
-      .impressum-sidebar { position: static; }
-      .sidebar-nav { display: none; }
-    }
+    .seal-block p { font-size: .8rem; color: var(--muted); margin: 0; }
+    .seal-block a { color: var(--blue); }
 
     /* ── Footer ────────────────────────────────────────────────────── */
     footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
@@ -278,39 +297,16 @@
     @media (max-width: 1100px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } }
 
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-
-    /* ── Scroll animations ─────────────────────────────────────────── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: .12s; }
-    .reveal-delay-2 { transition-delay: .24s; }
-
-    /* ── Dev Banner ────────────────────────────────────────────────── */
-    .dev-banner {
-      position: relative; z-index: 101; background: var(--blue);
-      padding: .6rem clamp(1.25rem, 5vw, 3rem);
-      display: flex; align-items: center; justify-content: center; gap: .75rem;
-      font-size: .72rem; font-weight: 500; letter-spacing: .06em;
-      color: rgba(255,255,255,.7); text-align: center;
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .page-body { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding-left: 0; }
     }
-    .dev-banner strong { color: white; font-weight: 700; letter-spacing: .08em; }
-    .dev-banner-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: #FBBF24;
-      display: inline-block; animation: blinkDot 1.8s ease-in-out infinite; flex-shrink: 0;
-    }
-    @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
   </style>
 </head>
 <body>
-
-  <!-- ── Dev Banner ─────────────────────────────────────────────── -->
-  <div class="dev-banner">
-    <span class="dev-banner-dot"></span>
-    <span><strong>Site Under Development</strong> — World Youth Initiative launches soon</span>
-  </div>
-
-  <!-- ── Navbar ─────────────────────────────────────────────────── -->
+  <!-- Navbar -->
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
@@ -335,7 +331,6 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" role="dialog">
-    <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
     <a href="../about/" class="mobile-link">About</a>
     <a href="../research/" class="mobile-link">Research</a>
     <a href="../team/" class="mobile-link">Teams</a>
@@ -343,111 +338,64 @@
     <a href="../contact/" class="mobile-link">Contact</a>
   </div>
 
+  
+
   <main>
 
-    <!-- ── Hero ───────────────────────────────────────────────────── -->
-    <section class="legal-hero">
-      <div class="hero-orb"></div>
-      <div class="hero-inner">
-        <p class="hero-eyebrow">Legal</p>
-        <h1>Legal Notice</h1>
-        <p>Mandatory information pursuant to § 5 of the German Telemedia Act (TMG) for the website of the World Youth Initiative.</p>
-      </div>
-    </section>
+    <div class="page-hero">
+      <p class="page-hero-label">Legal</p>
+      <h1>Legal Notice</h1>
+      <p class="page-hero-meta">Mandatory information pursuant to § 5 TMG</p>
+    </div>
 
-    <!-- ── Legal Notice Content ───────────────────────────────────── -->
-    <section class="section impressum-section">
-      <div class="section-inner">
-        <div class="impressum-grid">
+    <div class="page-body">
 
-          <!-- Sidebar -->
-          <div class="impressum-sidebar reveal">
-            <p class="section-label">Contents</p>
-            <h2>Legal Information</h2>
-            <p>This legal notice applies to all pages of the domain worldyouthinitiative.org and its sub-pages.</p>
-            <ul class="sidebar-nav">
-              <li><a href="#angaben">Information pursuant to § 5 TMG</a></li>
-              <li><a href="#kontakt">Contact</a></li>
-              <li><a href="#verantwortlich">Editorially Responsible</a></li>
-              <li><a href="#registereintrag">Registry Entry</a></li>
-              <li><a href="#haftung-inhalte">Liability for Content</a></li>
-              <li><a href="#haftung-links">Liability for Links</a></li>
-              <li><a href="#urheberrecht">Copyright</a></li>
-            </ul>
+      <aside class="toc">
+        <p class="toc-title">Contents</p>
+        <ul>
+          <li><a href="#diensteanbieter">Service Provider</a></li>
+          <li><a href="#kontakt">Contact</a></li>
+          <li><a href="#haftung">Liability & IP</a></li>
+        </ul>
+      </aside>
+
+      <div class="content">
+
+        <section id="diensteanbieter">
+          <h2>Service Provider</h2>
+          <p>
+            Marc Nestele<br>
+            World Youth Initiative<br>
+            Am Moarhof 14<br>
+            85419 Mauern<br>
+            Germany
+          </p>
+        </section>
+
+        <section id="kontakt">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:contact@worldyouthinitiative.org">contact@worldyouthinitiative.org</a></p>
+          <p>Phone: <a href="tel:+491788321054">+49 178 8321054</a></p>
+          <p>Contact form: <a href="https://worldyouthinitiative.org/contact/" target="_blank">worldyouthinitiative.org/contact</a></p>
+        </section>
+
+        <section id="haftung">
+          <h2>Liability and Intellectual Property</h2>
+          <h3>Disclaimer</h3>
+          <p>The content of this website has been compiled with care and to the best of our knowledge. It is provided for information purposes only and does not constitute legally binding information, unless such information is legally required (e.g. the legal notice, privacy policy, terms and conditions, or mandatory consumer disclosures). We reserve the right to modify or delete content in whole or in part, provided contractual obligations remain unaffected. All offers are non-binding.</p>
+          <h3>Copyright and Trademark</h3>
+          <p>All content published on this website — including texts, photographs, graphics, trademarks and logos — is protected by the applicable intellectual property rights (copyright, trademark law). Any use, reproduction, or distribution requires the prior written consent of the respective rights holder.</p>
+          <div class="seal-block">
+            <p>Generated with the <a href="https://datenschutz-generator.de/" target="_blank" rel="noopener noreferrer nofollow">Privacy Policy Generator by Dr. Thomas Schwenke</a> and adapted for the World Youth Initiative.</p>
           </div>
+        </section>
 
-          <!-- Content Blocks -->
-          <div class="impressum-blocks">
-
-            <div class="impressum-block reveal" id="angaben">
-              <h3>Information pursuant to § 5 TMG</h3>
-              <p><strong>World Youth Initiative</strong></p>
-              <p>Represented by the founders:</p>
-              <p>Marc Patrick Nestele &amp; Amira-Lavinia Khira Benkredda</p>
-              <p style="margin-top:.75rem;">
-                Am Moarhof 14<br />
-                85419 Mauern<br />
-                Germany
-              </p>
-            </div>
-
-            <div class="impressum-block reveal reveal-delay-1" id="kontakt">
-              <h3>Contact</h3>
-              <div class="contact-row">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-                  </div>
-                  <span><a href="mailto:contact@worldyouthinitiative.org">contact@worldyouthinitiative.org</a></span>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  </div>
-                  <span><a href="tel:+491788321054">+49 178 8321054</a></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="impressum-block reveal" id="verantwortlich">
-              <h3>Editorially Responsible</h3>
-              <p>Marc Patrick Nestele &amp; Amira-Lavinia Khira Benkredda</p>
-              <p>Address as stated above.</p>
-            </div>
-
-            <div class="impressum-block reveal" id="registereintrag">
-              <h3>Registry Entry</h3>
-              <span class="registration-badge">Registration in Progress</span>
-              <p>The World Youth Initiative is currently being established and has not yet been registered as a non-profit association (e.V.). Registration with the association register is in preparation.</p>
-              <!-- ✏️ EDIT: Insert association registration number + registration court after e.V. registration -->
-            </div>
-
-            <div class="impressum-block reveal" id="haftung-inhalte">
-              <h3>Liability for Content</h3>
-              <p>As a service provider, we are responsible for our own content on these pages in accordance with general law pursuant to § 7 para. 1 TMG. However, pursuant to §§ 8 to 10 TMG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
-              <p>Obligations to remove or block the use of information under general law remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. Upon becoming aware of any such legal violations, we will remove the relevant content immediately.</p>
-            </div>
-
-            <div class="impressum-block reveal" id="haftung-links">
-              <h3>Liability for Links</h3>
-              <p>Our website contains links to external third-party websites over whose content we have no control. We therefore cannot accept any liability for such external content. The respective provider or operator of the linked pages is always responsible for the content of those pages.</p>
-              <p>The linked pages were checked for possible legal violations at the time of linking. No illegal content was apparent at the time of linking. Permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of an infringement. Upon becoming aware of any legal violations, we will remove such links immediately.</p>
-            </div>
-
-            <div class="impressum-block reveal" id="urheberrecht">
-              <h3>Copyright</h3>
-              <p>The content and works created by the site operators on these pages are subject to German copyright law. Reproduction, editing, distribution, and any form of exploitation beyond the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of these pages are permitted for private, non-commercial use only.</p>
-              <p>Where content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, we kindly ask that you notify us accordingly.</p>
-            </div>
-
-          </div><!-- /impressum-blocks -->
-        </div><!-- /impressum-grid -->
       </div>
-    </section>
+    </div>
 
   </main>
 
-  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -466,7 +414,7 @@
         <div class="footer-col">
           <div class="footer-col-title">Organization</div>
           <ul>
-            <li><a href="../about/">About WYC</a></li>
+            <li><a href="../about/">About WYI</a></li>
             <li><a href="#" class="coming-soon">How It Works</a></li>
             <li><a href="#" class="coming-soon">Our Network</a></li>
             <li><a href="#" class="coming-soon">Leadership</a></li>
@@ -476,8 +424,8 @@
         <div class="footer-col">
           <div class="footer-col-title">Research</div>
           <ul>
-            <li><a href="#">Research Areas</a></li>
-            <li><a href="#">Policy Briefs</a></li>
+            <li><a href="../research/">Research Areas</a></li>
+            <li><a href="../policy/">Policy Briefs</a></li>
             <li><a href="#" class="coming-soon">Working Papers</a></li>
             <li><a href="#" class="coming-soon">Publications</a></li>
             <li><a href="#" class="coming-soon">Events</a></li>
@@ -486,39 +434,42 @@
         <div class="footer-col">
           <div class="footer-col-title">Get Involved</div>
           <ul>
-            <li><a href="#">Join the Network</a></li>
-            <li><a href="#">Become Ambassador</a></li>
-            <li><a href="#">Research Teams</a></li>
+            <li><a href="../apply/">Join the Network</a></li>
+            <li><a href="../apply/">Become Ambassador</a></li>
+            <li><a href="../team/">Research Teams</a></li>
             <li><a href="#" class="coming-soon">Submit Research</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="../contact/">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
         <ul class="footer-bottom-links">
-          <li><a href="../privacy/">Privacy Policy</a></li>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
           <li><a href="../terms/">Terms of Use</a></li>
           <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Impressum</a></li>
+          <li><a href="../impressum/">Legal Notice</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-  <!-- ── JS ─────────────────────────────────────────────────────── -->
+  
+
   <script>
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
+    // Highlight active TOC link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const links    = document.querySelectorAll('.toc a');
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          links.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
 
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
