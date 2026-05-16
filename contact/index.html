@@ -37,6 +37,8 @@
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     /* ── Navbar ────────────────────────────────────────────────────── */
@@ -69,7 +71,7 @@
       transition: background 0.2s, transform 0.2s;
     }
     .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -485,6 +487,7 @@
       color: var(--accent);
       text-decoration: none;
       display: inline-flex;
+      word-break: break-all;
       align-items: center;
       gap: .35rem;
       transition: gap .2s;
@@ -575,8 +578,7 @@
     .m-hide { display: block; }
     .m-show { display: none; }
     span.m-hide { display: inline; }
-    span.m-show { display: none; }
-    @media (max-width: 1100px) {
+    span    @media (max-width: 1100px) {
       .m-hide { display: none; }
       .m-show { display: block; }
       span.m-hide { display: none; }
@@ -593,7 +595,6 @@
       .contact-hero p { font-size: 0.9rem; }
       /* Form section padding */
       .contact-section { padding: 3rem 1.25rem; }
-      .contact-form-wrap { padding: 1.75rem 1.25rem; }
       /* Sidebar already stacks at 1100px */
       .contact-sidebar { grid-template-columns: 1fr; }
       /* Footer */
@@ -611,6 +612,11 @@
     .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
     .footer-col a.coming-soon::after { content: ' ·'; }
 
+  
+    /* iOS zoom fix: inputs must be ≥ 16px to prevent auto-zoom */
+    @media (max-width: 768px) {
+      input, select, textarea { font-size: 16px !important; }
+    }
   </style>
 </head>
 
@@ -745,7 +751,7 @@
                 <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <h3>Email Us Directly</h3>
-              <p class="m-hide">For general inquiries, reach out via email. We aim to respond within two to three business days.</p>
+              <p class="m-hide">For general inquiries, reach out via email.</p>
               <p class="m-show">General inquiries via email.</p>
               <!-- ✏️ EDIT: Replace with real WYI email address -->
               <a href="mailto:contact@worldyouthinitiative.org" class="card-link">
@@ -827,36 +833,33 @@
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Organization</div>
-          <ul>
-            <li><a href="../about/">About WYI</a></li>
-            <li><a href="#" class="coming-soon">How It Works</a></li>
-            <li><a href="#" class="coming-soon">Our Network</a></li>
-            <li><a href="#" class="coming-soon">Leadership</a></li>
-            <li><a href="#" class="coming-soon">Annual Report</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Research</div>
-          <ul>
-            <li><a href="#">Research Areas</a></li>
-            <li><a href="#">Policy Briefs</a></li>
-            <li><a href="#" class="coming-soon">Working Papers</a></li>
-            <li><a href="#" class="coming-soon">Publications</a></li>
-            <li><a href="#" class="coming-soon">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul>
-            <li><a href="#">Join the Network</a></li>
-            <li><a href="#">Become Ambassador</a></li>
-            <li><a href="#">Research Teams</a></li>
-            <li><a href="#" class="coming-soon">Submit Research</a></li>
-            <li><a href="../contact/">Contact</a></li>
-          </ul>
-        </div>
+              <div class="footer-col">
+        <div class="footer-col-title">Organization</div>
+        <ul>
+          <li><a href="../about/">About WYI</a></li>
+          <li><a href="../team/">Our Network</a></li>
+          <li><a href="#" class="coming-soon">Leadership</a></li>
+          <li><a href="#" class="coming-soon">Annual Report</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Research</div>
+        <ul>
+          <li><a href="../research/">Research Areas</a></li>
+          <li><a href="../policy/">Policy Briefs</a></li>
+          <li><a href="#" class="coming-soon">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Get Involved</div>
+        <ul>
+          <li><a href="../application/">Join the Network</a></li>
+          <li><a href="../application/">Become Ambassador</a></li>
+          <li><a href="../team/">Research Teams</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </div>
+
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
@@ -871,17 +874,18 @@
   </footer>
 
   <!-- ── JS ─────────────────────────────────────────────────────── -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    const _mq = window.matchMedia('(max-width: 768px)');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
 
     // Navbar scroll effect
