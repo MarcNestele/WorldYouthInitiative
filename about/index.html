@@ -37,6 +37,8 @@
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     /* ── Navbar ────────────────────────────────────────────────────── */
@@ -59,7 +61,7 @@
     .nav-links a.nav-active { opacity: 1; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
     .nav-cta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: white; background: var(--navy); padding: 0.65rem 1.4rem; border-radius: 4px; transition: background 0.2s, transform 0.2s; }
     .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -84,6 +86,13 @@
     @media (max-width: 1100px) {
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
+    }
+    /* ── Mobile show/hide ──────────────────────────────────────────── */
+    .m-hide { display: block; }
+    .m-show { display: none; }
+    @media (max-width: 1100px) {
+      .m-hide { display: none !important; }
+      .m-show { display: block !important; }
     }
 
     /* ── Page wrapper ──────────────────────────────────────────────── */
@@ -251,6 +260,9 @@
       .mission-grid { grid-template-columns: 1fr; }
       .stat-row { grid-template-columns: 1fr 1fr; }
     }
+    @media (max-width: 400px) {
+      .stat-row { grid-template-columns: 1fr; }
+    }
 
     /* ── Values ────────────────────────────────────────────────────── */
     .values-grid {
@@ -293,8 +305,13 @@
     }
 
     @media (max-width: 768px) {
+      html { font-size: 16px; }
       .nav-logo-sub { display: none; }
       .values-grid { grid-template-columns: 1fr; }
+      .footer-col { display: none; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
     }
 
     /* ── Founders ──────────────────────────────────────────────────── */
@@ -331,7 +348,11 @@
       gap: clamp(1.5rem, 3vw, 2.5rem);
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 900px) {
+      .founder-body { padding: 1.25rem 1.25rem 1.5rem; }
+      .founder-message-text { font-size: .88rem; }
+    }
+    @media (max-width: 640px) {
       .founders-cards { grid-template-columns: 1fr; }
     }
 
@@ -360,39 +381,6 @@
       object-fit: cover;
       object-position: center top;
       display: block;
-    }
-    .founder-photo-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: .75rem;
-      color: #9ca3af;
-      background: var(--gray);
-    }
-    .founder-photo-placeholder svg { width: 48px; height: 48px; opacity: .4; }
-    .founder-photo-placeholder span {
-      font-size: .75rem;
-      font-weight: 500;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .photo-label {
-      position: absolute;
-      bottom: 1rem; left: 1rem;
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(6px);
-      border-radius: 6px;
-      padding: .3rem .75rem;
-      font-size: .7rem;
-      font-weight: 600;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      border: 1px solid var(--border);
     }
 
     .founder-body { padding: 1.75rem 2rem 2rem; }
@@ -834,7 +822,8 @@
       <div class="hero-inner">
         <p class="hero-eyebrow">About WYI</p>
         <h1>A New Generation<br>Shaping Global Policy</h1>
-        <p>The World Youth Initiative is a youth-led international think tank dedicated to elevating the voices of the next generation in global policy discourse — through rigorous research, cross-border collaboration, and principled advocacy.</p>
+        <p class="m-hide">The World Youth Initiative is a youth-led international think tank dedicated to elevating the voices of the next generation in global policy discourse — through rigorous research, cross-border collaboration, and principled advocacy.</p>
+            <p class="m-show">WYI is a youth-led think tank elevating young voices in global policy.</p>
       </div>
     </section>
 
@@ -847,8 +836,10 @@
             <h2>Research-Driven.<br>Youth-Powered.<br>Globally Minded.</h2>
           </div>
           <div class="mission-right reveal reveal-delay-1">
-            <p>The World Youth Initiative exists to bridge the gap between young people and global governance. We believe that the most pressing challenges of our time — climate change, democratic erosion, economic inequality, and technological disruption — require fresh thinking from those who will live longest with their consequences.</p>
-            <p>Through policy research, fellowships, and institutional partnerships, WYI trains and deploys a new generation of evidence-based policymakers across every region of the world.</p>
+            <p class="m-hide">The World Youth Initiative exists to bridge the gap between young people and global governance. We believe that the most pressing challenges of our time — climate change, democratic erosion, economic inequality, and technological disruption — require fresh thinking from those who will live longest with their consequences.</p>
+            <p class="m-show">WYI bridges young people and global governance — building the next generation of evidence-based policymakers.</p>
+            
+            
           </div>
         </div>
 
@@ -936,7 +927,7 @@
             <p class="section-label">Leadership</p>
             <h2>A Message From<br>Our Founders</h2>
           </div>
-          <p class="reveal reveal-delay-1">The World Youth Initiative was built on a simple conviction: that young people are not just the future of global policy — they are already its most urgent constituency. We created WYI to give that conviction institutional form.</p>
+          
         </div>
 
         <div class="founders-cards">
@@ -950,14 +941,17 @@
               <p class="founder-role">Co-Founder</p>
               <!-- ✏️ EDIT: Replace with your name -->
               <h3 class="founder-name">Marc Nestele</h3>
-              <!-- ✏️ EDIT: Replace with your personal message -->
-              <p class="founder-message-text">
-                <p>I'm Marc, 18, and grew up near Munich. I'm finishing school this year, where I also serve as school president, and heading to the United States for university. My interests sit at the intersection of mathematics, economics, and politics, and I've always been drawn to understanding how systems work and, more importantly, how they can be changed.</p>
-                <p>Amira and I didn't start the World Youth Initiative with a grand blueprint. We started because we kept noticing the same absence: young people consistently left out of conversations that will define their futures. Not for lack of ideas, but for lack of a platform that takes those ideas seriously. WYI is our answer to that.</p>
+                            <div class="founder-message-text">
+                <p class="m-hide">I'm Marc, 18, and grew up near Munich. I'm finishing school this year, where I also serve as school president, and heading to the United States for university. My interests sit at the intersection of mathematics, economics, and politics, and I've always been drawn to understanding how systems work and, more importantly, how they can be changed.</p>
+                <p class="m-show">I'm Marc, 18, from Munich — co-founder of WYI, making young people's voices heard in global decisions.</p>
+                <p class="m-hide">Amira and I didn't start the World Youth Initiative with a grand blueprint. We started because we kept noticing the same absence: young people consistently left out of conversations that will define their futures. Not for lack of ideas, but for lack of a platform that takes those ideas seriously. WYI is our answer to that.</p>
+                <p class="m-show">We built WYI because no serious platform existed for young people to contribute real policy thinking globally.</p>
+              </div>
             </div>
           </div>
 
           <!-- ✏️ EDIT: Replace with your partner's name and photo -->
+        
           <div class="founder-card reveal reveal-delay-1">
             <div class="founder-photo">
               <img src="/images/Amira.jpeg" alt="Amira Benkredda" />
@@ -966,15 +960,17 @@
               <p class="founder-role">Co-Founder</p>
               <!-- ✏️ EDIT: Replace with your partner's name -->
               <h3 class="founder-name">Amira Benkredda</h3>
-              <!-- ✏️ EDIT: Replace with your partner's message -->
-              <p class="founder-message-text">
-                <p>I’m Amira, 17, and live near Munich. Being trilingual and growing up with a multicultural background has always given me a global perspective on how the world connects.</p>
-<p>I’m deeply passionate about business, politics, and the Arab world, with a huge focus on feminism and social justice. For me, the World Youth Initiative is about making sure our generation doesn't just sit at the kids' table, but actually stands up for the issues that matter.</p>
-<p>When I’m not working on policy briefs, you’ll probably find me singing, horseback riding, or traveling. I love being social and taking action where it’s needed. We’re here to turn our ideas into real impact - and that’s what I’m most excited about.</p>
+                            <div class="founder-message-text">
+                <p class="m-hide">I'm Amira, 17, and live near Munich. Being trilingual and growing up with a multicultural background has always given me a global perspective on how the world connects.</p>
+                <p class="m-show">I'm Amira, 17, from near Munich — trilingual, passionate about politics, feminism, and the Arab world.</p>
+                <p class="m-hide">I'm deeply passionate about business, politics, and the Arab world, with a huge focus on feminism and social justice. For me, the World Youth Initiative is about making sure our generation doesn't just sit at the kids' table, but actually stands up for the issues that matter.</p>
+                <p class="m-show">I'm passionate about politics, feminism, and social justice — making sure youth voices shape global decisions.</p>
+                <p class="m-hide">When I'm not working on policy briefs, you'll probably find me singing, horseback riding, or traveling. I love being social and taking action where it's needed. We're here to turn our ideas into real impact — and that's what I'm most excited about.</p>
+                <p class="m-show">Outside WYI you'll find me singing, horseback riding, or traveling — always somewhere new.</p>
+              </div>
             </div>
           </div>
 
-        </div>
       </div>
     </section>
 
@@ -994,19 +990,22 @@
             <div class="timeline-dot"></div>
             <p class="timeline-year">2025</p>
             <h3>The Founding Idea</h3>
-            <p>WYI is conceived by its founders after observing a persistent gap in global governance: young people are the most affected by long-term policy decisions yet systematically excluded from making them. A framework for a youth-led think tank is drafted.</p>
+            <p class="m-hide">WYI is conceived by its founders after observing a persistent gap in global governance: young people are the most affected by long-term policy decisions yet systematically excluded from making them. A framework for a youth-led think tank is drafted.</p>
+            <p class="m-show">WYI is founded on a simple observation: youth are most affected by global decisions, yet rarely consulted.</p>
           </div>
           <div class="timeline-item reveal reveal-delay-1">
             <div class="timeline-dot"></div>
             <p class="timeline-year">Early 2026</p>
             <h3>Institutional Launch</h3>
-            <p>The World Youth Initiative is formally established. The first cohort of national research teams is recruited across six continents, with researchers selected for academic excellence and policy ambition.</p>
+            <p class="m-hide">The World Youth Initiative is formally established. The first cohort of national research teams is recruited across six continents, with researchers selected for academic excellence and policy ambition.</p>
+            <p class="m-show">WYI is formally established. The first national research teams are recruited across six continents.</p>
           </div>
           <div class="timeline-item reveal reveal-delay-2">
             <div class="timeline-dot"></div>
             <p class="timeline-year">2026 — Present</p>
             <h3>Research &amp; Growth</h3>
-            <p>WYI publishes its inaugural policy briefs, launches its fellowship programme, and begins building institutional partnerships with universities, NGOs, and intergovernmental bodies. The journey is only beginning.</p>
+            <p class="m-hide">WYI publishes its inaugural policy briefs, launches its fellowship programme, and begins building institutional partnerships with universities, NGOs, and intergovernmental bodies. The journey is only beginning.</p>
+            <p class="m-show">WYI publishes its first policy briefs and launches its fellowship programme.</p>
           </div>
         </div>
       </div>
@@ -1031,7 +1030,8 @@
         <div class="reach-grid">
           <div class="reach-left reveal">
             <h2>Represented Across Every Continent</h2>
-            <p>WYI's national research teams operate across the globe, bringing local expertise and regional context to questions of international significance. Our network spans every major geopolitical region.</p>
+            <p class="m-hide">WYI's national research teams operate across the globe, bringing local expertise and regional context to questions of international significance. Our network spans every major geopolitical region.</p>
+            <p class="m-show">WYI's research teams span every major region, bringing local expertise to international policy questions.</p>
             <div class="reach-regions">
               <div class="region-row">
                 <span class="region-name">Europe</span>
@@ -1096,36 +1096,33 @@
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Organization</div>
-          <ul>
-            <li><a href="../about/">About WYI</a></li>
-            <li><a href="#" class="coming-soon">How It Works</a></li>
-            <li><a href="#" class="coming-soon">Our Network</a></li>
-            <li><a href="#" class="coming-soon">Leadership</a></li>
-            <li><a href="#" class="coming-soon">Annual Report</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Research</div>
-          <ul>
-            <li><a href="#">Research Areas</a></li>
-            <li><a href="#">Policy Briefs</a></li>
-            <li><a href="#" class="coming-soon">Working Papers</a></li>
-            <li><a href="#" class="coming-soon">Publications</a></li>
-            <li><a href="#" class="coming-soon">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul>
-            <li><a href="#">Join the Network</a></li>
-            <li><a href="#">Become Ambassador</a></li>
-            <li><a href="#">Research Teams</a></li>
-            <li><a href="#" class="coming-soon">Submit Research</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
+              <div class="footer-col">
+        <div class="footer-col-title">Organization</div>
+        <ul>
+          <li><a href="../about/">About WYI</a></li>
+          <li><a href="../team/">Our Network</a></li>
+          <li><a href="#" class="coming-soon">Leadership</a></li>
+          <li><a href="#" class="coming-soon">Annual Report</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Research</div>
+        <ul>
+          <li><a href="../research/">Research Areas</a></li>
+          <li><a href="../policy/">Policy Briefs</a></li>
+          <li><a href="#" class="coming-soon">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Get Involved</div>
+        <ul>
+          <li><a href="../application/">Join the Network</a></li>
+          <li><a href="../application/">Become Ambassador</a></li>
+          <li><a href="../team/">Research Teams</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </div>
+
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
@@ -1133,7 +1130,7 @@
           <li><a href="../privacy/">Privacy Policy</a></li>
           <li><a href="../terms/">Terms of Use</a></li>
           <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
+          <li><a href="../impressum/">Impressum</a></li>
         </ul>
       </div>
     </div>
@@ -1143,14 +1140,15 @@
   <script>
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    const _mq = window.matchMedia('(max-width: 768px)');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
 
     // Navbar scroll effect
