@@ -10,13 +10,148 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 20.25px; }
-    body { font-family: 'DM Sans', sans-serif; background: #fff; color: #0B2A4A; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-    :root {
-      --navy: #0B2A4A; --blue: #3B82F6; --light: #F5F5F5;
-      --muted: #6B7A8D; --border: #E2E8F0; --white: #ffffff;
-      --max: 1575px; --pad: clamp(1.5rem, 5vw, 5rem); --nav-h: 72px;
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
+    :root {
+      --navy:   #0B2A4A;
+      --blue:   #0B2A4A;
+      --accent: #3B82F6;
+      --gray:   #F5F5F5;
+      --light:  #F5F5F5;
+      --white:  #FFFFFF;
+      --muted:  #6B7280;
+      --border: #E5E7EB;
+      --text:   #1a1a2e;
+      --serif:  'DM Serif Display', Georgia, serif;
+      --sans:   'DM Sans', system-ui, sans-serif;
+      --max:    1575px;
+      --nav-h:  72px;
+      --pad:    clamp(1.5rem, 5vw, 5rem);
+    }
+
+    /* ── Page Hero ─────────────────────────────────────────────────────── */
+    .page-hero {
+      position: relative;
+      background: var(--navy);
+      color: var(--white);
+      overflow: hidden;
+      padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem);
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
+      background-size: 60px 60px; pointer-events: none;
+    }
+    .hero-orb {
+      position: absolute; right: -6rem; top: 50%; transform: translateY(-50%);
+      width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%;
+      border: 1px solid rgba(59,130,246,.2); pointer-events: none;
+    }
+    .hero-orb::before {
+      content: ''; position: absolute; inset: 2rem; border-radius: 50%;
+      border: 1px solid rgba(59,130,246,.12);
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); }
+    .page-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--white); line-height: 1.1; margin-bottom: 1rem;
+    }
+    .page-hero-meta {
+      font-size: .85rem; color: rgba(255,255,255,.45);
+      letter-spacing: .04em; opacity: .8;
+    }
+
+
     .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .page-body {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(2rem, 5vw, 4rem) var(--pad);
+      align-items: start;
+    }
+
+    /* ── Sidebar TOC ────────────────────────────────────────── */
+    .toc {
+      position: sticky; top: 80px;
+      padding-right: 2rem;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-size: .6rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.25rem;
+    }
+    .toc ul { list-style: none; }
+    .toc ul li { margin-bottom: .1rem; }
+    .toc ul li a {
+      font-size: .72rem; color: var(--muted); text-decoration: none;
+      line-height: 1.5; display: block; padding: .25rem 0;
+      border-left: 2px solid transparent;
+      padding-left: .75rem;
+      transition: color .2s, border-color .2s;
+    }
+    .toc ul li a:hover,
+    .toc ul li a.active { color: var(--navy); border-color: var(--accent); }
+
+    /* ── Content ────────────────────────────────────────────── */
+    .content {
+      padding-left: clamp(1.5rem, 4vw, 3.5rem);
+      min-width: 0;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    .content section { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .content section:last-child { border-bottom: none; margin-bottom: 0; }
+    .content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem;
+    }
+    .content h3 {
+      font-size: .85rem; font-weight: 600;
+      color: var(--navy); margin: 1.5rem 0 .5rem;
+    }
+    .content p {
+      font-size: .85rem; color: #374151;
+      line-height: 1.85; margin-bottom: 1rem;
+    }
+    .content p:last-child { margin-bottom: 0; }
+    .content ul, .content ol { padding-left: 1.25rem; margin-bottom: 1rem; }
+    .content li {
+      font-size: .85rem; color: #374151;
+      line-height: 1.85; margin-bottom: .4rem;
+    }
+    .content li strong { color: var(--navy); font-weight: 600; }
+    .content a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+    .content a:hover { border-color: var(--accent); }
+
+    .seal-block {
+      margin-top: 2rem; padding: 1.5rem;
+      background: var(--gray); border-radius: 8px; text-align: center;
+    }
+    .seal-block p { font-size: .75rem; color: var(--muted); margin: 0; }
+    .seal-block a { color: var(--accent); }
+
+
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 999; padding: 1.25rem clamp(1rem, 3vw, 5rem); display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color 0.3s, box-shadow 0.3s; }
     nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
     .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
@@ -29,7 +164,7 @@
     .nav-links a:hover { opacity: 1; }
     .nav-cta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: white; background: var(--navy); padding: 0.65rem 1.4rem; border-radius: 4px; transition: background 0.2s; }
     .nav-cta:hover { background: #0d3360; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -39,14 +174,16 @@
     .mobile-menu a { font-size: 0.85rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right; }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { opacity: 1; }
-    .page-hero { padding: calc(var(--nav-h) + 4rem) var(--pad) 3.5rem; background: var(--navy); position: relative; overflow: hidden; }
-    .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px); background-size: 30px 30px; }
-    .page-hero-inner { position: relative; max-width: 860px; }
     .page-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(59,130,246,0.85); margin-bottom: 1.25rem; }
-    .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.1; letter-spacing: -0.025em; color: white; margin-bottom: 1rem; }
-    .page-hero p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
-    .page-hero-meta { margin-top: 2rem; font-size: 0.75rem; color: rgba(255,255,255,0.35); letter-spacing: 0.04em; }
-    .legal-body { padding: clamp(3rem, 6vw, 5rem) var(--pad); }
+    .legal-body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
     .legal-inner { max-width: 860px; }
     .legal-section { margin-bottom: 3rem; }
     .legal-section h2 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 1rem; letter-spacing: -0.015em; }
@@ -85,13 +222,19 @@
     .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
     .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
     @media (max-width: 1100px) { .footer-inner { grid-template-columns: 1fr 1fr; } .nav-links, .nav-cta { display: none; } .hamburger { display: flex; } }
-    @media (max-width: 768px) { html { font-size: 16px; } .nav-logo-sub { display: none; } .footer-col { display: none; } .footer-inner { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
+    @media (max-width: 768px) {
+      html { font-size: 16px; } html { scroll-behavior: smooth; font-size: 20.25px; } .nav-logo-sub { display: none; } .footer-col { display: none; } .footer-inner { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
     @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } }
   
     /* Coming-soon footer links */
     .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
     .footer-col a.coming-soon::after { content: ' ·'; }
 
+  
+    /* Long URLs / emails break on mobile */
+    @media (max-width: 768px) {
+      a { word-break: break-all; }
+    }
   </style>
 </head>
 <body>
@@ -101,7 +244,7 @@
     <div class="nav-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
     <div>
       <span class="nav-logo-text">World Youth Initiative</span>
-      <span class="nav-logo-sub">Global Policy Initiative</span>
+      <span class="nav-logo-sub">Act for Young Voices</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -122,120 +265,84 @@
   <a href="../contact/" class="mobile-link">Contact</a>
 </div>
 
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <p class="page-eyebrow">Legal</p>
-    <h1>Cookie Policy</h1>
-    <p>How the World Youth Initiative uses — or rather, doesn't use — cookies on this website.</p>
-    <p class="page-hero-meta">Last updated: March 2026</p>
-  </div>
-</section>
+<main>
 
-<section class="legal-body">
-  <div class="legal-inner">
-    <div class="divider"></div>
-
-    <div class="cookie-badge">
-      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      This website does not use tracking cookies or third-party analytics. No cookie consent banner is required.
-    </div>
-
-    <div class="legal-section">
-      <h2>1. What Are Cookies</h2>
-      <p>Cookies are small text files that websites store on your device to remember information about your visit. They are commonly used for session management, analytics, and advertising.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>2. Our Approach</h2>
-      <p>The World Youth Initiative website is a static informational website. We have made a deliberate choice to operate without tracking cookies, third-party analytics scripts, or advertising trackers of any kind.</p>
-      <p>This means we do not build profiles of our visitors, share browsing data with third parties, or require your consent to place cookies — because we simply don't use them for those purposes.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>3. Technical Cookies</h2>
-      <p>Some cookies are technically necessary for basic website functionality. If any such cookies are set by our hosting provider or content delivery network, they are strictly functional and do not track or identify you personally. These may include:</p>
-      <ul>
-        <li>Session security cookies set by the hosting infrastructure</li>
-        <li>Load balancing cookies that ensure stable delivery of the website</li>
-      </ul>
-      <p>These cookies are temporary, contain no personally identifiable information, and expire when you close your browser.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>4. Embedded Content and External Links</h2>
-      <p>This website does not embed third-party content such as social media widgets, YouTube videos, or advertising networks that could set their own cookies. External links to other websites are provided for reference only — those websites have their own cookie and privacy policies which we have no control over.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>5. Analytics</h2>
-      <p>If WYC chooses to introduce website analytics in the future, we are committed to using privacy-first, cookie-free tools (such as Plausible or Fathom Analytics) that do not set tracking cookies and are fully GDPR-compliant without requiring a consent banner. This policy will be updated accordingly if that happens.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>6. Your Control</h2>
-      <p>You can manage, block, or delete any cookies through your browser settings at any time. Since we do not rely on cookies for any core functionality, doing so will not affect your experience on this website.</p>
-      <p>For guidance on managing cookies in your browser, visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">allaboutcookies.org</a>.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>7. Changes to This Policy</h2>
-      <p>We may update this Cookie Policy if our practices change. The most current version will always be available on this page. If you have questions, reach out via our <a href="../contact/">contact page</a>.</p>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
-          <span class="footer-brand-name">World Youth Initiative</span>
-        </div>
-        <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
-        <div class="footer-socials">
-          <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
-          <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
-          <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-        </div>
+    <div class="page-hero">
+      <div class="hero-orb"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Legal</p>
+        <h1>Cookie Policy</h1>
+        <p class="page-hero-meta">Last updated: March 2026</p>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Organization</div>
+    </div>
+
+    <div class="page-body">
+
+      <aside class="toc">
+        <p class="toc-title">Contents</p>
         <ul>
-          <li><a href="../about/">About WYC</a></li>
-          <li><a href="../#how">How It Works</a></li>
-          <li><a href="../team/">Our Network</a></li>
+          <li><a href="#what-are-cookies">1. What Are Cookies</a></li>
+          <li><a href="#our-approach">2. Our Approach</a></li>
+          <li><a href="#technical-cookies">3. Technical Cookies</a></li>
+          <li><a href="#embedded-content">4. Embedded Content</a></li>
+          <li><a href="#analytics">5. Analytics</a></li>
+          <li><a href="#your-control">6. Your Control</a></li>
+          <li><a href="#changes">7. Changes</a></li>
         </ul>
+      </aside>
+
+      <div class="content">
+
+        <section id="what-are-cookies">
+          <h2>1. What Are Cookies</h2>
+          <p>Cookies are small text files that websites store on your device to remember information about your visit. They are widely used to make websites work more efficiently and to provide information to site owners.</p>
+        </section>
+
+        <section id="our-approach">
+          <h2>2. Our Approach</h2>
+          <p>The World Youth Initiative website is a static informational website. We have made a deliberate choice to operate without tracking cookies, behavioural analytics, or advertising technology.</p>
+          <p>This means we do not build profiles of our visitors, share browsing data with third parties, or require your consent to use basic website functionality. You can browse this website without accepting any cookie banner — because there isn't one.</p>
+        </section>
+
+        <section id="technical-cookies">
+          <h2>3. Technical Cookies</h2>
+          <p>Some cookies are technically necessary for basic website functionality. If any such cookies are set by our hosting provider (GitHub Pages) or by essential services, they are strictly required for the site to operate and are not used for tracking or personalisation purposes.</p>
+        </section>
+
+        <section id="embedded-content">
+          <h2>4. Embedded Content and External Links</h2>
+          <p>This website does not embed third-party content such as social media widgets, YouTube videos, or advertising networks that would set cookies on your device. External links to other websites are provided for your convenience; once you leave this site, the privacy and cookie practices of those sites apply.</p>
+        </section>
+
+        <section id="analytics">
+          <h2>5. Analytics</h2>
+          <p>We do not currently use any web analytics tool. If WYI chooses to introduce website analytics in the future, we are committed to using privacy-first, cookie-free analytics services (such as Plausible Analytics or Fathom Analytics) that do not require cookie consent and do not track individual users across the web.</p>
+          <p>Any such implementation will be disclosed in this Cookie Policy before it takes effect.</p>
+        </section>
+
+        <section id="your-control">
+          <h2>6. Your Control</h2>
+          <p>You can manage, block, or delete any cookies through your browser settings at any time. Since we do not rely on cookies for tracking or personalisation, doing so will not affect your experience on this website.</p>
+        </section>
+
+        <section id="changes">
+          <h2>7. Changes to This Policy</h2>
+          <p>We may update this Cookie Policy if our practices change. The most current version will always be available on this page. We encourage you to review it periodically.</p>
+          <p>For questions about this policy, please <a href="../contact/">contact us</a>.</p>
+        </section>
+
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Research</div>
-        <ul>
-          <li><a href="../research/">Research Areas</a></li>
-          <li><a href="../policy/">Policy Briefs</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Get Involved</div>
-        <ul>
-          <li><a href="../application/">Join the Network</a></li>
-          <li><a href="../contact/">Contact</a></li>
-        </ul>
-      </div>
+
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
-      <ul class="footer-bottom-links">
-        <li><a href="../privacy/">Privacy Policy</a></li>
-        <li><a href="../terms/">Terms of Use</a></li>
-        <li><a href="../cookies/">Cookie Policy</a></li>
-        <li><a href="../impressum/">Impressum</a></li>
-      </ul>
-    </div>
+
+  </main>
+
+  
   </div>
 </footer>
 
 <script>
+
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
   const hamburger = document.getElementById('hamburger');
@@ -247,6 +354,79 @@
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); });
   });
-</script>
+
+  // Highlight active TOC link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const links    = document.querySelectorAll('.toc a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));</script>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
+            <span class="footer-brand-name">World Youth Initiative</span>
+          </div>
+          <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
+          <div class="footer-socials">
+            <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+            <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          </div>
+        </div>
+              <div class="footer-col">
+        <div class="footer-col-title">Organization</div>
+        <ul>
+          <li><a href="../about/">About WYI</a></li>
+          <li><a href="../team/">Our Network</a></li>
+          <li><a href="#" class="coming-soon">Leadership</a></li>
+          <li><a href="#" class="coming-soon">Annual Report</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Research</div>
+        <ul>
+          <li><a href="../research/">Research Areas</a></li>
+          <li><a href="../policy/">Policy Briefs</a></li>
+          <li><a href="#" class="coming-soon">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Get Involved</div>
+        <ul>
+          <li><a href="../application/">Join the Network</a></li>
+          <li><a href="../application/">Become Ambassador</a></li>
+          <li><a href="../team/">Research Teams</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="../privacy/">Privacy Policy</a></li>
+          <li><a href="../terms/">Terms of Use</a></li>
+          <li><a href="../cookies/">Cookie Policy</a></li>
+          <li><a href="../impressum/">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  
+
 </body>
 </html>
