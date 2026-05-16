@@ -29,7 +29,10 @@
     }
 
     html { scroll-behavior: smooth; font-size: 20.25px; }
-    body { font-family: var(--sans); background: var(--white); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--sans); background: var(--white); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
 
     /* ── Navbar ── */
     nav {
@@ -51,7 +54,7 @@
     .nav-links a.nav-active { opacity: 1; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
     .nav-cta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: white; background: var(--navy); padding: 0.65rem 1.4rem; border-radius: 4px; transition: background 0.2s, transform 0.2s; }
     .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -313,8 +316,7 @@
     .m-hide { display: block; }
     .m-show { display: none; }
     span.m-hide { display: inline; }
-    span.m-show { display: none; }
-    @media (max-width: 1100px) {
+    span    @media (max-width: 1100px) {
       .m-hide { display: none; }
       .m-show { display: block; }
       span.m-hide { display: none; }
@@ -392,8 +394,8 @@
       <div class="hero-orb"></div>
       <div class="hero-inner">
         <p class="hero-eyebrow">Research</p>
-        <h1>How WYC<br>Produces Knowledge</h1>
-        <p class="m-hide">WYC publishes five distinct output formats — each designed for a specific audience, purpose, and depth of analysis. From rapid policy responses to in-depth comparative studies, our work is structured to have real-world impact.</p>
+        <h1>How WYI<br>Produces Knowledge</h1>
+        <p class="m-hide">WYI publishes five distinct output formats — each designed for a specific audience, purpose, and depth of analysis. From rapid policy responses to in-depth comparative studies, our work is structured to have real-world impact.</p>
         <p class="m-show">Five output formats. Built for real-world impact.</p>
       </div>
     </section>
@@ -404,7 +406,7 @@
         <div class="reveal">
           <p class="section-label">Our Approach</p>
           <h2>Rigorous research.<br>Youth perspective.<br>Actionable outputs.</h2>
-          <p class="m-hide">Every WYC publication is produced by trained young researchers under structured methodology. We apply academic standards while keeping policy relevance at the centre of everything we write.</p>
+          <p class="m-hide">Every WYI publication is produced by trained young researchers under structured methodology. We apply academic standards while keeping policy relevance at the centre of everything we write.</p>
           <p class="m-show">Academic standards. Policy relevance at the centre.</p>
         </div>
         <div class="intro-stats reveal reveal-delay-1">
@@ -435,8 +437,8 @@
         <div class="outputs-header reveal">
           <p class="section-label">Output Formats</p>
           <h2>Five formats for five<br>different purposes.</h2>
-          <p class="m-hide">Each output type is calibrated to a specific use case — whether that is advising a policymaker, informing public debate, or making complex data accessible to a general audience.</p>
-          <p class="m-show">Each format serves a distinct purpose and audience.</p>
+          
+          
         </div>
 
         <!-- 1 — Policy Brief -->
@@ -543,8 +545,8 @@
             </div>
           </div>
           <div class="output-card-right">
-            <p class="output-purpose m-hide"><strong>Purpose:</strong> Provide rapid, structured responses to current political developments — articulating WYC's normative stance and a focused policy ask on behalf of youth.</p>
-            <p class="output-purpose m-show"><strong>Purpose:</strong> Rapid responses articulating WYC's stance on current developments.</p>
+            <p class="output-purpose m-hide"><strong>Purpose:</strong> Provide rapid, structured responses to current political developments — articulating WYI's normative stance and a focused policy ask on behalf of youth.</p>
+            <p class="output-purpose m-show"><strong>Purpose:</strong> Rapid responses articulating WYI's stance on current developments.</p>
             <span class="output-structure-label">Document Structure</span>
             <div class="output-structure">
               <div class="structure-item"><div class="structure-num">1</div><span>Context</span></div>
@@ -591,7 +593,7 @@
         <div class="process-header reveal">
           <p class="section-label">Our Process</p>
           <h2>From question to publication.</h2>
-          <p class="m-hide">All WYC outputs follow a structured production cycle designed to maintain quality, independence, and methodological transparency.</p>
+          <p class="m-hide">All WYI outputs follow a structured production cycle designed to maintain quality, independence, and methodological transparency.</p>
           <p class="m-show">Structured cycle. Quality and independence guaranteed.</p>
         </div>
         <div class="process-steps">
@@ -601,7 +603,7 @@
             </div>
             <div class="process-step-num">01</div>
             <h4>Topic Selection</h4>
-            <p>Research teams identify issues with clear youth relevance and policy salience. Topics are reviewed and approved by WYC editorial leadership.</p>
+            <p>Research teams identify issues with clear youth relevance and policy salience. Topics are reviewed and approved by WYI editorial leadership.</p>
           </div>
           <div class="process-step reveal reveal-delay-2">
             <div class="process-step-icon">
@@ -625,7 +627,7 @@
             </div>
             <div class="process-step-num">04</div>
             <h4>Open Publication</h4>
-            <p>Approved outputs are published open-access on the WYC website and distributed to relevant policy networks and partner organisations.</p>
+            <p>Approved outputs are published open-access on the WYI website and distributed to relevant policy networks and partner organisations.</p>
           </div>
         </div>
       </div>
@@ -636,7 +638,7 @@
       <div class="cta-inner">
         <div class="cta-text reveal">
           <p class="section-label" style="color:rgba(255,255,255,.5);">Get Involved</p>
-          <h2>Contribute to<br>WYC research.</h2>
+          <h2>Contribute to<br>WYI research.</h2>
           <p class="m-hide">Whether you want to author a brief, join a national research team, or submit a topic proposal — we want to hear from you.</p>
           <p class="m-show">Author a brief, join a team, or propose a topic.</p>
         </div>
@@ -668,36 +670,33 @@
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Organization</div>
-          <ul>
-            <li><a href="../about/">About WYC</a></li>
-            <li><a href="#" class="coming-soon">How It Works</a></li>
-            <li><a href="../team/">Our Network</a></li>
-            <li><a href="#" class="coming-soon">Leadership</a></li>
-            <li><a href="#" class="coming-soon">Annual Report</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Research</div>
-          <ul>
-            <li><a href="../research/">Research Areas</a></li>
-            <li><a href="../policy/">Policy Briefs</a></li>
-            <li><a href="#" class="coming-soon">Working Papers</a></li>
-            <li><a href="#" class="coming-soon">Publications</a></li>
-            <li><a href="#" class="coming-soon">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul>
-            <li><a href="../application/">Join the Network</a></li>
-            <li><a href="../application/">Become Ambassador</a></li>
-            <li><a href="../team/">Research Teams</a></li>
-            <li><a href="#" class="coming-soon">Submit Research</a></li>
-            <li><a href="../contact/">Contact</a></li>
-          </ul>
-        </div>
+              <div class="footer-col">
+        <div class="footer-col-title">Organization</div>
+        <ul>
+          <li><a href="../about/">About WYI</a></li>
+          <li><a href="../team/">Our Network</a></li>
+          <li><a href="#" class="coming-soon">Leadership</a></li>
+          <li><a href="#" class="coming-soon">Annual Report</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Research</div>
+        <ul>
+          <li><a href="../research/">Research Areas</a></li>
+          <li><a href="../policy/">Policy Briefs</a></li>
+          <li><a href="#" class="coming-soon">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Get Involved</div>
+        <ul>
+          <li><a href="../application/">Join the Network</a></li>
+          <li><a href="../application/">Become Ambassador</a></li>
+          <li><a href="../team/">Research Teams</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </div>
+
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
@@ -713,11 +712,15 @@
 
   <script>
     const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    const _mq = window.matchMedia('(max-width: 768px)');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: _mq.matches ? 0.04 : 0.08, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
 
     const navbar = document.getElementById('navbar');
