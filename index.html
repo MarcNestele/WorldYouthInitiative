@@ -17,6 +17,8 @@
       background: #fff;
       color: #0B2A4A;
       overflow-x: hidden;
+      overflow-wrap: break-word;
+      word-break: break-word;
       -webkit-font-smoothing: antialiased;
     }
     :root {
@@ -75,7 +77,7 @@
       transition: background 0.2s, transform 0.2s;
     }
     .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -206,13 +208,6 @@
     .btn-secondary:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
     .btn-arrow { transition: transform 0.2s; }
     .btn-primary:hover .btn-arrow, .btn-secondary:hover .btn-arrow { transform: translateX(4px); }
-    .hero-stats {
-      position: absolute; bottom: 3.5rem; left: var(--pad); right: var(--pad);
-      display: flex; gap: 3rem; flex-wrap: wrap;
-    }
-    .hero-stat { display: flex; flex-direction: column; }
-    .hero-stat-num { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: #ffffff; line-height: 1; }
-    .hero-stat-label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 0.25rem; }
     .scroll-indicator {
       position: absolute; bottom: 2.5rem; right: var(--pad);
       display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -335,7 +330,6 @@
     }
     .btn-apply.researcher-btn { background: var(--navy); color: white; }
     .btn-apply.ambassador-btn { background: linear-gradient(135deg, #7C3AED, #3B82F6); color: white; }
-    .apply-soon-note { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; margin-left: 0.75rem; }
 
     /* POLICY BRIEFS */
     #briefs { background-color: var(--light); }
@@ -448,7 +442,6 @@
       .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
-      .hero-stats { gap: 2rem; }
       h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
       h1 br { display: block; }
       .briefs-grid { grid-template-columns: 1fr; }
@@ -503,17 +496,18 @@
       .steps-grid { grid-template-columns: 1fr; }
       .step { border-right: none; border-bottom: 1px solid var(--border); }
       .step:last-child { border-bottom: none; }
-      .hero-stats { display: none; }
       h1 { font-size: clamp(3rem, 17vw, 4.5rem); }
       h2 { font-size: clamp(1.9rem, 8vw, 2.8rem); }
       h3 { font-size: 1.1rem; }
+    }
+    @media (max-width: 400px) {
+      h1 { font-size: clamp(1.9rem, 10.5vw, 2.6rem); }
     }
 
     .m-hide { display: block; }
     .m-show { display: none;  }
     span.m-hide { display: inline; }
-    span.m-show { display: none;  }
-    @media (max-width: 1100px) {
+    span    @media (max-width: 1100px) {
       .m-hide { display: none;  }
       .m-show { display: block; }
       span.m-hide { display: none;  }
@@ -666,7 +660,7 @@
     <div class="divider reveal reveal-delay-1"></div>
     <h2 class="reveal reveal-delay-1">How It Works</h2>
     <p class="section-lead reveal reveal-delay-2 m-hide">From national ambassadors to published policy briefs — a structured process designed to produce rigorous, actionable research.</p>
-    <p class="section-lead reveal reveal-delay-2 m-show">Ambassadors. Teams. Research. Briefs.</p>
+    
     <div class="steps-grid">
       <div class="step reveal">
         <span class="step-num">01</span>
@@ -825,13 +819,14 @@
       <p class="section-eyebrow reveal">Publications</p>
       <div class="divider reveal reveal-delay-1"></div>
       <h2 class="reveal reveal-delay-1">Policy Briefs</h2>
-      <p class="section-lead reveal reveal-delay-2">Our research teams are currently working on the first series of policy briefs. Each brief offers evidence-based analysis and actionable recommendations on pressing global issues.</p>
+      <p class="section-lead reveal reveal-delay-2 m-hide">Our research teams are currently working on the first series of policy briefs. Each brief offers evidence-based analysis and actionable recommendations on pressing global issues.</p>
+            <p class="section-lead reveal reveal-delay-2 m-show">Our first policy briefs are in progress. Sign up to be notified on release.</p>
     </div>
     <div class="briefs-grid reveal reveal-delay-1">
       <div class="briefs-coming-overlay">
         <div class="briefs-overlay-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
         <div class="briefs-overlay-title">Coming Soon</div>
-        <p class="briefs-overlay-sub">Our first policy briefs are in preparation. Check back here once our research teams are up and running.</p>
+        
       </div>
       <div class="brief-card">
         <span class="brief-card-tag">Governance</span>
@@ -911,7 +906,7 @@
         <p class="section-eyebrow reveal">An International Community</p>
         <div class="divider reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-1">Connecting<br/>young minds<br/>worldwide.</h2>
-        <p class="section-lead reveal reveal-delay-2 m-hide">The World Youth Initiative brings together motivated young people from across continents to collaborate on policy research and exchange perspectives.</p>
+        
         <p class="section-lead reveal reveal-delay-2 m-show">Young people from every continent. One shared mission.</p>
         <div class="region-list reveal reveal-delay-2">
           <span class="region-pill">Africa</span>
@@ -983,11 +978,11 @@
           <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
         </div>
       </div>
-      <div class="footer-col">
+            <div class="footer-col">
         <div class="footer-col-title">Organization</div>
         <ul>
           <li><a href="about/">About WYI</a></li>
-          <li><a href="#network">Our Network</a></li>
+          <li><a href="team/">Our Network</a></li>
           <li><a href="#" class="coming-soon">Leadership</a></li>
           <li><a href="#" class="coming-soon">Annual Report</a></li>
         </ul>
@@ -1009,21 +1004,23 @@
           <li><a href="contact/">Contact</a></li>
         </ul>
       </div>
+
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
       <ul class="footer-bottom-links">
-        <li><a href="privacy/">Privacy Policy</a></li>
-        <li><a href="terms/">Terms of Use</a></li>
-        <li><a href="cookies/">Cookie Policy</a></li>
-        <li><a href="impressum/">Impressum</a></li>
-      </ul>
+          <li><a href="privacy/">Privacy Policy</a></li>
+          <li><a href="terms/">Terms of Use</a></li>
+          <li><a href="cookies/">Cookie Policy</a></li>
+          <li><a href="impressum/">Impressum</a></li>
+        </ul>
     </div>
   </div>
 </footer>
 
 <script>
   const reveals = document.querySelectorAll('.reveal');
+  const _mq = window.matchMedia('(max-width: 768px)');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1031,7 +1028,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
   reveals.forEach(el => observer.observe(el));
 
   const navbar = document.getElementById('navbar');
