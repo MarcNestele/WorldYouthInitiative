@@ -38,6 +38,8 @@
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     /* ── Navbar ────────────────────────────────────────────────────── */
@@ -70,7 +72,7 @@
       transition: background 0.2s, transform 0.2s;
     }
     .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -309,14 +311,6 @@
     .role-card.researcher .role-perks li .check svg { stroke: var(--accent); }
     .role-card.ambassador .role-perks li .check svg { stroke: var(--purple); }
 
-    .role-commitment {
-      margin-top: 1.75rem; padding: 1rem 1.25rem;
-      background: var(--light); border-radius: 8px;
-      font-size: .82rem; color: var(--muted); line-height: 1.55;
-      display: flex; align-items: flex-start; gap: .6rem;
-    }
-    .role-commitment svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: .1rem; fill: none; stroke: var(--muted); stroke-width: 1.8; }
-
     @media (max-width: 900px) {
       .roles-grid { grid-template-columns: 1fr; }
     }
@@ -332,6 +326,7 @@
     .compare-header p { font-size: .95rem; line-height: 1.75; color: var(--muted); }
 
     .compare-table {
+      min-width: 520px;
       width: 100%; border-collapse: collapse;
       border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden;
     }
@@ -525,8 +520,7 @@
     .m-hide { display: block; }
     .m-show { display: none; }
     span.m-hide { display: inline; }
-    span.m-show { display: none; }
-    @media (max-width: 1100px) {
+    span    @media (max-width: 1100px) {
       .m-hide { display: none; }
       .m-show { display: block; }
       span.m-hide { display: none; }
@@ -544,13 +538,11 @@
       /* Roles grid already 1 col at 900px — tighten padding */
       .role-card { padding: 1.5rem 1.25rem; }
       /* Application form layout */
-      .apply-layout { grid-template-columns: 1fr; }
       .apply-info { display: none; }
       /* Role cards — show body on mobile but condensed */
       .role-card-body { display: block; padding: 1rem 1.25rem 1.5rem; }
       .role-card { padding: 0; }
       .role-card-top { padding: 1.5rem 1.25rem 1rem; border-bottom: 1px solid var(--border); }
-      .role-commitment { display: none; }
       /* Hide "What You Gain" on mobile */
       .role-perks-section { display: block; margin-top: 1.5rem; }
       .role-perks li:nth-child(n+4) { display: none; }
@@ -574,6 +566,11 @@
     .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
     .footer-col a.coming-soon::after { content: ' ·'; }
 
+  
+    /* iOS zoom fix: inputs must be ≥ 16px to prevent auto-zoom */
+    @media (max-width: 768px) {
+      input, select, textarea { font-size: 16px !important; }
+    }
   </style>
 </head>
 
@@ -636,7 +633,8 @@
         <div class="roles-intro reveal">
           <p class="section-label">Open Roles</p>
           <h2>Two ways to<br>contribute to WYI.</h2>
-          <p>Whether you want to lead a national chapter or contribute analytical work to an international research team, we have a role for you. Both positions are voluntary and open to applicants worldwide.</p>
+          <p class="m-hide">Whether you want to lead a national chapter or contribute analytical work to an international research team, we have a role for you. Both positions are voluntary.</p>
+            <p class="m-show">Whether you want to lead a national chapter or join a research team — there is a role for you.</p>
         </div>
 
         <div class="roles-grid">
@@ -650,7 +648,7 @@
               <div class="role-type">Research Role</div>
               <h3>Researcher</h3>
               <p class="role-card-desc m-hide">Researchers are the analytical core of WYI. You conduct policy research within a national team, contribute to publications, and engage with an international network of peers.</p>
-              <p class="role-card-desc m-show">Researchers are the analytical core of WYI. You conduct policy research, contribute to publications, and engage with an international network of peers.</p>
+              <p class="role-card-desc m-show">Researchers conduct policy research, contribute to publications, and engage with the WYI community.</p>
             </div>
             <div class="role-card-body">
               <div class="role-responsibilities">
@@ -696,7 +694,7 @@
               <div class="role-type">Leadership Role</div>
               <h3>National Ambassador <span style="font-family:'DM Serif Display',serif; font-style:normal; font-size:1.55rem; color:var(--blue);">Ψ</span></h3>
               <p class="role-card-desc m-hide">Ambassadors are WYI's national representatives. You build and lead your country's research team, coordinate research activities, and serve as the primary liaison to the global WYI leadership.</p>
-              <p class="role-card-desc m-show">Ambassadors are WYI's national representatives. You build and lead your country's research team and liaise with the global WYI leadership.</p>
+              <p class="role-card-desc m-show">Ambassadors lead their country's WYI chapter, coordinate research, and represent WYI nationally.</p>
             </div>
             <div class="role-card-body">
               <div class="role-responsibilities">
@@ -806,7 +804,8 @@
           <div class="apply-sidebar reveal">
             <p class="section-label">Submit Your Application</p>
             <h2 class="apply-sidebar-title">Ready to join<br>WYI?</h2>
-            <p>Fill out the application form and tell us about yourself, your background, and why you want to be part of the World Youth Initiative. We review all applications on a rolling basis.</p>
+            <p class="m-hide">Fill out the application form and tell us about yourself, your background, and why you want to be part of the World Youth Initiative. We review all applications on a rolling basis.</p>
+            <p class="m-show">Tell us about yourself and why you want to join WYI. We review applications on a rolling basis.</p>
 
             <ul class="apply-info-list">
               <li class="apply-info-item">
@@ -978,28 +977,33 @@
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Organization</div>
-          <ul>
-            <li><a href="../about/">About WYI</a></li>
-            <li><a href="../research/">How It Works</a></li>
-            <li><a href="../team/">Our Network</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Research</div>
-          <ul>
-            <li><a href="../research/">Research Areas</a></li>
-            <li><a href="../policy/">Policy Briefs</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul>
-            <li><a href="../application/">Join the Network</a></li>
-            <li><a href="../contact/">Contact</a></li>
-          </ul>
-        </div>
+              <div class="footer-col">
+        <div class="footer-col-title">Organization</div>
+        <ul>
+          <li><a href="../about/">About WYI</a></li>
+          <li><a href="../team/">Our Network</a></li>
+          <li><a href="#" class="coming-soon">Leadership</a></li>
+          <li><a href="#" class="coming-soon">Annual Report</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Research</div>
+        <ul>
+          <li><a href="../research/">Research Areas</a></li>
+          <li><a href="../policy/">Policy Briefs</a></li>
+          <li><a href="#" class="coming-soon">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Get Involved</div>
+        <ul>
+          <li><a href="../application/">Join the Network</a></li>
+          <li><a href="../application/">Become Ambassador</a></li>
+          <li><a href="../team/">Research Teams</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </div>
+
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
@@ -1007,7 +1011,7 @@
           <li><a href="../privacy/">Privacy Policy</a></li>
           <li><a href="../terms/">Terms of Use</a></li>
           <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
+          <li><a href="../impressum/">Impressum</a></li>
         </ul>
       </div>
     </div>
@@ -1017,14 +1021,15 @@
   <script>
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    const _mq = window.matchMedia('(max-width: 768px)');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
 
     // Navbar scroll effect
