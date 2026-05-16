@@ -13,28 +13,33 @@
     /* ── Design tokens ─────────────────────────────────────── */
     :root {
       --navy:   #0B2A4A;
-      --blue:   #3B82F6;
+      --blue:   #0B2A4A;
+      --accent: #3B82F6;
       --gray:   #F5F5F5;
+      --light:  #F5F5F5;
       --white:  #FFFFFF;
       --muted:  #6B7280;
       --border: #E5E7EB;
-      --text:   #1F2937;
-      --serif:  'DM Serif Display', serif;
-      --sans:   'DM Sans', sans-serif;
-      --max:    760px;
+      --text:   #1a1a2e;
+      --serif:  'DM Serif Display', Georgia, serif;
+      --sans:   'DM Sans', system-ui, sans-serif;
+      --max:    1575px;
+      --nav-h:  72px;
+      --pad:    clamp(1.5rem, 5vw, 5rem);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 20.25px; }
 
     body {
       font-family: var(--sans);
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--text);
       background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     /* ── Navbar ────────────────────────────────────────────────────── */
@@ -68,7 +73,7 @@
       transition: background 0.2s, transform 0.2s;
     }
     .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -114,163 +119,127 @@
     }
     @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
 
-    /* ── Hero banner ────────────────────────────────────────── */
+    /* ── Page Hero ─────────────────────────────────────────────────────── */
     .page-hero {
+      position: relative;
       background: var(--navy);
-      padding: clamp(3rem, 8vw, 6rem) 2rem clamp(2.5rem, 6vw, 4.5rem);
-      text-align: center;
+      color: var(--white);
+      overflow: hidden;
+      padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem);
     }
-    .page-hero-label {
-      display: inline-block;
-      font-size: 0.7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
-      color: rgba(59,130,246,.8);
-      margin-bottom: 1rem;
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
+      background-size: 60px 60px; pointer-events: none;
     }
+    .hero-orb {
+      position: absolute; right: -6rem; top: 50%; transform: translateY(-50%);
+      width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%;
+      border: 1px solid rgba(59,130,246,.2); pointer-events: none;
+    }
+    .hero-orb::before {
+      content: ''; position: absolute; inset: 2rem; border-radius: 50%;
+      border: 1px solid rgba(59,130,246,.12);
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); }
     .page-hero h1 {
       font-family: var(--serif);
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 1rem;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--white); line-height: 1.1; margin-bottom: 1rem;
     }
     .page-hero-meta {
       font-size: .85rem; color: rgba(255,255,255,.45);
-      letter-spacing: .04em;
+      letter-spacing: .04em; opacity: .8;
     }
+
+
+
+    
 
     .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 
     /* ── Layout ─────────────────────────────────────────────── */
     .page-body {
       display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 200px 1fr;
       gap: 0;
       max-width: 1100px;
       margin: 0 auto;
-      padding: clamp(2rem, 5vw, 4rem) 2rem;
+      padding: clamp(2rem, 5vw, 4rem) var(--pad);
       align-items: start;
     }
 
     /* ── Sidebar TOC ────────────────────────────────────────── */
     .toc {
       position: sticky; top: 80px;
-      padding-right: 2.5rem;
+      padding-right: 2rem;
       border-right: 1px solid var(--border);
     }
     .toc-title {
-      font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      font-size: .6rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
       color: var(--muted); margin-bottom: 1.25rem;
     }
     .toc ul { list-style: none; }
     .toc ul li { margin-bottom: .1rem; }
     .toc ul li a {
-      font-size: .8rem; color: var(--muted); text-decoration: none;
+      font-size: .72rem; color: var(--muted); text-decoration: none;
       line-height: 1.5; display: block; padding: .25rem 0;
       border-left: 2px solid transparent;
       padding-left: .75rem;
       transition: color .2s, border-color .2s;
     }
     .toc ul li a:hover,
-    .toc ul li a.active { color: var(--navy); border-color: var(--blue); }
+    .toc ul li a.active { color: var(--navy); border-color: var(--accent); }
 
     /* ── Content ────────────────────────────────────────────── */
     .content {
       padding-left: clamp(1.5rem, 4vw, 3.5rem);
       min-width: 0;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
-
     .content section { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
     .content section:last-child { border-bottom: none; margin-bottom: 0; }
-
     .content h2 {
       font-family: var(--serif);
-      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem;
     }
     .content h3 {
-      font-size: .95rem; font-weight: 600;
-      color: var(--navy);
-      margin: 1.5rem 0 .5rem;
+      font-size: .85rem; font-weight: 600;
+      color: var(--navy); margin: 1.5rem 0 .5rem;
     }
     .content p {
-      font-size: .95rem; color: #374151;
-      line-height: 1.8; margin-bottom: 1rem;
+      font-size: .85rem; color: #374151;
+      line-height: 1.85; margin-bottom: 1rem;
     }
     .content p:last-child { margin-bottom: 0; }
-
-    .content ul, .content ol {
-      padding-left: 1.25rem;
-      margin-bottom: 1rem;
-    }
+    .content ul, .content ol { padding-left: 1.25rem; margin-bottom: 1rem; }
     .content li {
-      font-size: .95rem; color: #374151;
-      line-height: 1.8; margin-bottom: .4rem;
+      font-size: .85rem; color: #374151;
+      line-height: 1.85; margin-bottom: .4rem;
     }
     .content li strong { color: var(--navy); font-weight: 600; }
+    .content a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+    .content a:hover { border-color: var(--accent); }
 
-    .content a { color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
-    .content a:hover { border-color: var(--blue); }
-
-    /* ── Info boxes ─────────────────────────────────────────── */
-    .info-block {
-      background: #EFF6FF;
-      border-left: 3px solid var(--blue);
-      border-radius: 0 6px 6px 0;
-      padding: 1rem 1.25rem;
-      margin: 1.25rem 0;
-    }
-    .info-block p { margin: 0; font-size: .9rem; color: #1E40AF; }
-
-    /* Provider card */
-    .provider-card {
-      background: var(--gray);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.1rem 1.25rem;
-      margin: 1rem 0;
-    }
-    .provider-card strong {
-      display: block; font-size: .875rem; color: var(--navy);
-      margin-bottom: .5rem;
-    }
-    .provider-card p { margin: 0; font-size: .875rem; line-height: 1.7; }
-    .provider-card .tag {
-      display: inline-block;
-      font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-      background: var(--blue); color: var(--white);
-      padding: .15rem .5rem; border-radius: 100px; margin-bottom: .5rem;
-    }
-
-    /* Rights list */
-    .rights-list { list-style: none; padding: 0; }
-    .rights-list li {
-      padding: .85rem 0;
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1.5rem 1fr;
-      gap: .75rem;
-      align-items: start;
-    }
-    .rights-list li:last-child { border-bottom: none; }
-    .rights-list .icon {
-      width: 1.5rem; height: 1.5rem; border-radius: 50%;
-      background: #EFF6FF; display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; margin-top: .15rem;
-    }
-    .rights-list .icon svg { width: 12px; height: 12px; stroke: var(--blue); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-
-    /* Seal */
     .seal-block {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      background: var(--gray);
-      border-radius: 8px;
-      text-align: center;
+      margin-top: 2rem; padding: 1.5rem;
+      background: var(--gray); border-radius: 8px; text-align: center;
     }
-    .seal-block p { font-size: .8rem; color: var(--muted); margin: 0; }
-    .seal-block a { color: var(--blue); }
+    .seal-block p { font-size: .75rem; color: var(--muted); margin: 0; }
+    .seal-block a { color: var(--accent); }
+
+
+
+    
 
     /* ── Footer ────────────────────────────────────────────────────── */
     footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
@@ -299,9 +268,31 @@
 
     /* ── Responsive ─────────────────────────────────────────── */
     @media (max-width: 768px) {
-      .page-body { grid-template-columns: 1fr; }
+      html { font-size: 16px; }
+      html { scroll-behavior: smooth; font-size: 20.25px; }
+      .page-body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
       .toc { display: none; }
       .content { padding-left: 0; }
+    }
+  
+    @media (max-width: 768px) {
+      .footer-col { display: none; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
+    }
+  
+    /* Long URLs / emails break on mobile */
+    @media (max-width: 768px) {
+      a { word-break: break-all; }
     }
   </style>
 </head>
@@ -343,9 +334,12 @@
   <main>
 
     <div class="page-hero">
-      <p class="page-hero-label">Legal</p>
-      <h1>Legal Notice</h1>
-      <p class="page-hero-meta">Mandatory information pursuant to § 5 TMG</p>
+      <div class="hero-orb"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Legal</p>
+        <h1>Legal Notice</h1>
+        <p class="page-hero-meta">Mandatory information pursuant to § 5 TMG</p>
+      </div>
     </div>
 
     <div class="page-body">
@@ -411,44 +405,41 @@
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Organization</div>
-          <ul>
-            <li><a href="../about/">About WYI</a></li>
-            <li><a href="#" class="coming-soon">How It Works</a></li>
-            <li><a href="#" class="coming-soon">Our Network</a></li>
-            <li><a href="#" class="coming-soon">Leadership</a></li>
-            <li><a href="#" class="coming-soon">Annual Report</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Research</div>
-          <ul>
-            <li><a href="../research/">Research Areas</a></li>
-            <li><a href="../policy/">Policy Briefs</a></li>
-            <li><a href="#" class="coming-soon">Working Papers</a></li>
-            <li><a href="#" class="coming-soon">Publications</a></li>
-            <li><a href="#" class="coming-soon">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul>
-            <li><a href="../apply/">Join the Network</a></li>
-            <li><a href="../apply/">Become Ambassador</a></li>
-            <li><a href="../team/">Research Teams</a></li>
-            <li><a href="#" class="coming-soon">Submit Research</a></li>
-            <li><a href="../contact/">Contact</a></li>
-          </ul>
-        </div>
+              <div class="footer-col">
+        <div class="footer-col-title">Organization</div>
+        <ul>
+          <li><a href="../about/">About WYI</a></li>
+          <li><a href="../team/">Our Network</a></li>
+          <li><a href="#" class="coming-soon">Leadership</a></li>
+          <li><a href="#" class="coming-soon">Annual Report</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Research</div>
+        <ul>
+          <li><a href="../research/">Research Areas</a></li>
+          <li><a href="../policy/">Policy Briefs</a></li>
+          <li><a href="#" class="coming-soon">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Get Involved</div>
+        <ul>
+          <li><a href="../application/">Join the Network</a></li>
+          <li><a href="../application/">Become Ambassador</a></li>
+          <li><a href="../team/">Research Teams</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </div>
+
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
         <ul class="footer-bottom-links">
-          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../privacy/">Privacy Policy</a></li>
           <li><a href="../terms/">Terms of Use</a></li>
           <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
+          <li><a href="../impressum/">Impressum</a></li>
         </ul>
       </div>
     </div>
