@@ -51,7 +51,7 @@
     }
     nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
     .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
-    .nav-logo-mark { width: 34px; height: 34px; background: var(--navy); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .nav-logo-mark { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; }
     .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
     .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
     .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
@@ -633,7 +633,7 @@
     footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
     .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
     .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
     .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
     .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
@@ -784,7 +784,7 @@
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg>
+        <img src="../images/logo(1).png" alt="WYI Logo" style="width:34px;height:34px;object-fit:contain;">
       </div>
       <div>
         <span class="nav-logo-text">World Youth Initiative</span>
@@ -932,14 +932,12 @@
 
         <div class="founders-cards">
 
-          <!-- ✏️ EDIT: Replace with your name and photo -->
           <div class="founder-card reveal">
             <div class="founder-photo">
               <img src="/images/Marc.jpeg" alt="Marc Nestele" />
             </div>
             <div class="founder-body">
               <p class="founder-role">Co-Founder</p>
-              <!-- ✏️ EDIT: Replace with your name -->
               <h3 class="founder-name">Marc Nestele</h3>
                             <div class="founder-message-text">
                 <p class="m-hide">I'm Marc, 18, and grew up near Munich. I'm finishing school this year, where I also serve as school president, and heading to the United States for university. My interests sit at the intersection of mathematics, economics, and politics, and I've always been drawn to understanding how systems work and, more importantly, how they can be changed.</p>
@@ -949,8 +947,6 @@
               </div>
             </div>
           </div>
-
-          <!-- ✏️ EDIT: Replace with your partner's name and photo -->
         
           <div class="founder-card reveal reveal-delay-1">
             <div class="founder-photo">
@@ -958,7 +954,6 @@
             </div>
             <div class="founder-body">
               <p class="founder-role">Co-Founder</p>
-              <!-- ✏️ EDIT: Replace with your partner's name -->
               <h3 class="founder-name">Amira Benkredda</h3>
                             <div class="founder-message-text">
                 <p class="m-hide">I'm Amira, 17, and live near Munich. Being trilingual and growing up with a multicultural background has always given me a global perspective on how the world connects.</p>
@@ -1086,7 +1081,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3C9 7 9 17 12 21M12 3C15 7 15 17 12 21M3 12h18"/></svg></div>
+            <div class="footer-logo-mark"><img src="../images/logo(1).png" alt="WYI Logo" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"></div>
             <span class="footer-brand-name">World Youth Initiative</span>
           </div>
           <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
