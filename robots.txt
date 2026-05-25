@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow utility/legal pages from being indexed (optional SEO preference)
+Disallow: /impressum/
+Disallow: /cookies/
+Disallow: /terms/
+Disallow: /privacy/
+
+Sitemap: https://worldyouthinitiative.org/sitemap.xml
