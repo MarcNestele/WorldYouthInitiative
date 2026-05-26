@@ -6,27 +6,23 @@
   <title>Apply | World Youth Initiative</title>
   <meta name="description" content="Apply to join the World Youth Initiative as a Researcher or Country Ambassador. Open to motivated young people from all nationalities. Shape global policy from your country." />
   <link rel="canonical" href="https://worldyouthinitiative.org/application/" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://worldyouthinitiative.org/application/" />
   <meta property="og:title" content="Apply | World Youth Initiative" />
   <meta property="og:description" content="Apply to join the World Youth Initiative as a Researcher or Country Ambassador. Open to motivated young people from all nationalities." />
   <meta property="og:image" content="https://worldyouthinitiative.org/images/logo.png" />
   <meta property="og:site_name" content="World Youth Initiative" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Apply | World Youth Initiative" />
   <meta name="twitter:description" content="Join WYI as a Researcher or Country Ambassador. Open to all nationalities." />
   <meta name="twitter:image" content="https://worldyouthinitiative.org/images/logo.png" />
-  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox='190%20-10%20300%20280'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='white'%20stroke='white'%20stroke-width='44'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='%230B2A4A'%20stroke='%230B2A4A'%20stroke-width='28'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C38%20437%2C109%20400%2C223%20280%2C223%20243%2C109'%20fill='none'%20stroke='white'%20stroke-width='3.5'%20stroke-linejoin='round'/%3E%3Cpath%20d='M340%2C52%20L343.5%2C62%20L355%2C66%20L343.5%2C70%20L340%2C80%20L336.5%2C70%20L325%2C66%20L336.5%2C62%20Z'%20fill='white'/%3E%3Crect%20x='284'%20y='108'%20width='112'%20height='11'%20rx='3'%20fill='white'/%3E%3Crect%20x='292'%20y='122'%20width='96'%20height='7'%20rx='2'%20fill='white'/%3E%3Crect%20x='288'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='316'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='353'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='382'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Cpath%20d='M327%2C214%20L327%2C202%20A12%2C12%200%200%201%20353%2C202%20L353%2C214%20Z'%20fill='white'/%3E%3Cpath%20d='M331%2C214%20L331%2C202%20A8%2C8%200%200%201%20349%2C202%20L349%2C214%20Z'%20fill='%230B2A4A'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
   <style>
-    /* ── Reset & Variables ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --blue:    #0B2A4A;
       --navy:    #0B2A4A;
@@ -44,9 +40,7 @@
       --nav-h:   72px;
       --pad:     clamp(1.5rem, 5vw, 5rem);
     }
-
     html { scroll-behavior: smooth; font-size: 20.25px; }
-
     body {
       font-family: var(--sans);
       background: var(--white);
@@ -56,8 +50,6 @@
       overflow-wrap: break-word;
       word-break: break-word;
     }
-
-    /* ── Navbar ────────────────────────────────────────────────────── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 999;
       padding: 1.25rem clamp(1rem, 3vw, 5rem);
@@ -71,10 +63,10 @@
     nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
     .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
     .nav-logo-mark {
-      width: 34px; height: 34px;  
+      width: 46px; height: 46px;
       display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
-    .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
     .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
     .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
     .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
@@ -93,426 +85,164 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .mobile-menu {
-      position: fixed;
-      top: 0; right: 0;
-      z-index: 997;
-      background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(20px);
-      border-left: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      border-radius: 0 0 0 14px;
-      padding: calc(72px + 1.25rem) 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0;
-      min-width: 200px;
+      position: fixed; top: 0; right: 0; z-index: 997;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
+      border-left: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      border-radius: 0 0 0 14px; padding: calc(72px + 1.25rem) 2rem 1.5rem;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 0; min-width: 200px;
       box-shadow: -4px 8px 24px rgba(11,42,74,0.08);
-      transform: translateY(-110%);
-      opacity: 0;
+      transform: translateY(-110%); opacity: 0;
       transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
       pointer-events: none;
     }
     .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-menu a {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem; font-weight: 500;
-      color: var(--navy); text-decoration: none;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      letter-spacing: 0.02em; opacity: 0.65;
-      transition: opacity 0.2s; width: 100%; text-align: right;
-    }
+    .mobile-menu a { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); letter-spacing: 0.02em; opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right; }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { opacity: 1; }
     .mobile-close { display: none; }
-
-    @media (max-width: 1100px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-    }
-
-    /* ── Dev Banner ────────────────────────────────────────────────── */
-    .dev-banner {
-      position: relative; z-index: 101; background: var(--blue);
-      padding: .6rem clamp(1.25rem, 5vw, 3rem);
-      display: flex; align-items: center; justify-content: center; gap: .75rem;
-      font-size: .72rem; font-weight: 500; letter-spacing: .06em;
-      color: rgba(255,255,255,.7); text-align: center;
-    }
+    @media (max-width: 1100px) { .nav-links, .nav-cta { display: none; } .hamburger { display: flex; } }
+    .dev-banner { position: relative; z-index: 101; background: var(--blue); padding: .6rem clamp(1.25rem, 5vw, 3rem); display: flex; align-items: center; justify-content: center; gap: .75rem; font-size: .72rem; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.7); text-align: center; }
     .dev-banner strong { color: white; font-weight: 700; letter-spacing: .08em; }
-    .dev-banner-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: #FBBF24;
-      display: inline-block; animation: blinkDot 1.8s ease-in-out infinite; flex-shrink: 0;
-    }
+    .dev-banner-dot { width: 6px; height: 6px; border-radius: 50%; background: #FBBF24; display: inline-block; animation: blinkDot 1.8s ease-in-out infinite; flex-shrink: 0; }
     @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
-
-    /* ── Scroll animations ─────────────────────────────────────────── */
-    .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: .12s; }
     .reveal-delay-2 { transition-delay: .24s; }
     .reveal-delay-3 { transition-delay: .36s; }
     .reveal-delay-4 { transition-delay: .48s; }
-
-    /* ── Page wrapper ──────────────────────────────────────────────── */
     main { padding-top: var(--nav-h); }
     .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-
-    /* ── Section utility ───────────────────────────────────────────── */
     .section { padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem); }
     .section-inner { max-width: var(--max); margin: 0 auto; }
-    .section-label {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .7rem; font-weight: 600; letter-spacing: .15em;
-      text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
-    }
+    .section-label { display: inline-flex; align-items: center; gap: .5rem; font-size: .7rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
     .section-label::before { content: ''; display: block; width: 22px; height: 1px; background: var(--accent); }
-
-    /* ── Hero ──────────────────────────────────────────────────────── */
-    .apply-hero {
-      position: relative; background: var(--blue); color: var(--white);
-      overflow: hidden;
-      padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem);
-    }
-    .apply-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
-      background-size: 60px 60px; pointer-events: none;
-    }
-    .hero-orb {
-      position: absolute; right: -6rem; top: 50%; transform: translateY(-50%);
-      width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%;
-      border: 1px solid rgba(59,130,246,.2); pointer-events: none;
-    }
-    .hero-orb::before {
-      content: ''; position: absolute; inset: 2rem; border-radius: 50%;
-      border: 1px solid rgba(59,130,246,.12);
-    }
+    .apply-hero { position: relative; background: var(--blue); color: var(--white); overflow: hidden; padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem); }
+    .apply-hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+    .hero-orb { position: absolute; right: -6rem; top: 50%; transform: translateY(-50%); width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(59,130,246,.2); pointer-events: none; }
+    .hero-orb::before { content: ''; position: absolute; inset: 2rem; border-radius: 50%; border: 1px solid rgba(59,130,246,.12); }
     .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .75rem; font-weight: 600; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;
-    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
     .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); }
-    .apply-hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.75rem, 6vw, 5rem);
-      line-height: 1.08; max-width: 16ch; margin-bottom: 1.75rem;
-    }
-    .apply-hero p {
-      font-size: clamp(1rem, 2vw, 1.175rem);
-      font-weight: 300; line-height: 1.75; max-width: 54ch; opacity: .8;
-    }
-    .hero-badges {
-      display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.25rem;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: .45rem;
-      font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-      border: 1px solid rgba(255,255,255,.2); border-radius: 100px;
-      padding: .4rem 1rem; color: rgba(255,255,255,.8);
-    }
+    .apply-hero h1 { font-family: var(--serif); font-size: clamp(2.75rem, 6vw, 5rem); line-height: 1.08; max-width: 16ch; margin-bottom: 1.75rem; }
+    .apply-hero p { font-size: clamp(1rem, 2vw, 1.175rem); font-weight: 300; line-height: 1.75; max-width: 54ch; opacity: .8; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.25rem; }
+    .hero-badge { display: inline-flex; align-items: center; gap: .45rem; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; border: 1px solid rgba(255,255,255,.2); border-radius: 100px; padding: .4rem 1rem; color: rgba(255,255,255,.8); }
     .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
     .hero-badge-dot.blue  { background: var(--accent); }
     .hero-badge-dot.purple { background: #a78bfa; }
-
-    /* ── Roles Section ─────────────────────────────────────────────── */
     .roles-section { background: var(--light); }
-
     .roles-intro { max-width: 700px; margin-bottom: clamp(3rem, 6vw, 5rem); }
-    .roles-intro h2 {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.15; color: var(--blue); margin-bottom: .75rem;
-    }
+    .roles-intro h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: var(--blue); margin-bottom: .75rem; }
     .roles-intro p { font-size: 1rem; line-height: 1.8; color: var(--muted); }
-
-    .roles-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: clamp(1.5rem, 3vw, 2.5rem);
-    }
-
-    .role-card {
-      background: var(--white); border-radius: 16px;
-      border: 1.5px solid var(--border);
-      overflow: hidden;
-      transition: box-shadow .3s, transform .3s;
-    }
+    .roles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 3vw, 2.5rem); }
+    .role-card { background: var(--white); border-radius: 16px; border: 1.5px solid var(--border); overflow: hidden; transition: box-shadow .3s, transform .3s; }
     .role-card:hover { box-shadow: 0 16px 48px rgba(11,42,74,.1); transform: translateY(-4px); }
-
-    .role-card-top {
-      padding: 2.5rem 2.25rem 2rem;
-      border-bottom: 1.5px solid var(--border);
-    }
+    .role-card-top { padding: 2.5rem 2.25rem 2rem; border-bottom: 1.5px solid var(--border); }
     .role-card.researcher .role-card-top { border-top: 4px solid var(--accent); }
     .role-card.ambassador .role-card-top { border-top: 4px solid var(--purple); }
-
-    .role-icon {
-      width: 52px; height: 52px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.5rem;
-    }
+    .role-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
     .role-card.researcher .role-icon { background: rgba(59,130,246,.1); }
     .role-card.ambassador .role-icon { background: rgba(124,58,237,.1); }
     .role-icon svg { width: 24px; height: 24px; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
     .role-card.researcher .role-icon svg { stroke: var(--accent); }
     .role-card.ambassador .role-icon svg { stroke: var(--purple); }
-
-    .role-type {
-      font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-      margin-bottom: .3rem;
-    }
+    .role-type { font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: .3rem; }
     .role-card.researcher .role-type { color: var(--accent); }
     .role-card.ambassador .role-type { color: var(--purple); }
-
-    .role-card h3 {
-      font-family: var(--serif);
-      font-size: 1.55rem; color: var(--blue); margin-bottom: .65rem; line-height: 1.15;
-      display: flex; align-items: center; gap: .4rem;
-    }
+    .role-card h3 { font-family: var(--serif); font-size: 1.55rem; color: var(--blue); margin-bottom: .65rem; line-height: 1.15; display: flex; align-items: center; gap: .4rem; }
     .role-card-desc { font-size: .925rem; line-height: 1.75; color: var(--muted); }
-
     .role-card-body { padding: 2rem 2.25rem 2.25rem; }
-
-    .role-responsibilities {
-      margin-bottom: 2rem;
-    }
-    .role-responsibilities-title {
-      font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--blue); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: .5rem;
-    }
-    .role-responsibilities-title::after {
-      content: ''; flex: 1; height: 1px; background: var(--border);
-    }
+    .role-responsibilities { margin-bottom: 2rem; }
+    .role-responsibilities-title { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
+    .role-responsibilities-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
     .role-list { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
-    .role-list li {
-      display: flex; align-items: flex-start; gap: .75rem;
-      font-size: .88rem; line-height: 1.65; color: #374151;
-    }
-    .role-list li::before {
-      content: '';
-      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: .45rem;
-    }
+    .role-list li { display: flex; align-items: flex-start; gap: .75rem; font-size: .88rem; line-height: 1.65; color: #374151; }
+    .role-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: .45rem; }
     .role-card.researcher .role-list li::before { background: var(--accent); }
     .role-card.ambassador .role-list li::before { background: var(--purple); }
-
-    .role-perks-title {
-      font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--blue); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: .5rem;
-    }
+    .role-perks-title { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
     .role-perks-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
     .role-perks { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
-    .role-perks li {
-      display: flex; align-items: flex-start; gap: .75rem;
-      font-size: .88rem; line-height: 1.6; color: #374151;
-    }
-    .role-perks li .check {
-      width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: .1rem;
-      display: flex; align-items: center; justify-content: center;
-    }
+    .role-perks li { display: flex; align-items: flex-start; gap: .75rem; font-size: .88rem; line-height: 1.6; color: #374151; }
+    .role-perks li .check { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: .1rem; display: flex; align-items: center; justify-content: center; }
     .role-card.researcher .role-perks li .check { background: rgba(59,130,246,.12); }
     .role-card.ambassador .role-perks li .check { background: rgba(124,58,237,.12); }
     .role-perks li .check svg { width: 10px; height: 10px; fill: none; stroke-width: 2.5; }
     .role-card.researcher .role-perks li .check svg { stroke: var(--accent); }
     .role-card.ambassador .role-perks li .check svg { stroke: var(--purple); }
-
-    @media (max-width: 900px) {
-      .roles-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ── Comparison strip ──────────────────────────────────────────── */
+    @media (max-width: 900px) { .roles-grid { grid-template-columns: 1fr; } }
     .compare-section { background: var(--white); }
     .compare-header { max-width: 700px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-    .compare-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      line-height: 1.2; color: var(--blue); margin-bottom: .6rem;
-    }
+    .compare-header h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.2; color: var(--blue); margin-bottom: .6rem; }
     .compare-header p { font-size: .95rem; line-height: 1.75; color: var(--muted); }
-
-    .compare-table {
-      min-width: 520px;
-      width: 100%; border-collapse: collapse;
-      border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden;
-    }
+    .compare-table { min-width: 520px; width: 100%; border-collapse: collapse; border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; }
     .compare-table thead tr { background: var(--navy); }
-    .compare-table thead th {
-      padding: 1.1rem 1.5rem; text-align: left;
-      font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-    }
+    .compare-table thead th { padding: 1.1rem 1.5rem; text-align: left; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .compare-table thead th:first-child { color: rgba(255,255,255,.5); width: 32%; }
     .compare-table thead th.col-researcher { color: #93c5fd; }
     .compare-table thead th.col-ambassador { color: #c4b5fd; }
     .compare-table tbody tr { border-bottom: 1px solid var(--border); transition: background .15s; }
     .compare-table tbody tr:last-child { border-bottom: none; }
     .compare-table tbody tr:hover { background: #f8faff; }
-    .compare-table td {
-      padding: 1rem 1.5rem; font-size: .875rem; color: #374151; vertical-align: middle;
-    }
+    .compare-table td { padding: 1rem 1.5rem; font-size: .875rem; color: #374151; vertical-align: middle; }
     .compare-table td:first-child { font-weight: 600; color: var(--blue); font-size: .82rem; letter-spacing: .02em; }
     .check-icon { color: var(--accent); font-weight: 700; font-size: 1rem; }
     .check-icon.purple { color: var(--purple); }
-
-    @media (max-width: 640px) {
-      .compare-table td, .compare-table th { padding: .85rem 1rem; }
-    }
-
-    /* ── Application Form ──────────────────────────────────────────── */
+    @media (max-width: 640px) { .compare-table td, .compare-table th { padding: .85rem 1rem; } }
     .apply-section { background: var(--light); }
-
-    .apply-grid {
-      display: grid; grid-template-columns: 1fr 1.6fr;
-      gap: clamp(3rem, 6vw, 7rem); align-items: start;
-    }
-
+    .apply-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(3rem, 6vw, 7rem); align-items: start; }
     .apply-sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
-
-    .apply-sidebar-title {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 3.5vw, 2.75rem);
-      line-height: 1.15; color: var(--blue); margin-bottom: 1rem;
-    }
+    .apply-sidebar-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.75rem); line-height: 1.15; color: var(--blue); margin-bottom: 1rem; }
     .apply-sidebar p { font-size: .925rem; line-height: 1.75; color: var(--muted); margin-bottom: 1.5rem; }
-
     .apply-info-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
-    .apply-info-item {
-      display: flex; align-items: flex-start; gap: .85rem;
-      font-size: .875rem; line-height: 1.65; color: #374151;
-    }
-    .apply-info-icon {
-      width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0;
-      background: rgba(11,42,74,.07);
-      display: flex; align-items: center; justify-content: center;
-    }
+    .apply-info-item { display: flex; align-items: flex-start; gap: .85rem; font-size: .875rem; line-height: 1.65; color: #374151; }
+    .apply-info-icon { width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; background: rgba(11,42,74,.07); display: flex; align-items: center; justify-content: center; }
     .apply-info-icon svg { width: 16px; height: 16px; stroke: var(--navy); fill: none; stroke-width: 1.8; }
     .apply-info-text strong { display: block; font-weight: 600; color: var(--blue); margin-bottom: .1rem; font-size: .82rem; }
-
-    .apply-note {
-      background: var(--white); border: 1.5px solid rgba(59,130,246,.2);
-      border-radius: 10px; padding: 1.25rem 1.5rem;
-      font-size: .82rem; color: var(--muted); line-height: 1.65;
-    }
+    .apply-note { background: var(--white); border: 1.5px solid rgba(59,130,246,.2); border-radius: 10px; padding: 1.25rem 1.5rem; font-size: .82rem; color: var(--muted); line-height: 1.65; }
     .apply-note strong { color: var(--blue); }
-
-    /* Form */
     .apply-form-wrap { background: var(--white); border-radius: 16px; border: 1.5px solid var(--border); padding: clamp(2rem, 4vw, 3rem); }
-
     .apply-form { display: flex; flex-direction: column; gap: 1.5rem; }
-
-    .form-section-title {
-      font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--blue); padding-bottom: .75rem; border-bottom: 1px solid var(--border);
-      margin-bottom: .25rem;
-    }
-
+    .form-section-title { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); padding-bottom: .75rem; border-bottom: 1px solid var(--border); margin-bottom: .25rem; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-
     .form-field { display: flex; flex-direction: column; gap: .5rem; }
-    .form-field label {
-      font-size: .75rem; font-weight: 600; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--blue);
-    }
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      font-family: var(--sans); font-size: .9rem; color: var(--text);
-      background: var(--white); border: 1.5px solid var(--border);
-      border-radius: 8px; padding: .85rem 1.1rem;
-      outline: none; transition: border-color .2s, box-shadow .2s;
-      width: 100%; resize: none; appearance: none;
-    }
+    .form-field label { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+    .form-field input, .form-field select, .form-field textarea { font-family: var(--sans); font-size: .9rem; color: var(--text); background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; padding: .85rem 1.1rem; outline: none; transition: border-color .2s, box-shadow .2s; width: 100%; resize: none; appearance: none; }
     .form-field input::placeholder, .form-field textarea::placeholder { color: #9ca3af; }
-    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
-      border-color: var(--accent); box-shadow: 0 0 0 3px rgba(59,130,246,.12);
-    }
-    .form-field select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 1rem center;
-      padding-right: 2.5rem; cursor: pointer;
-    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(59,130,246,.12); }
+    .form-field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer; }
     .form-field textarea { min-height: 120px; line-height: 1.65; }
-
-    /* Role selector */
     .role-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .role-option { display: none; }
-    .role-option-label {
-      display: flex; align-items: center; gap: .75rem;
-      border: 1.5px solid var(--border); border-radius: 10px;
-      padding: 1rem 1.25rem; cursor: pointer;
-      transition: border-color .2s, background .2s, box-shadow .2s;
-      user-select: none;
-    }
+    .role-option-label { display: flex; align-items: center; gap: .75rem; border: 1.5px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; cursor: pointer; transition: border-color .2s, background .2s, box-shadow .2s; user-select: none; }
     .role-option-label:hover { border-color: rgba(59,130,246,.4); background: #f8faff; }
     .role-option:checked + .role-option-label { background: var(--white); box-shadow: 0 0 0 3px rgba(59,130,246,.15); }
     .role-option.researcher:checked + .role-option-label { border-color: var(--accent); }
     .role-option.ambassador:checked + .role-option-label { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(124,58,237,.12); }
-    .role-dot {
-      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
-      border: 2px solid var(--border); transition: border-color .2s, background .2s;
-    }
+    .role-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; border: 2px solid var(--border); transition: border-color .2s, background .2s; }
     .role-option.researcher:checked + .role-option-label .role-dot { border-color: var(--accent); background: var(--accent); }
     .role-option.ambassador:checked + .role-option-label .role-dot { border-color: var(--purple); background: var(--purple); }
-    .role-option-info strong {
-      display: block; font-size: .875rem; font-weight: 600; color: var(--blue);
-    }
+    .role-option-info strong { display: block; font-size: .875rem; font-weight: 600; color: var(--blue); }
     .role-option-info span { font-size: .78rem; color: var(--muted); }
-
     .form-note { font-size: .78rem; color: var(--muted); line-height: 1.6; margin-top: -.5rem; }
-
-    .form-submit {
-      display: inline-flex; align-items: center; gap: .6rem;
-      background: var(--blue); color: var(--white);
-      font-family: var(--sans); font-size: .875rem; font-weight: 600;
-      letter-spacing: .04em; text-transform: uppercase;
-      border: none; border-radius: 6px; padding: 1rem 2.25rem;
-      cursor: pointer; transition: background .2s, transform .15s, box-shadow .2s;
-      box-shadow: 0 4px 20px rgba(11,42,74,.18); align-self: flex-start;
-    }
+    .form-submit { display: inline-flex; align-items: center; gap: .6rem; background: var(--blue); color: var(--white); font-family: var(--sans); font-size: .875rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; border: none; border-radius: 6px; padding: 1rem 2.25rem; cursor: pointer; transition: background .2s, transform .15s, box-shadow .2s; box-shadow: 0 4px 20px rgba(11,42,74,.18); align-self: flex-start; }
     .form-submit svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; transition: transform .2s; }
     .form-submit:hover { background: #0d3360; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(11,42,74,.26); }
     .form-submit:hover svg { transform: translateX(3px); }
     .form-submit:disabled { opacity: .65; cursor: not-allowed; transform: none; box-shadow: none; }
-
-    /* Success */
-    .form-success {
-      display: none; flex-direction: column; align-items: flex-start; gap: 1rem;
-      background: #f0fdf4; border: 1.5px solid #bbf7d0;
-      border-radius: 12px; padding: 2rem; margin-top: 1rem;
-    }
+    .form-success { display: none; flex-direction: column; align-items: flex-start; gap: 1rem; background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 2rem; margin-top: 1rem; }
     .form-success.visible { display: flex; }
-    .success-icon {
-      width: 44px; height: 44px; background: #dcfce7; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
+    .success-icon { width: 44px; height: 44px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
     .success-icon svg { width: 22px; height: 22px; stroke: #16a34a; fill: none; stroke-width: 2.5; }
     .form-success h3 { font-family: var(--serif); font-size: 1.3rem; color: #15803d; }
     .form-success p { font-size: .875rem; color: #166534; line-height: 1.65; }
-
-    @media (max-width: 1100px) {
-      .apply-grid { grid-template-columns: 1fr; }
-      .apply-sidebar { position: static; }
-    }
-    @media (max-width: 640px) {
-      .form-row { grid-template-columns: 1fr; }
-      .role-selector { grid-template-columns: 1fr; }
-    }
-
-    /* ── Footer ────────────────────────────────────────────────────── */
+    @media (max-width: 1100px) { .apply-grid { grid-template-columns: 1fr; } .apply-sidebar { position: static; } }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } .role-selector { grid-template-columns: 1fr; } }
     footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
     .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
-    .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
+    .footer-logo-mark { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
     .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
     .footer-socials { display: flex; gap: 0.75rem; }
@@ -530,72 +260,55 @@
     .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
     @media (max-width: 1100px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } }
-
-    /* ── TEXT SWITCHING ─────────────────────────────────────── */
     .m-hide { display: block; }
     .m-show { display: none; }
     span.m-hide { display: inline; }
-    span    @media (max-width: 1100px) {
-      .m-hide { display: none; }
-      .m-show { display: block; }
-      span.m-hide { display: none; }
-      span.m-show { display: inline; }
-    }
-
-    /* ── MOBILE FIXES ───────────────────────────────────────────── */
+    span.m-show { display: none; }
+    @media (max-width: 1100px) { .m-hide { display: none; } .m-show { display: block; } span.m-hide { display: none; } span.m-show { display: inline; } }
     @media (max-width: 768px) {
       html { font-size: 16px; }
       .nav-logo-sub { display: none; }
-      /* Hero */
       .apply-hero { padding: 5.5rem 1.25rem 4rem; }
       .apply-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
       .hero-badges { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      /* Roles grid already 1 col at 900px — tighten padding */
       .role-card { padding: 1.5rem 1.25rem; }
-      /* Application form layout */
       .apply-info { display: none; }
-      /* Role cards — show body on mobile but condensed */
       .role-card-body { display: block; padding: 1rem 1.25rem 1.5rem; }
       .role-card { padding: 0; }
       .role-card-top { padding: 1.5rem 1.25rem 1rem; border-bottom: 1px solid var(--border); }
-      /* Hide "What You Gain" on mobile */
       .role-perks-section { display: block; margin-top: 1.5rem; }
       .role-perks li:nth-child(n+4) { display: none; }
-      /* Show only first 2 responsibility items */
       .role-list li:nth-child(n+3) { display: none; }
-      /* Tighten spacing */
       .role-responsibilities { margin-bottom: 0; }
       .role-responsibilities-title { font-size: .65rem; margin-bottom: .6rem; }
-      /* Footer */
       .footer-col { display: none; }
       .footer-inner { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
       .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
     }
-    @media (max-width: 670px) {
-      html { font-size: 15px; }
-      .apply-hero { padding: 4.5rem 1rem 3rem; }
-    }
-  
-    /* Coming-soon footer links */
+    @media (max-width: 670px) { html { font-size: 15px; } .apply-hero { padding: 4.5rem 1rem 3rem; } }
     .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
     .footer-col a.coming-soon::after { content: ' ·'; }
-
-  
-    /* iOS zoom fix: inputs must be ≥ 16px to prevent auto-zoom */
-    @media (max-width: 768px) {
-      input, select, textarea { font-size: 16px !important; }
-    }
+    @media (max-width: 768px) { input, select, textarea { font-size: 16px !important; } }
   </style>
 </head>
-
 <body>
-
-  <!-- ── Navbar ─────────────────────────────────────────────────── -->
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
-        <img src="../images/logo.svg" alt="WYI Logo" style="width:42px;height:42px;object-fit:contain;">
+        <svg width="46" height="46" viewBox="202 2 276 252" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex-shrink:0;">
+          <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+          <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+          <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+          <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+          <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+          <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+          <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+          <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+        </svg>
       </div>
       <div>
         <span class="nav-logo-text">World Youth Initiative</span>
@@ -613,8 +326,6 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
-
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" role="dialog">
     <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
     <a href="../about/" class="mobile-link">About</a>
@@ -623,10 +334,7 @@
     <a href="../policy/" class="mobile-link">Policy Briefs</a>
     <a href="../contact/" class="mobile-link">Contact</a>
   </div>
-
   <main>
-
-    <!-- ── Hero ───────────────────────────────────────────────────── -->
     <section class="apply-hero">
       <div class="hero-orb"></div>
       <div class="hero-inner">
@@ -641,25 +349,18 @@
         </div>
       </div>
     </section>
-
-    <!-- ── Roles ──────────────────────────────────────────────────── -->
     <section class="section roles-section">
       <div class="section-inner">
         <div class="roles-intro reveal">
           <p class="section-label">Open Roles</p>
           <h2>Two ways to<br>contribute to WYI.</h2>
           <p class="m-hide">Whether you want to lead a national chapter or contribute analytical work to an international research team, we have a role for you. Both positions are voluntary.</p>
-            <p class="m-show">Whether you want to lead a national chapter or join a research team — there is a role for you.</p>
+          <p class="m-show">Whether you want to lead a national chapter or join a research team — there is a role for you.</p>
         </div>
-
         <div class="roles-grid">
-
-          <!-- Researcher Card -->
           <div class="role-card researcher reveal">
             <div class="role-card-top">
-              <div class="role-icon">
-                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              </div>
+              <div class="role-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
               <div class="role-type">Research Role</div>
               <h3>Researcher</h3>
               <p class="role-card-desc m-hide">Researchers are the analytical core of WYI. You conduct policy research within a national team, contribute to publications, and engage with an international network of peers.</p>
@@ -677,35 +378,19 @@
                 </ul>
               </div>
               <div class="role-perks-section">
-              <div class="role-responsibilities-title" style="margin-bottom:1rem;">What You Gain</div>
-              <ul class="role-perks">
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  Published policy research with international reach
-                </li>
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  Access to WYI's global researcher network and events
-                </li>
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  WYI Research Certificate upon successful completion
-                </li>
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  Mentorship from senior researchers and academics
-                </li>
-              </ul>
+                <div class="role-responsibilities-title" style="margin-bottom:1rem;">What You Gain</div>
+                <ul class="role-perks">
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Published policy research with international reach</li>
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Access to WYI's global researcher network and events</li>
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>WYI Research Certificate upon successful completion</li>
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Mentorship from senior researchers and academics</li>
+                </ul>
               </div>
             </div>
           </div>
-
-          <!-- Ambassador Card -->
           <div class="role-card ambassador reveal reveal-delay-1">
             <div class="role-card-top">
-              <div class="role-icon" style="font-size:1.6rem; font-weight:700; color:#7C3AED; font-family:'DM Sans',sans-serif;">
-                Ψ
-              </div>
+              <div class="role-icon" style="font-size:1.6rem; font-weight:700; color:#7C3AED; font-family:'DM Sans',sans-serif;">Ψ</div>
               <div class="role-type">Leadership Role</div>
               <h3>National Ambassador <span style="font-family:'DM Serif Display',serif; font-style:normal; font-size:1.55rem; color:var(--blue);">Ψ</span></h3>
               <p class="role-card-desc m-hide">Ambassadors are WYI's national representatives. You build and lead your country's research team, coordinate research activities, and serve as the primary liaison to the global WYI leadership.</p>
@@ -724,34 +409,19 @@
                 </ul>
               </div>
               <div class="role-perks-section">
-              <div class="role-responsibilities-title" style="margin-bottom:1rem;">What You Gain</div>
-              <ul class="role-perks">
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  Direct access to WYI's global leadership board
-                </li>
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  Speaking and representation opportunities at policy events
-                </li>
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  WYI Leadership Certificate upon successful completion
-                </li>
-                <li>
-                  <span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  Leadership development and organisational management experience
-                </li>
-              </ul>
+                <div class="role-responsibilities-title" style="margin-bottom:1rem;">What You Gain</div>
+                <ul class="role-perks">
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Direct access to WYI's global leadership board</li>
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Speaking and representation opportunities at policy events</li>
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>WYI Leadership Certificate upon successful completion</li>
+                  <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Leadership development and organisational management experience</li>
+                </ul>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
-    <!-- ── Comparison ─────────────────────────────────────────────── -->
     <section class="section compare-section">
       <div class="section-inner">
         <div class="compare-header reveal">
@@ -761,228 +431,109 @@
         </div>
         <div class="reveal reveal-delay-1" style="overflow-x:auto;">
           <table class="compare-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th class="col-researcher">Researcher</th>
-                <th class="col-ambassador">Ambassador</th>
-              </tr>
-            </thead>
+            <thead><tr><th></th><th class="col-researcher">Researcher</th><th class="col-ambassador">Ambassador</th></tr></thead>
             <tbody>
-              <tr>
-                <td>Team management</td>
-                <td>—</td>
-                <td><span class="check-icon purple">✓</span></td>
-              </tr>
-              <tr>
-                <td>Policy research &amp; writing</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon purple">✓</span></td>
-              </tr>
-              <tr>
-                <td>Public representation</td>
-                <td>Optional</td>
-                <td><span class="check-icon purple">✓</span></td>
-              </tr>
-              <tr>
-                <td>Prior research experience</td>
-                <td>Recommended</td>
-                <td>Required</td>
-              </tr>
-              <tr>
-                <td>Leadership experience required</td>
-                <td>—</td>
-                <td>Preferred</td>
-              </tr>
-              <tr>
-                <td>Access to global leadership board</td>
-                <td>—</td>
-                <td><span class="check-icon purple">✓</span></td>
-              </tr>
-              <tr>
-                <td>Open to all backgrounds</td>
-                <td><span class="check-icon">✓</span></td>
-                <td><span class="check-icon purple">✓</span></td>
-              </tr>
+              <tr><td>Team management</td><td>—</td><td><span class="check-icon purple">✓</span></td></tr>
+              <tr><td>Policy research &amp; writing</td><td><span class="check-icon">✓</span></td><td><span class="check-icon purple">✓</span></td></tr>
+              <tr><td>Public representation</td><td>Optional</td><td><span class="check-icon purple">✓</span></td></tr>
+              <tr><td>Prior research experience</td><td>Recommended</td><td>Required</td></tr>
+              <tr><td>Leadership experience required</td><td>—</td><td>Preferred</td></tr>
+              <tr><td>Access to global leadership board</td><td>—</td><td><span class="check-icon purple">✓</span></td></tr>
+              <tr><td>Open to all backgrounds</td><td><span class="check-icon">✓</span></td><td><span class="check-icon purple">✓</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
-
-    <!-- ── Application Form ───────────────────────────────────────── -->
     <section class="section apply-section" id="apply-form">
       <div class="section-inner">
         <div class="apply-grid">
-
-          <!-- Sidebar -->
           <div class="apply-sidebar reveal">
             <p class="section-label">Submit Your Application</p>
             <h2 class="apply-sidebar-title">Ready to join<br>WYI?</h2>
             <p class="m-hide">Fill out the application form and tell us about yourself, your background, and why you want to be part of the World Youth Initiative. We review all applications on a rolling basis.</p>
             <p class="m-show">Tell us about yourself and why you want to join WYI. We review applications on a rolling basis.</p>
-
             <ul class="apply-info-list">
               <li class="apply-info-item">
-                <div class="apply-info-icon">
-                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </div>
-                <div class="apply-info-text">
-                  <strong>Rolling Admissions</strong>
-                  Applications are reviewed year-round. No fixed deadlines.
-                </div>
+                <div class="apply-info-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+                <div class="apply-info-text"><strong>Rolling Admissions</strong>Applications are reviewed year-round. No fixed deadlines.</div>
               </li>
               <li class="apply-info-item">
-                <div class="apply-info-icon">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                </div>
-                <div class="apply-info-text">
-                  <strong>Open Internationally</strong>
-                  We welcome applicants from every country and background.
-                </div>
+                <div class="apply-info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                <div class="apply-info-text"><strong>Open Internationally</strong>We welcome applicants from every country and background.</div>
               </li>
               <li class="apply-info-item">
-                <div class="apply-info-icon">
-                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-                </div>
-                <div class="apply-info-text">
-                  <strong>Response within 14 days</strong>
-                  Our team will follow up via email after reviewing your application.
-                </div>
+                <div class="apply-info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg></div>
+                <div class="apply-info-text"><strong>Response within 14 days</strong>Our team will follow up via email after reviewing your application.</div>
               </li>
             </ul>
-
-            <div class="apply-note">
-              <strong>Questions?</strong> If you have any questions about the application process or the roles, feel free to reach out via our <a href="../contact/" style="color:var(--accent);text-decoration:none;">contact page</a> before applying.
-            </div>
+            <div class="apply-note"><strong>Questions?</strong> If you have any questions about the application process or the roles, feel free to reach out via our <a href="../contact/" style="color:var(--accent);text-decoration:none;">contact page</a> before applying.</div>
           </div>
-
-          <!-- Form -->
           <div class="apply-form-wrap reveal reveal-delay-1">
-
             <form class="apply-form" id="applyForm" action="https://formspree.io/f/xdabzkzp" method="POST" novalidate>
-
               <input type="hidden" name="_subject" value="New WYI Application" />
-
               <div class="form-section-title">Personal Information</div>
-
               <div class="form-row">
-                <div class="form-field">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required />
-                </div>
-                <div class="form-field">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Doe" autocomplete="family-name" required />
-                </div>
+                <div class="form-field"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required /></div>
+                <div class="form-field"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" placeholder="Doe" autocomplete="family-name" required /></div>
               </div>
-
-              <div class="form-field">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="jane.doe@example.com" autocomplete="email" required />
-              </div>
-
+              <div class="form-field"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane.doe@example.com" autocomplete="email" required /></div>
               <div class="form-row">
-                <div class="form-field">
-                  <label for="country">Country of Residence</label>
-                  <input type="text" id="country" name="country" placeholder="e.g. Germany" required />
-                </div>
-                <div class="form-field">
-                  <label for="nationality">Nationality</label>
-                  <input type="text" id="nationality" name="nationality" placeholder="e.g. German" required />
-                </div>
+                <div class="form-field"><label for="country">Country of Residence</label><input type="text" id="country" name="country" placeholder="e.g. Germany" required /></div>
+                <div class="form-field"><label for="nationality">Nationality</label><input type="text" id="nationality" name="nationality" placeholder="e.g. German" required /></div>
               </div>
-
               <div class="form-section-title" style="margin-top:.5rem;">Academic &amp; Professional Background</div>
-
-              <div class="form-field">
-                <label for="institution">School / University / Employer</label>
-                <input type="text" id="institution" name="institution" placeholder="e.g. Humboldt University Berlin, UN, McKinsey…" required />
-              </div>
-
+              <div class="form-field"><label for="institution">School / University / Employer</label><input type="text" id="institution" name="institution" placeholder="e.g. Humboldt University Berlin, UN, McKinsey…" required /></div>
               <div class="form-row">
-                <div class="form-field">
-                  <label for="field">Field of Study / Work</label>
-                  <input type="text" id="field" name="field" placeholder="e.g. Political Science" required />
-                </div>
-                <div class="form-field">
-                  <label for="level">Academic Level</label>
-                  <select id="level" name="level" required>
-                    <option value="" disabled selected>Select level</option>
-                    <option>High School Student</option>
-                    <option>Undergraduate (Bachelor's)</option>
-                    <option>Postgraduate (Master's)</option>
-                    <option>Doctoral (PhD)</option>
-                    <option>Early Career Professional</option>
-                    <option>Mid-Career Professional</option>
-                    <option>Other</option>
-                  </select>
-                </div>
+                <div class="form-field"><label for="field">Field of Study / Work</label><input type="text" id="field" name="field" placeholder="e.g. Political Science" required /></div>
+                <div class="form-field"><label for="level">Academic Level</label><select id="level" name="level" required><option value="" disabled selected>Select level</option><option>High School Student</option><option>Undergraduate (Bachelor's)</option><option>Postgraduate (Master's)</option><option>Doctoral (PhD)</option><option>Early Career Professional</option><option>Mid-Career Professional</option><option>Other</option></select></div>
               </div>
-
               <div class="form-section-title" style="margin-top:.5rem;">Role &amp; Motivation</div>
-
               <div class="form-field">
                 <label>Role You Are Applying For</label>
                 <div class="role-selector">
                   <input type="radio" class="role-option researcher" id="roleResearcher" name="role" value="Researcher" required />
-                  <label class="role-option-label" for="roleResearcher">
-                    <span class="role-dot"></span>
-                    <span class="role-option-info">
-                      <strong>Researcher</strong>
-                    </span>
-                  </label>
+                  <label class="role-option-label" for="roleResearcher"><span class="role-dot"></span><span class="role-option-info"><strong>Researcher</strong></span></label>
                   <input type="radio" class="role-option ambassador" id="roleAmbassador" name="role" value="Ambassador" />
-                  <label class="role-option-label" for="roleAmbassador">
-                    <span class="role-dot"></span>
-                    <span class="role-option-info">
-                      <strong>Ambassador</strong>
-                    </span>
-                  </label>
+                  <label class="role-option-label" for="roleAmbassador"><span class="role-dot"></span><span class="role-option-info"><strong>Ambassador</strong></span></label>
                 </div>
               </div>
-
-              <div class="form-field">
-                <label for="motivation">Letter of Motivation</label>
-                <textarea id="motivation" name="motivation" placeholder="Tell us why you want to join WYI, what you bring to the team, and what you hope to contribute or learn. (200–400 words)" required style="min-height:180px;"></textarea>
-              </div>
-
-              <div class="form-field">
-                <label for="experience">Relevant Experience <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);">(optional)</span></label>
-                <textarea id="experience" name="experience" placeholder="Briefly describe any relevant research, policy, or leadership experience — academic projects, internships, publications, or positions held."></textarea>
-              </div>
-
+              <div class="form-field"><label for="motivation">Letter of Motivation</label><textarea id="motivation" name="motivation" placeholder="Tell us why you want to join WYI, what you bring to the team, and what you hope to contribute or learn. (200–400 words)" required style="min-height:180px;"></textarea></div>
+              <div class="form-field"><label for="experience">Relevant Experience <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);">(optional)</span></label><textarea id="experience" name="experience" placeholder="Briefly describe any relevant research, policy, or leadership experience — academic projects, internships, publications, or positions held."></textarea></div>
               <p class="form-note">By submitting this form you agree to our <a href="../privacy/" style="color:var(--accent);text-decoration:none;">Privacy Policy</a>. Your information will only be used for the purpose of evaluating your application.</p>
-
-              <button type="submit" class="form-submit" id="submitBtn">
-                Submit Application
-                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-
+              <button type="submit" class="form-submit" id="submitBtn">Submit Application<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
             </form>
-
             <div class="form-success" id="formSuccess">
-              <div class="success-icon">
-                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
+              <div class="success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
               <h3>Application Received</h3>
               <p>Thank you for applying to the World Youth Initiative. We have received your application and will review it carefully. You can expect to hear from us within 14 days.</p>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-
   </main>
-
-  <!-- ── Footer ─────────────────────────────────────────────────── -->
   <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark"><img src="../images/logo.svg" alt="WYI Logo" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1);"></div>
+          <div class="footer-logo-mark">
+            <svg width="38" height="38" viewBox="190 -10 300 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;">
+              <polygon points="340,20 454,103 410,237 270,237 226,103" fill="white" stroke="white" stroke-width="44" stroke-linejoin="round"/>
+              <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+              <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+              <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+              <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+              <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+              <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+              <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+              <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+              <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+              <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+            </svg>
+          </div>
             <span class="footer-brand-name">World Youth Initiative</span>
           </div>
           <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
@@ -992,174 +543,52 @@
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-              <div class="footer-col">
-        <div class="footer-col-title">Organization</div>
-        <ul>
-          <li><a href="../about/">About WYI</a></li>
-          <li><a href="../team/">Our Network</a></li>
-          <li><a href="#" class="coming-soon">Leadership</a></li>
-          <li><a href="#" class="coming-soon">Annual Report</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Research</div>
-        <ul>
-          <li><a href="../research/">Research Areas</a></li>
-          <li><a href="../policy/">Policy Briefs</a></li>
-          <li><a href="#" class="coming-soon">Events</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Get Involved</div>
-        <ul>
-          <li><a href="../application/">Join the Network</a></li>
-          <li><a href="../application/">Become Ambassador</a></li>
-          <li><a href="../team/">Research Teams</a></li>
-          <li><a href="../contact/">Contact</a></li>
-        </ul>
-      </div>
-
+        <div class="footer-col"><div class="footer-col-title">Organization</div><ul><li><a href="../about/">About WYI</a></li><li><a href="../team/">Our Network</a></li><li><a href="#" class="coming-soon">Leadership</a></li><li><a href="#" class="coming-soon">Annual Report</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Research</div><ul><li><a href="../research/">Research Areas</a></li><li><a href="../policy/">Policy Briefs</a></li><li><a href="#" class="coming-soon">Events</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Get Involved</div><ul><li><a href="../application/">Join the Network</a></li><li><a href="../application/">Become Ambassador</a></li><li><a href="../team/">Research Teams</a></li><li><a href="../contact/">Contact</a></li></ul></div>
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
         <ul class="footer-bottom-links">
-          <li><a href="../privacy/">Privacy Policy</a></li>
-          <li><a href="../terms/">Terms of Use</a></li>
-          <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
+          <li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Use</a></li><li><a href="../cookies/">Cookie Policy</a></li><li><a href="../impressum/">Legal Notice</a></li>
         </ul>
       </div>
     </div>
   </footer>
-
-  <!-- ── JS ─────────────────────────────────────────────────────── -->
   <script>
-    // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const _mq = window.matchMedia('(max-width: 768px)');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
-
-    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 30);
-    }, { passive: true });
-
-    // Mobile menu
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Application form submission
+    hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.classList.toggle('open', isOpen); document.body.style.overflow = isOpen ? 'hidden' : ''; });
+    document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow = ''; }); });
     const form = document.getElementById('applyForm');
     const successBox = document.getElementById('formSuccess');
     const submitBtn = document.getElementById('submitBtn');
-
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-
-      // Required field check
       const required = form.querySelectorAll('[required]');
       let valid = true;
-      required.forEach(field => {
-        if (!field.value.trim()) {
-          valid = false;
-          field.style.borderColor = '#ef4444';
-          field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
-        }
-      });
-
-      // Role selection check
+      required.forEach(field => { if (!field.value.trim()) { valid = false; field.style.borderColor = '#ef4444'; field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true }); } });
       const roleSelected = form.querySelector('input[name="role"]:checked');
-      if (!roleSelected) {
-        valid = false;
-        document.querySelectorAll('.role-option-label').forEach(l => {
-          l.style.borderColor = '#ef4444';
-          setTimeout(() => { l.style.borderColor = ''; }, 2000);
-        });
-      }
-
+      if (!roleSelected) { valid = false; document.querySelectorAll('.role-option-label').forEach(l => { l.style.borderColor = '#ef4444'; setTimeout(() => { l.style.borderColor = ''; }, 2000); }); }
       if (!valid) return;
-
       submitBtn.textContent = 'Submitting…';
       submitBtn.disabled = true;
-
-      const data = new FormData(form);
-
-      fetch('https://formspree.io/f/xdabzkzp', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        if (response.ok) {
-          form.style.display = 'none';
-          successBox.classList.add('visible');
-          successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        } else {
-          return response.json().then(data => {
-            submitBtn.textContent = 'Submit Application';
-            submitBtn.disabled = false;
-            alert(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please try again.');
-          });
-        }
-      })
-      .catch(() => {
-        submitBtn.textContent = 'Submit Application';
-        submitBtn.disabled = false;
-        alert('Network error. Please check your connection and try again.');
-      });
+      fetch('https://formspree.io/f/xdabzkzp', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(response => { if (response.ok) { form.style.display = 'none'; successBox.classList.add('visible'); successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } else { return response.json().then(data => { submitBtn.textContent = 'Submit Application'; submitBtn.disabled = false; alert(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong.'); }); } })
+      .catch(() => { submitBtn.textContent = 'Submit Application'; submitBtn.disabled = false; alert('Network error. Please check your connection and try again.'); });
     });
-  </script>
-
-  <!-- ── Pre-fill form from URL params (e.g. ?country=Germany&role=researcher) ── -->
-  <script>
     (function() {
       const params = new URLSearchParams(window.location.search);
-      const country = params.get('country');
-      const role    = params.get('role');
-
-      if (country || role) {
-        // Scroll to form once page loads
-        window.addEventListener('load', () => {
-          const form = document.getElementById('apply-form');
-          if (form) setTimeout(() => form.scrollIntoView({ behavior: 'smooth', block: 'start' }), 400);
-        });
-      }
-
-      if (country) {
-        const countryField = document.getElementById('country');
-        if (countryField) countryField.value = country;
-      }
-
-      if (role) {
-        if (role === 'researcher') {
-          const radio = document.getElementById('roleResearcher');
-          if (radio) radio.checked = true;
-        } else if (role === 'ambassador') {
-          const radio = document.getElementById('roleAmbassador');
-          if (radio) radio.checked = true;
-        }
-      }
+      const country = params.get('country'); const role = params.get('role');
+      if (country || role) { window.addEventListener('load', () => { const form = document.getElementById('apply-form'); if (form) setTimeout(() => form.scrollIntoView({ behavior: 'smooth', block: 'start' }), 400); }); }
+      if (country) { const countryField = document.getElementById('country'); if (countryField) countryField.value = country; }
+      if (role) { if (role === 'researcher') { const radio = document.getElementById('roleResearcher'); if (radio) radio.checked = true; } else if (role === 'ambassador') { const radio = document.getElementById('roleAmbassador'); if (radio) radio.checked = true; } }
     })();
   </script>
 </body>
