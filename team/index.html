@@ -4,351 +4,204 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teams | World Youth Initiative</title>
-  <meta name="description" content="Meet the national research teams and country ambassadors of the World Youth Initiative — young policy researchers from across every continent working on evidence-based global policy solutions." />
+  <meta name="description" content="Meet the national research teams and country ambassadors of the World Youth Initiative." />
   <link rel="canonical" href="https://worldyouthinitiative.org/team/" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://worldyouthinitiative.org/team/" />
   <meta property="og:title" content="Teams | World Youth Initiative" />
-  <meta property="og:description" content="Meet the national research teams and country ambassadors of the World Youth Initiative — young policy researchers from across every continent." />
   <meta property="og:image" content="https://worldyouthinitiative.org/images/logo.png" />
   <meta property="og:site_name" content="World Youth Initiative" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Teams | World Youth Initiative" />
-  <meta name="twitter:description" content="National research teams and country ambassadors — young policy researchers from across every continent." />
   <meta name="twitter:image" content="https://worldyouthinitiative.org/images/logo.png" />
-  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox='190%20-10%20300%20280'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='white'%20stroke='white'%20stroke-width='44'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='%230B2A4A'%20stroke='%230B2A4A'%20stroke-width='28'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C38%20437%2C109%20400%2C223%20280%2C223%20243%2C109'%20fill='none'%20stroke='white'%20stroke-width='3.5'%20stroke-linejoin='round'/%3E%3Cpath%20d='M340%2C52%20L343.5%2C62%20L355%2C66%20L343.5%2C70%20L340%2C80%20L336.5%2C70%20L325%2C66%20L336.5%2C62%20Z'%20fill='white'/%3E%3Crect%20x='284'%20y='108'%20width='112'%20height='11'%20rx='3'%20fill='white'/%3E%3Crect%20x='292'%20y='122'%20width='96'%20height='7'%20rx='2'%20fill='white'/%3E%3Crect%20x='288'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='316'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='353'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='382'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Cpath%20d='M327%2C214%20L327%2C202%20A12%2C12%200%200%201%20353%2C202%20L353%2C214%20Z'%20fill='white'/%3E%3Cpath%20d='M331%2C214%20L331%2C202%20A8%2C8%200%200%201%20349%2C202%20L349%2C214%20Z'%20fill='%230B2A4A'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
-
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --blue:    #0B2A4A;
-      --navy:    #0B2A4A;
-      --gray:    #F5F5F5;
-      --light:   #F5F5F5;
-      --accent:  #3B82F6;
-      --white:   #ffffff;
-      --text:    #1a1a2e;
-      --muted:   #6b7280;
-      --border:  #e5e7eb;
-      --serif:   'DM Serif Display', Georgia, serif;
-      --sans:    'DM Sans', system-ui, sans-serif;
-      --max:     1575px;
-      --nav-h:   72px;
-      --pad:     clamp(1.5rem, 5vw, 5rem);
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --blue:#0B2A4A; --navy:#0B2A4A; --gray:#F5F5F5; --light:#F5F5F5; --accent:#3B82F6; --white:#ffffff; --text:#1a1a2e; --muted:#6b7280; --border:#e5e7eb; --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif; --max:1575px; --nav-h:72px; --pad:clamp(1.5rem,5vw,5rem); }
+    html { scroll-behavior:smooth; font-size:20.25px; }
+    body { font-family:var(--sans); background:var(--white); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:999; padding:1.25rem clamp(1rem,3vw,5rem); display:flex; align-items:center; justify-content:space-between; gap:1rem; background:rgba(255,255,255,0.92); backdrop-filter:blur(12px); border-bottom:1px solid transparent; transition:border-color 0.3s,box-shadow 0.3s; }
+    nav.scrolled { border-color:var(--border); box-shadow:0 2px 24px rgba(11,42,74,0.06); }
+    .nav-logo { display:flex; align-items:center; gap:0.625rem; text-decoration:none; color:var(--navy); }
+    .nav-logo-mark { width:46px; height:46px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-logo-text { font-family:'DM Serif Display',serif; font-size:1.05rem; letter-spacing:-0.01em; }
+    .nav-logo-sub { font-size:0.65rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); display:block; line-height:1; }
+    .nav-links { display:flex; align-items:center; gap:clamp(1rem,2vw,2.5rem); list-style:none; }
+    .nav-links a { text-decoration:none; font-size:0.875rem; font-weight:500; letter-spacing:0.02em; color:var(--navy); opacity:0.7; transition:opacity 0.2s; }
+    .nav-links a:hover,.nav-links a.active { opacity:1; }
+    .nav-links a.nav-active { opacity:1; border-bottom:2px solid var(--accent); padding-bottom:2px; }
+    .nav-cta { font-size:0.8rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; text-decoration:none; color:white; background:var(--navy); padding:0.65rem 1.4rem; border-radius:4px; transition:background 0.2s,transform 0.2s; }
+    .nav-cta:hover { background:#0d3360; transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--navy); border-radius:2px; transition:0.3s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-menu { position:fixed; top:0; right:0; z-index:997; background:rgba(255,255,255,0.97); backdrop-filter:blur(20px); border-left:1px solid var(--border); border-bottom:1px solid var(--border); border-radius:0 0 0 14px; padding:calc(72px + 1.25rem) 2rem 1.5rem; display:flex; flex-direction:column; align-items:flex-end; gap:0; min-width:200px; box-shadow:-4px 8px 24px rgba(11,42,74,0.08); transform:translateY(-110%); opacity:0; transition:transform 0.3s cubic-bezier(0.22,1,0.36,1),opacity 0.25s ease; pointer-events:none; }
+    .mobile-menu.open { transform:translateY(0); opacity:1; pointer-events:all; }
+    .mobile-menu a { font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; color:var(--navy); text-decoration:none; padding:0.6rem 0; border-bottom:1px solid rgba(0,0,0,0.06); letter-spacing:0.02em; opacity:0.65; transition:opacity 0.2s; width:100%; text-align:right; }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { opacity:1; }
+    .mobile-close { display:none; }
+    @media (max-width:1100px) { .nav-links,.nav-cta { display:none; } .hamburger { display:flex; } }
+    .dev-banner { position:relative; z-index:101; background:var(--blue); padding:.6rem clamp(1.25rem,5vw,3rem); display:flex; align-items:center; justify-content:center; gap:.75rem; font-size:.72rem; font-weight:500; letter-spacing:.06em; color:rgba(255,255,255,.7); text-align:center; }
+    .dev-banner strong { color:white; font-weight:700; letter-spacing:.08em; }
+    .dev-banner-dot { width:6px; height:6px; border-radius:50%; background:#FBBF24; display:inline-block; animation:blinkDot 1.8s ease-in-out infinite; flex-shrink:0; }
+    @keyframes blinkDot { 0%,100% { opacity:.4; } 50% { opacity:1; } }
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:.12s; } .reveal-delay-2 { transition-delay:.24s; } .reveal-delay-3 { transition-delay:.36s; }
+    main { padding-top:var(--nav-h); }
+    .container { max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+    .section { padding:clamp(4rem,9vw,7rem) clamp(1.25rem,5vw,3rem); }
+    .section-inner { max-width:var(--max); margin:0 auto; }
+    .section-label { display:inline-flex; align-items:center; gap:.5rem; font-size:.7rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+    .section-label::before { content:''; display:block; width:22px; height:1px; background:var(--accent); }
+    .team-hero { position:relative; background:var(--blue); color:var(--white); overflow:hidden; padding:clamp(5rem,12vw,9rem) clamp(1.25rem,5vw,3rem) clamp(4rem,9vw,7rem); }
+    .team-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(59,130,246,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.07) 1px,transparent 1px); background-size:60px 60px; pointer-events:none; }
+    .hero-orb { position:absolute; right:-6rem; top:50%; transform:translateY(-50%); width:clamp(280px,38vw,520px); aspect-ratio:1; border-radius:50%; border:1px solid rgba(59,130,246,.2); pointer-events:none; }
+    .hero-orb::before { content:''; position:absolute; inset:2rem; border-radius:50%; border:1px solid rgba(59,130,246,.12); }
+    .hero-inner { max-width:var(--max); margin:0 auto; position:relative; }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:1.5rem; }
+    .hero-eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--accent); }
+    .team-hero h1 { font-family:var(--serif); font-size:clamp(2.75rem,6vw,5rem); line-height:1.08; max-width:16ch; margin-bottom:1.75rem; }
+    .team-hero p { font-size:clamp(1rem,2vw,1.175rem); font-weight:300; line-height:1.75; max-width:54ch; opacity:.8; }
+    .stats-strip { background:var(--white); border-bottom:1px solid var(--border); }
+    .dev-notice-inner { max-width:var(--max); margin:0 auto; padding:2.5rem var(--pad); display:flex; align-items:center; gap:1.5rem; }
+    .dev-notice-icon { width:44px; height:44px; background:rgba(251,191,36,.1); border:1px solid rgba(251,191,36,.3); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .dev-notice-icon svg { width:20px; height:20px; stroke:#B45309; fill:none; stroke-width:1.8; }
+    .dev-notice-text strong { display:block; font-size:.8rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); margin-bottom:.25rem; }
+    .dev-notice-text p { font-size:.88rem; color:var(--muted); line-height:1.6; }
+    .map-section { background:var(--navy); padding:clamp(4rem,8vw,6rem) clamp(1.25rem,5vw,3rem); }
+    .map-section-inner { max-width:var(--max); margin:0 auto; }
+    .map-header { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:end; margin-bottom:3rem; }
+    .map-header h2 { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); line-height:1.15; color:white; }
+    .map-header p { font-size:.95rem; line-height:1.75; color:rgba(255,255,255,.55); }
+    .map-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.7rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+    .map-eyebrow::before { content:''; display:block; width:22px; height:1px; background:var(--accent); }
+    @media (max-width:768px) { .map-header { grid-template-columns:1fr; gap:1.5rem; } .markers { pointer-events:none; } }
+    .map-wrap { position:relative; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:16px; overflow:hidden; user-select:none; }
+    #world-map { width:100%; display:block; cursor:grab; }
+    #world-map:active { cursor:grabbing; }
+    .map-controls { position:absolute; bottom:1.25rem; right:1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+    .map-btn { width:34px; height:34px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15); border-radius:7px; color:white; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s; line-height:1; }
+    .map-btn:hover { background:rgba(255,255,255,.2); }
+    .map-legend { position:absolute; bottom:1.25rem; left:1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+    .legend-item { display:flex; align-items:center; gap:.5rem; font-size:.7rem; font-weight:500; letter-spacing:.06em; color:rgba(255,255,255,.55); }
+    .legend-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    .legend-dot.coming { background:rgba(251,191,36,.8); }
+    .team-panel { position:absolute; top:1.25rem; left:1.25rem; background:rgba(11,42,74,.97); backdrop-filter:blur(12px); border:1px solid rgba(59,130,246,.25); border-radius:12px; padding:1.35rem 1.5rem; width:270px; color:white; opacity:0; pointer-events:none; transition:opacity .25s ease,transform .25s ease; transform:translateY(6px); }
+    .team-panel.visible { opacity:1; pointer-events:all; transform:translateY(0); }
+    .panel-close { position:absolute; top:.75rem; right:.75rem; background:none; border:none; color:rgba(255,255,255,.4); cursor:pointer; font-size:1rem; line-height:1; padding:.25rem; transition:color .2s; }
+    .panel-close:hover { color:white; }
+    .panel-region { font-size:.65rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#60a5fa; margin-bottom:.75rem; }
+    .panel-flag-large { display:block; margin-bottom:.75rem; }
+    .panel-flag-large svg { width:56px; height:36px; border-radius:5px; display:block; box-shadow:0 2px 8px rgba(0,0,0,.4); }
+    .panel-country { font-family:var(--serif); font-size:1.2rem; color:#ffffff; margin-bottom:.35rem; }
+    .panel-ambassador { font-size:.78rem; color:rgba(255,255,255,.55); margin-bottom:.9rem; }
+    .panel-ambassador strong { color:rgba(255,255,255,.85); }
+    .panel-actions { display:flex; flex-direction:column; gap:.5rem; }
+    .panel-btn { display:block; text-align:center; font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.6rem 1rem; border-radius:6px; text-decoration:none; transition:background .2s,border-color .2s,color .2s; }
+    .panel-btn-primary { background:var(--accent); color:#ffffff; }
+    .panel-btn-primary:hover { background:#2563eb; }
+    .panel-btn-outline { background:transparent; border:1.5px solid rgba(96,165,250,.45); color:#93c5fd; }
+    .panel-btn-outline:hover { border-color:var(--accent); color:white; }
+    @media (max-width:580px) { .team-panel { width:calc(100% - 2.5rem); left:1.25rem; right:1.25rem; } }
+    .teams-section { background:var(--light); }
+    .teams-header { max-width:700px; margin-bottom:2.5rem; }
+    .teams-header h2 { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); line-height:1.15; color:var(--blue); margin-bottom:.6rem; }
+    .teams-header p { font-size:.95rem; line-height:1.75; color:var(--muted); }
+    .filter-bar { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:3rem; }
+    .filter-btn { font-family:var(--sans); font-size:.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:.55rem 1.25rem; border-radius:100px; border:1.5px solid var(--border); background:var(--white); color:var(--muted); cursor:pointer; transition:border-color .2s,color .2s,background .2s; }
+    .filter-btn:hover { border-color:var(--accent); color:var(--accent); }
+    .filter-btn.active { background:var(--navy); border-color:var(--navy); color:white; }
+    .teams-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .team-card { background:var(--white); border:1.5px solid var(--border); border-radius:14px; padding:1.75rem 1.75rem 1.5rem; position:relative; overflow:hidden; transition:box-shadow .3s,transform .3s,border-color .3s; }
+    .team-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
+    .team-card:hover::before { transform:scaleX(1); }
+    .team-card:hover { box-shadow:0 12px 36px rgba(11,42,74,.1); transform:translateY(-4px); border-color:rgba(59,130,246,.2); }
+    .team-card[data-status="coming"]::before { background:#FBBF24; }
+    .card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; margin-bottom:1.25rem; }
+    .card-flag { flex-shrink:0; }
+    .card-flag svg { width:44px; height:28px; border-radius:4px; display:block; box-shadow:0 1px 5px rgba(0,0,0,.2); }
+    .card-status { font-size:.62rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:.25rem .7rem; border-radius:100px; flex-shrink:0; }
+    .card-status.coming { background:rgba(251,191,36,.12); color:#B45309; border:1px solid rgba(251,191,36,.4); }
+    .card-region { font-size:.65rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:.35rem; }
+    .card-country { font-family:var(--serif); font-size:1.25rem; color:var(--blue); margin-bottom:.3rem; }
+    .card-ambassador { font-size:.8rem; color:var(--muted); margin-bottom:1rem; }
+    .card-ambassador strong { color:var(--blue); font-weight:600; }
+    @media (max-width:1100px) { .teams-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:600px) { .teams-grid { grid-template-columns:1fr; } }
+    .cta-section { background:var(--white); text-align:center; padding:clamp(4rem,9vw,7rem) clamp(1.25rem,5vw,3rem); border-top:1.5px solid var(--border); }
+    .cta-section h2 { font-family:var(--serif); font-size:clamp(1.75rem,4vw,2.75rem); color:var(--blue); margin-bottom:1rem; }
+    .cta-section p { font-size:1rem; color:var(--muted); max-width:50ch; margin:0 auto 2rem; line-height:1.75; }
+    .btn-group { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .btn-primary { display:inline-flex; align-items:center; gap:.5rem; background:var(--blue); color:var(--white); padding:.9rem 2rem; border-radius:6px; font-size:.875rem; font-weight:600; letter-spacing:.04em; text-decoration:none; transition:background .2s,transform .15s; }
+    .btn-primary:hover { background:#0d3360; transform:translateY(-1px); }
+    .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border:1.5px solid var(--blue); color:var(--blue); padding:.9rem 2rem; border-radius:6px; font-size:.875rem; font-weight:600; letter-spacing:.04em; text-decoration:none; transition:border-color .2s,color .2s,transform .15s; }
+    .btn-outline:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-1px); }
+    @keyframes pulse-ring { 0% { r:5; opacity:0.7; } 100% { r:18; opacity:0; } }
+    .pulse-ring { animation:pulse-ring 2.4s ease-out infinite; }
+    footer { background:var(--navy); color:white; padding:clamp(3.5rem,7vw,5.5rem) var(--pad) 2.5rem; }
+    .footer-inner { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:2rem; }
+    .footer-logo { display:flex; align-items:center; gap:0.6rem; margin-bottom:1.2rem; }
+    .footer-logo-mark { width:40px; height:40px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .footer-brand-name { font-family:'DM Serif Display',serif; font-size:0.95rem; }
+    .footer-tagline { font-size:0.875rem; line-height:1.7; color:rgba(255,255,255,0.45); max-width:420px; margin-bottom:1.75rem; }
+    .footer-socials { display:flex; gap:0.75rem; }
+    .social-btn { width:34px; height:34px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.2s; }
+    .social-btn:hover { background:rgba(255,255,255,0.15); }
+    .social-btn svg { width:15px; height:15px; fill:rgba(255,255,255,0.7); }
+    .footer-col-title { font-size:0.68rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:1.25rem; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { font-size:0.875rem; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s; }
+    .footer-col a:hover { color:white; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; }
+    .footer-copy { font-size:0.8rem; color:rgba(255,255,255,0.3); }
+    .footer-bottom-links { display:flex; gap:1.5rem; list-style:none; }
+    .footer-bottom-links a { font-size:0.8rem; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-bottom-links a:hover { color:rgba(255,255,255,0.7); }
+    .footer-col a.coming-soon { opacity:0.35; cursor:default; pointer-events:none; }
+    @media (max-width:1100px) { .footer-inner { grid-template-columns:1fr 1fr; } }
+    @media (max-width:480px) { .footer-inner { grid-template-columns:1fr; } }
+    .m-hide { display:block; } .m-show { display:none; }
+    span.m-hide { display:inline; } span.m-show { display:none; }
+    @media (max-width:1100px) { .m-hide { display:none; } .m-show { display:block; } span.m-hide { display:none; } span.m-show { display:inline; } }
+    @media (max-width:768px) {
+      html { font-size:16px; } .nav-logo-sub { display:none; }
+      .team-hero { padding:5.5rem 1.25rem 4rem; } .team-hero h1 { font-size:clamp(2rem,9vw,3rem); } .team-hero p { font-size:0.9rem; }
+      .dev-notice-inner { padding:1.5rem 1.25rem; gap:1rem; }
+      #map { display:none; } .map-header { grid-template-columns:1fr; gap:1rem; margin-bottom:1.5rem; }
+      .filter-bar { gap:0.4rem; margin-bottom:2rem; } .filter-btn { font-size:0.7rem; padding:0.35rem 0.75rem; }
+      .footer-col { display:none; } .footer-inner { grid-template-columns:1fr; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:0.5rem; }
+      .footer-bottom-links { flex-wrap:wrap; gap:0.75rem 1.25rem; }
+      .btn-group { flex-direction:column; align-items:center; }
     }
-
-    html { scroll-behavior: smooth; font-size: 20.25px; }
-    body { font-family: var(--sans); background: var(--white); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-    /* ── Navbar ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-      padding: 1.25rem clamp(1rem, 3vw, 5rem);
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent; transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
-    .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
-    .nav-logo-mark { width: 34px; height: 34px;   display: flex; align-items: center; justify-content: center; }
-    .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
-    .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
-    .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
-    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); opacity: 0.7; transition: opacity 0.2s; }
-    .nav-links a:hover, .nav-links a.active { opacity: 1; }
-    .nav-links a.nav-active { opacity: 1; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
-    .nav-cta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: white; background: var(--navy); padding: 0.65rem 1.4rem; border-radius: 4px; transition: background 0.2s, transform 0.2s; }
-    .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu {
-      position: fixed; top: 0; right: 0; z-index: 997;
-      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
-      border-left: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      border-radius: 0 0 0 14px; padding: calc(72px + 1.25rem) 2rem 1.5rem;
-      display: flex; flex-direction: column; align-items: flex-end; gap: 0; min-width: 200px;
-      box-shadow: -4px 8px 24px rgba(11,42,74,0.08);
-      transform: translateY(-110%); opacity: 0;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
-      pointer-events: none;
-    }
-    .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-menu a { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); letter-spacing: 0.02em; opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right; }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { opacity: 1; }
-    .mobile-close { display: none; }
-    @media (max-width: 1100px) { .nav-links, .nav-cta { display: none; } .hamburger { display: flex; } }
-
-    /* ── Dev Banner ── */
-    .dev-banner { position: relative; z-index: 101; background: var(--blue); padding: .6rem clamp(1.25rem, 5vw, 3rem); display: flex; align-items: center; justify-content: center; gap: .75rem; font-size: .72rem; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.7); text-align: center; }
-    .dev-banner strong { color: white; font-weight: 700; letter-spacing: .08em; }
-    .dev-banner-dot { width: 6px; height: 6px; border-radius: 50%; background: #FBBF24; display: inline-block; animation: blinkDot 1.8s ease-in-out infinite; flex-shrink: 0; }
-    @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
-
-    /* ── Scroll animations ── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: .12s; }
-    .reveal-delay-2 { transition-delay: .24s; }
-    .reveal-delay-3 { transition-delay: .36s; }
-
-    main { padding-top: var(--nav-h); }
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-    .section { padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem); }
-    .section-inner { max-width: var(--max); margin: 0 auto; }
-    .section-label { display: inline-flex; align-items: center; gap: .5rem; font-size: .7rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-    .section-label::before { content: ''; display: block; width: 22px; height: 1px; background: var(--accent); }
-
-    /* ── Hero ── */
-    .team-hero { position: relative; background: var(--blue); color: var(--white); overflow: hidden; padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem); }
-    .team-hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
-    .hero-orb { position: absolute; right: -6rem; top: 50%; transform: translateY(-50%); width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(59,130,246,.2); pointer-events: none; }
-    .hero-orb::before { content: ''; position: absolute; inset: 2rem; border-radius: 50%; border: 1px solid rgba(59,130,246,.12); }
-    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
-    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); }
-    .team-hero h1 { font-family: var(--serif); font-size: clamp(2.75rem, 6vw, 5rem); line-height: 1.08; max-width: 16ch; margin-bottom: 1.75rem; }
-    .team-hero p { font-size: clamp(1rem, 2vw, 1.175rem); font-weight: 300; line-height: 1.75; max-width: 54ch; opacity: .8; }
-
-    /* ── Under-development notice ── */
-    .stats-strip { background: var(--white); border-bottom: 1px solid var(--border); }
-    .dev-notice-inner { max-width: var(--max); margin: 0 auto; padding: 2.5rem var(--pad); display: flex; align-items: center; gap: 1.5rem; }
-    .dev-notice-icon { width: 44px; height: 44px; background: rgba(251,191,36,.1); border: 1px solid rgba(251,191,36,.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .dev-notice-icon svg { width: 20px; height: 20px; stroke: #B45309; fill: none; stroke-width: 1.8; }
-    .dev-notice-text { }
-    .dev-notice-text strong { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: .25rem; }
-    .dev-notice-text p { font-size: .88rem; color: var(--muted); line-height: 1.6; }
-    @media (max-width: 600px) { .dev-notice-inner { flex-direction: column; align-items: flex-start; gap: 1rem; } }
-
-    /* ── Map Section ── */
-    .map-section { background: var(--navy); padding: clamp(4rem, 8vw, 6rem) clamp(1.25rem, 5vw, 3rem); }
-    .map-section-inner { max-width: var(--max); margin: 0 auto; }
-    .map-header { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
-    .map-header h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: white; }
-    .map-header p { font-size: .95rem; line-height: 1.75; color: rgba(255,255,255,.55); }
-    .map-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .7rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-    .map-eyebrow::before { content: ''; display: block; width: 22px; height: 1px; background: var(--accent); }
-    @media (max-width: 768px) { .map-header { grid-template-columns: 1fr; gap: 1.5rem; } .markers { pointer-events: none; } }
-
-    .map-wrap {
-      position: relative; background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.08); border-radius: 16px;
-      overflow: hidden; user-select: none;
-    }
-
-    #world-map { width: 100%; display: block; cursor: grab; }
-    #world-map:active { cursor: grabbing; }
-
-    .map-controls {
-      position: absolute; bottom: 1.25rem; right: 1.25rem;
-      display: flex; flex-direction: column; gap: .5rem;
-    }
-    .map-btn {
-      width: 34px; height: 34px; background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.15); border-radius: 7px;
-      color: white; font-size: 1.1rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: background .2s; line-height: 1;
-    }
-    .map-btn:hover { background: rgba(255,255,255,.2); }
-
-    .map-legend {
-      position: absolute; bottom: 1.25rem; left: 1.25rem;
-      display: flex; flex-direction: column; gap: .5rem;
-    }
-    .legend-item { display: flex; align-items: center; gap: .5rem; font-size: .7rem; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.55); }
-    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-    .legend-dot.active { background: var(--accent); }
-    .legend-dot.coming { background: rgba(251,191,36,.8); }
-
-    /* Team panel (tooltip) */
-    .team-panel {
-      position: absolute; top: 1.25rem; left: 1.25rem;
-      background: rgba(11,42,74,.97); backdrop-filter: blur(12px);
-      border: 1px solid rgba(59,130,246,.25); border-radius: 12px;
-      padding: 1.35rem 1.5rem; width: 270px;
-      color: white;
-      opacity: 0; pointer-events: none;
-      transition: opacity .25s ease, transform .25s ease;
-      transform: translateY(6px);
-    }
-    .team-panel.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
-    .panel-close { position: absolute; top: .75rem; right: .75rem; background: none; border: none; color: rgba(255,255,255,.4); cursor: pointer; font-size: 1rem; line-height: 1; padding: .25rem; transition: color .2s; }
-    .panel-close:hover { color: white; }
-    .panel-region { font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #60a5fa; margin-bottom: .75rem; }
-    .panel-flag-large { display: block; margin-bottom: .75rem; }
-    .panel-flag-large svg { width: 56px; height: 36px; border-radius: 5px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,.4); }
-    .panel-country { font-family: var(--serif); font-size: 1.2rem; color: #ffffff; margin-bottom: .35rem; }
-    .panel-ambassador { font-size: .78rem; color: rgba(255,255,255,.55); margin-bottom: .9rem; }
-    .panel-ambassador strong { color: rgba(255,255,255,.85); }
-    .panel-actions { display: flex; flex-direction: column; gap: .5rem; }
-    .panel-btn { display: block; text-align: center; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .6rem 1rem; border-radius: 6px; text-decoration: none; transition: background .2s, border-color .2s, color .2s; }
-    .panel-btn-primary { background: var(--accent); color: #ffffff; }
-    .panel-btn-primary:hover { background: #2563eb; }
-    .panel-btn-outline { background: transparent; border: 1.5px solid rgba(96,165,250,.45); color: #93c5fd; }
-    .panel-btn-outline:hover { border-color: var(--accent); color: white; }
-
-    @media (max-width: 580px) {
-      .team-panel { width: calc(100% - 2.5rem); left: 1.25rem; right: 1.25rem; }
-    }
-
-    /* ── Region filter + team grid ── */
-    .teams-section { background: var(--light); }
-    .teams-header { max-width: 700px; margin-bottom: 2.5rem; }
-    .teams-header h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: var(--blue); margin-bottom: .6rem; }
-    .teams-header p { font-size: .95rem; line-height: 1.75; color: var(--muted); }
-
-    .filter-bar { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 3rem; }
-    .filter-btn {
-      font-family: var(--sans); font-size: .75rem; font-weight: 600;
-      letter-spacing: .08em; text-transform: uppercase;
-      padding: .55rem 1.25rem; border-radius: 100px;
-      border: 1.5px solid var(--border); background: var(--white);
-      color: var(--muted); cursor: pointer; transition: border-color .2s, color .2s, background .2s;
-    }
-    .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .filter-btn.active { background: var(--navy); border-color: var(--navy); color: white; }
-
-    .teams-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-
-    .team-card {
-      background: var(--white); border: 1.5px solid var(--border); border-radius: 14px;
-      padding: 1.75rem 1.75rem 1.5rem; position: relative; overflow: hidden;
-      transition: box-shadow .3s, transform .3s, border-color .3s;
-    }
-    .team-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
-    .team-card:hover::before { transform: scaleX(1); }
-    .team-card:hover { box-shadow: 0 12px 36px rgba(11,42,74,.1); transform: translateY(-4px); border-color: rgba(59,130,246,.2); }
-    .team-card[data-status="coming"]::before { background: #FBBF24; }
-
-    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
-    .card-flag { flex-shrink: 0; }
-    .card-flag svg { width: 44px; height: 28px; border-radius: 4px; display: block; box-shadow: 0 1px 5px rgba(0,0,0,.2); }
-    .card-status { font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 100px; flex-shrink: 0; }
-    .card-status.active { background: rgba(59,130,246,.1); color: var(--accent); border: 1px solid rgba(59,130,246,.25); }
-    .card-status.coming { background: rgba(251,191,36,.12); color: #B45309; border: 1px solid rgba(251,191,36,.4); }
-
-    .card-region { font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: .35rem; }
-    .card-country { font-family: var(--serif); font-size: 1.25rem; color: var(--blue); margin-bottom: .3rem; }
-    .card-ambassador { font-size: .8rem; color: var(--muted); margin-bottom: 1rem; }
-    .card-ambassador strong { color: var(--blue); font-weight: 600; }
-
-    .card-topics { display: flex; flex-wrap: wrap; gap: .4rem; }
-    .card-topic { font-size: .65rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: .25rem .65rem; border-radius: 100px; background: var(--light); color: var(--muted); border: 1px solid var(--border); }
-
-    .team-card.hidden { display: none; }
-
-    @media (max-width: 1100px) { .teams-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px) { .teams-grid { grid-template-columns: 1fr; } }
-
-    /* ── CTA ── */
-    .cta-section { background: var(--white); text-align: center; padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem); border-top: 1.5px solid var(--border); }
-    .cta-section h2 { font-family: var(--serif); font-size: clamp(1.75rem, 4vw, 2.75rem); color: var(--blue); margin-bottom: 1rem; }
-    .cta-section p { font-size: 1rem; color: var(--muted); max-width: 50ch; margin: 0 auto 2rem; line-height: 1.75; }
-    .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { display: inline-flex; align-items: center; gap: .5rem; background: var(--blue); color: var(--white); padding: .9rem 2rem; border-radius: 6px; font-size: .875rem; font-weight: 600; letter-spacing: .04em; text-decoration: none; transition: background .2s, transform .15s; }
-    .btn-primary:hover { background: #0d3360; transform: translateY(-1px); }
-    .btn-outline { display: inline-flex; align-items: center; gap: .5rem; border: 1.5px solid var(--blue); color: var(--blue); padding: .9rem 2rem; border-radius: 6px; font-size: .875rem; font-weight: 600; letter-spacing: .04em; text-decoration: none; transition: border-color .2s, color .2s, transform .15s; }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-
-    /* ── Pulse ring animation ── */
-    @keyframes pulse-ring {
-      0%   { r: 5; opacity: 0.7; }
-      100% { r: 18; opacity: 0; }
-    }
-    .pulse-ring {
-      animation: pulse-ring 2.4s ease-out infinite;
-    }
-
-    /* ── Footer ── */
-    footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
-    .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
-    .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
-    .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
-    .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
-    .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
-    .footer-socials { display: flex; gap: 0.75rem; }
-    .social-btn { width: 34px; height: 34px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
-    .social-btn:hover { background: rgba(255,255,255,0.15); }
-    .social-btn svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.7); }
-    .footer-col-title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
-    .footer-col a:hover { color: white; }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
-    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-    .footer-bottom-links { display: flex; gap: 1.5rem; list-style: none; }
-    .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
-    @media (max-width: 1100px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } }
-
-    /* ── TEXT SWITCHING ─────────────────────────────────────── */
-    .m-hide { display: block; }
-    .m-show { display: none; }
-    span.m-hide { display: inline; }
-    span.m-show { display: none; }
-    @media (max-width: 1100px) {
-      .m-hide { display: none; }
-      .m-show { display: block; }
-      span.m-hide { display: none; }
-      span.m-show { display: inline; }
-    }
-
-    /* ── MOBILE FIXES ───────────────────────────────────────────── */
-    @media (max-width: 768px) {
-      html { font-size: 16px; }
-      .nav-logo-sub { display: none; }
-      /* Hero */
-      .team-hero { padding: 5.5rem 1.25rem 4rem; }
-      .team-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
-      .team-hero p { font-size: 0.9rem; }
-      /* Dev notice */
-      .dev-notice-inner { padding: 1.5rem 1.25rem; gap: 1rem; }
-      /* Map section: hide the map itself, keep header text */
-      #map { display: none; }
-      .map-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
-      /* Filter bar wraps */
-      .filter-bar { gap: 0.4rem; margin-bottom: 2rem; }
-      .filter-btn { font-size: 0.7rem; padding: 0.35rem 0.75rem; }
-      /* Teams grid already 1fr at 600px */
-      /* Footer */
-      .footer-col { display: none; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
-      /* CTA section */
-      .btn-group { flex-direction: column; align-items: center; }
-    }
-    @media (max-width: 670px) {
-      html { font-size: 15px; }
-      .team-hero { padding: 4.5rem 1rem 3rem; }
-    }
-  
-    /* Coming-soon footer links */
-    .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
-    .footer-col a.coming-soon::after { content: ' ·'; }
-
+    @media (max-width:670px) { html { font-size:15px; } .team-hero { padding:4.5rem 1rem 3rem; } }
   </style>
 </head>
 <body>
-
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
-        <img src="../images/logo.svg" alt="WYI Logo" style="width:42px;height:42px;object-fit:contain;">
+        <svg width="46" height="46" viewBox="202 2 276 252" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex-shrink:0;">
+          <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+          <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+          <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+          <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+          <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+          <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+          <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+          <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+        </svg>
       </div>
       <div>
         <span class="nav-logo-text">World Youth Initiative</span>
@@ -362,39 +215,29 @@
       <li><a href="../policy/">Policy Briefs</a></li>
     </ul>
     <a href="../contact/" class="nav-cta">Contact</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
-
   <div class="mobile-menu" id="mobileMenu" role="dialog">
-    <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
+    <button class="mobile-close" id="mobileClose" aria-label="Close">x</button>
     <a href="../about/" class="mobile-link">About</a>
     <a href="../research/" class="mobile-link">Research</a>
     <a href="../team/" class="mobile-link">Teams</a>
     <a href="../policy/" class="mobile-link">Policy Briefs</a>
     <a href="../contact/" class="mobile-link">Contact</a>
   </div>
-
   <main>
-
-    <!-- Hero -->
     <section class="team-hero">
       <div class="hero-orb"></div>
       <div class="hero-inner">
         <p class="hero-eyebrow">Global Network</p>
         <h1>National<br>Research<br>Teams</h1>
-        <p class="m-hide">WYI's national research teams operate across every major region of the world, bringing local expertise and diverse perspectives to questions of global significance.</p>
+        <p class="m-hide">WYI&#8217;s national research teams operate across every major region of the world, bringing local expertise and diverse perspectives to questions of global significance.</p>
         <p class="m-show">Local expertise. Global perspectives. Every region.</p>
       </div>
     </section>
-
-    <!-- Under Development Notice -->
     <div class="stats-strip">
       <div class="dev-notice-inner reveal">
-        <div class="dev-notice-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
+        <div class="dev-notice-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
         <div class="dev-notice-text">
           <strong>Teams under development</strong>
           <p class="m-hide">Our national research teams are currently being established. We are actively recruiting founding ambassadors and researchers across all regions. The first wave of teams is launching in 2026.</p>
@@ -402,8 +245,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Interactive Map -->
     <section class="map-section">
       <div class="map-section-inner">
         <div class="map-header reveal">
@@ -411,47 +252,37 @@
             <p class="map-eyebrow">Interactive Map</p>
             <h2>Our teams,<br>mapped globally.</h2>
           </div>
-          <p>Click any marker to explore a national research team launching soon — including its region, ambassador status, and how to get involved. Drag to pan, scroll to zoom.</p>
+          <p>Click any marker to explore a national research team launching soon &#8212; including its region, ambassador status, and how to get involved. Drag to pan, scroll to zoom.</p>
         </div>
-
         <div class="map-wrap reveal reveal-delay-1">
           <svg id="world-map" viewBox="0 0 960 500"></svg>
-
-          <!-- Team info panel -->
           <div class="team-panel" id="teamPanel">
-            <button class="panel-close" id="panelClose">✕</button>
+            <button class="panel-close" id="panelClose">&#10005;</button>
             <div class="panel-region" id="panelRegion"></div>
             <span class="panel-flag-large" id="panelFlag"></span>
             <div class="panel-country" id="panelCountry"></div>
             <div class="panel-ambassador" id="panelAmbassador"></div>
             <div class="panel-actions" id="panelActions"></div>
           </div>
-
-          <!-- Controls -->
           <div class="map-controls">
             <button class="map-btn" id="zoomIn" title="Zoom in">+</button>
-            <button class="map-btn" id="zoomOut" title="Zoom out">−</button>
-            <button class="map-btn" id="zoomReset" title="Reset view" style="font-size:.75rem;">↺</button>
+            <button class="map-btn" id="zoomOut" title="Zoom out">&#8722;</button>
+            <button class="map-btn" id="zoomReset" title="Reset view" style="font-size:.75rem;">&#8635;</button>
           </div>
-
-          <!-- Legend -->
           <div class="map-legend">
             <div class="legend-item"><span class="legend-dot coming"></span>Launching Soon</div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Team Grid -->
     <section class="section teams-section">
       <div class="section-inner">
         <div class="teams-header reveal">
           <p class="section-label">All Teams</p>
           <h2>Browse by region.</h2>
-          <p class="m-hide">Our founding national research teams — currently being established across five regions. Filter by area or view all at once.</p>
+          <p class="m-hide">Our founding national research teams &#8212; currently being established across five regions. Filter by area or view all at once.</p>
           <p class="m-show">Founding teams across five regions.</p>
         </div>
-
         <div class="filter-bar reveal reveal-delay-1">
           <button class="filter-btn active" data-filter="all">All Regions</button>
           <button class="filter-btn" data-filter="Europe">Europe</button>
@@ -460,114 +291,82 @@
           <button class="filter-btn" data-filter="Asia-Pacific">Asia-Pacific</button>
           <button class="filter-btn" data-filter="MENA">MENA</button>
         </div>
-
-        <div class="teams-grid" id="teamsGrid">
-          <!-- Cards injected by JS -->
-        </div>
+        <div class="teams-grid" id="teamsGrid"></div>
       </div>
     </section>
-
-    <!-- CTA -->
     <section class="cta-section">
-      <h2 class="reveal">Don't see your country?</h2>
-      <p class="reveal reveal-delay-1 m-hide">We are actively building new national teams. Apply to become the founding Ambassador in your country and shape WYI's presence from the ground up.</p>
+      <h2 class="reveal">Don&#8217;t see your country?</h2>
+      <p class="reveal reveal-delay-1 m-hide">We are actively building new national teams. Apply to become the founding Ambassador in your country and shape WYI&#8217;s presence from the ground up.</p>
       <p class="reveal reveal-delay-1 m-show">Apply to be a founding Ambassador in your country.</p>
       <div class="btn-group reveal reveal-delay-2">
         <a href="../application/" class="btn-primary">Apply as Ambassador <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <a href="../contact/" class="btn-outline">Get in Touch</a>
       </div>
     </section>
-
   </main>
-
-  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark"><img src="../images/logo.svg" alt="WYI Logo" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1);"></div>
+            <div class="footer-logo-mark">
+              <svg width="38" height="38" viewBox="190 -10 300 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;">
+                <polygon points="340,20 454,103 410,237 270,237 226,103" fill="white" stroke="white" stroke-width="44" stroke-linejoin="round"/>
+                <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+                <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+                <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+                <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+                <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+                <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+                <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+                <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+                <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+              </svg>
+            </div>
             <span class="footer-brand-name">World Youth Initiative</span>
           </div>
-          <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
+          <p class="footer-tagline">World Youth Initiative &#8212; A global youth-driven policy initiative connecting young researchers to shape tomorrow&#8217;s decisions.</p>
           <div class="footer-socials">
             <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
             <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Organization</div>
-          <ul>
-            <li><a href="../about/">About WYI</a></li>
-            <li><a href="#" class="coming-soon">How It Works</a></li>
-            <li><a href="../team/">Our Network</a></li>
-            <li><a href="#" class="coming-soon">Leadership</a></li>
-            <li><a href="#" class="coming-soon">Annual Report</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Research</div>
-          <ul>
-            <li><a href="#">Research Areas</a></li>
-            <li><a href="#">Policy Briefs</a></li>
-            <li><a href="#" class="coming-soon">Working Papers</a></li>
-            <li><a href="#" class="coming-soon">Publications</a></li>
-            <li><a href="#" class="coming-soon">Events</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul>
-            <li><a href="../application/">Join the Network</a></li>
-            <li><a href="../application/">Become Ambassador</a></li>
-            <li><a href="../team/">Research Teams</a></li>
-            <li><a href="#" class="coming-soon">Submit Research</a></li>
-            <li><a href="../contact/">Contact</a></li>
-          </ul>
-        </div>
+        <div class="footer-col"><div class="footer-col-title">Organization</div><ul><li><a href="../about/">About WYI</a></li><li><a href="#" class="coming-soon">How It Works</a></li><li><a href="../team/">Our Network</a></li><li><a href="#" class="coming-soon">Leadership</a></li><li><a href="#" class="coming-soon">Annual Report</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Research</div><ul><li><a href="#">Research Areas</a></li><li><a href="#">Policy Briefs</a></li><li><a href="#" class="coming-soon">Working Papers</a></li><li><a href="#" class="coming-soon">Publications</a></li><li><a href="#" class="coming-soon">Events</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Get Involved</div><ul><li><a href="../application/">Join the Network</a></li><li><a href="../application/">Become Ambassador</a></li><li><a href="../team/">Research Teams</a></li><li><a href="#" class="coming-soon">Submit Research</a></li><li><a href="../contact/">Contact</a></li></ul></div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
-        <ul class="footer-bottom-links">
-          <li><a href="../privacy/">Privacy Policy</a></li>
-          <li><a href="../terms/">Terms of Use</a></li>
-          <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
-        </ul>
+        <p class="footer-copy">&#169; 2026 World Youth Initiative. All rights reserved.</p>
+        <ul class="footer-bottom-links"><li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Use</a></li><li><a href="../cookies/">Cookie Policy</a></li><li><a href="../impressum/">Legal Notice</a></li></ul>
       </div>
     </div>
   </footer>
-
-  <!-- D3 + TopoJSON -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
-
   <script>
-  // ── Team data ──────────────────────────────────────────────────────────────
   const FLAGS = {
     de: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3"><rect width="5" height="1" fill="#000"/><rect width="5" height="1" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg>`,
     gb: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></svg>`,
     us: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 10"><rect width="19" height="10" fill="#B22234"/><rect width="19" height=".77" y=".77" fill="#fff"/><rect width="19" height=".77" y="2.31" fill="#fff"/><rect width="19" height=".77" y="3.85" fill="#fff"/><rect width="19" height=".77" y="5.38" fill="#fff"/><rect width="19" height=".77" y="6.92" fill="#fff"/><rect width="19" height=".77" y="8.46" fill="#fff"/><rect width="7.6" height="5.38" fill="#3C3B6E"/></svg>`,
-    br: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><rect width="20" height="14" fill="#009C3B"/><polygon points="10,1 19,7 10,13 1,7" fill="#FFDF00"/><circle cx="10" cy="7" r="3.2" fill="#002776"/><path d="M6.5,5.8 Q10,4.5 13.5,6.2" stroke="#fff" stroke-width=".5" fill="none"/></svg>`,
-    ke: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height=".67" fill="#006600"/><rect width="3" height=".67" y=".67" fill="#BB0000"/><rect width="3" height=".67" y="1.33" fill="#000"/><rect width="3" height=".08" y=".63" fill="#fff"/><rect width="3" height=".08" y="1.29" fill="#fff"/></svg>`,
+    br: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><rect width="20" height="14" fill="#009C3B"/><polygon points="10,1 19,7 10,13 1,7" fill="#FFDF00"/><circle cx="10" cy="7" r="3.2" fill="#002776"/></svg>`,
+    ke: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height=".67" fill="#006600"/><rect width="3" height=".67" y=".67" fill="#BB0000"/><rect width="3" height=".67" y="1.33" fill="#000"/></svg>`,
     in: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height=".67" fill="#FF9933"/><rect width="3" height=".67" y=".67" fill="#fff"/><rect width="3" height=".67" y="1.33" fill="#138808"/><circle cx="1.5" cy="1" r=".22" fill="none" stroke="#00008B" stroke-width=".05"/></svg>`,
     id: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="1" fill="#CE1126"/><rect width="3" height="1" y="1" fill="#fff"/></svg>`,
     ae: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height=".67" fill="#00732F"/><rect width="3" height=".67" y=".67" fill="#fff"/><rect width="3" height=".67" y="1.33" fill="#000"/><rect width=".75" height="2" fill="#EF3340"/></svg>`,
   };
-
   const TEAMS = [
-    { country: 'Germany',              iso: 'de', region: 'Europe',       status: 'coming', lon:  10.45, lat: 51.17, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
-    { country: 'United Kingdom',       iso: 'gb', region: 'Europe',       status: 'coming', lon:  -3.18, lat: 55.38, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
-    { country: 'United States',        iso: 'us', region: 'Americas',     status: 'coming', lon: -95.71, lat: 37.09, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
-    { country: 'Brazil',               iso: 'br', region: 'Americas',     status: 'coming', lon: -51.93, lat:-14.24, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
-    { country: 'Kenya',                iso: 'ke', region: 'Africa',       status: 'coming', lon:  37.91, lat: -0.02, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
-    { country: 'India',                iso: 'in', region: 'Asia-Pacific', status: 'coming', lon:  78.96, lat: 20.59, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
-    { country: 'Indonesia',            iso: 'id', region: 'Asia-Pacific', status: 'coming', lon: 113.92, lat: -0.79, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
-    { country: 'United Arab Emirates', iso: 'ae', region: 'MENA',         status: 'coming', lon:  53.85, lat: 23.42, ambassador: '<!-- ✏️ EDIT: Ambassador name -->' },
+    { country:'Germany',              iso:'de', region:'Europe',       status:'coming', lon:  10.45, lat: 51.17, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
+    { country:'United Kingdom',       iso:'gb', region:'Europe',       status:'coming', lon:  -3.18, lat: 55.38, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
+    { country:'United States',        iso:'us', region:'Americas',     status:'coming', lon: -95.71, lat: 37.09, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
+    { country:'Brazil',               iso:'br', region:'Americas',     status:'coming', lon: -51.93, lat:-14.24, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
+    { country:'Kenya',                iso:'ke', region:'Africa',       status:'coming', lon:  37.91, lat: -0.02, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
+    { country:'India',                iso:'in', region:'Asia-Pacific', status:'coming', lon:  78.96, lat: 20.59, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
+    { country:'Indonesia',            iso:'id', region:'Asia-Pacific', status:'coming', lon: 113.92, lat: -0.79, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
+    { country:'United Arab Emirates', iso:'ae', region:'MENA',         status:'coming', lon:  53.85, lat: 23.42, ambassador:'<!-- &#x270F;&#xFE0F; EDIT: Ambassador name -->' },
   ];
-
-  // ── Render team cards ──────────────────────────────────────────────────────
   function renderCards(filter) {
     const grid = document.getElementById('teamsGrid');
     grid.innerHTML = '';
@@ -579,26 +378,11 @@
       card.dataset.region = t.region;
       card.dataset.status = t.status;
       card.style.transitionDelay = delay + 's';
-      card.innerHTML = `
-        <div class="card-top">
-          <span class="card-flag">${FLAGS[t.iso]}</span>
-          <span class="card-status coming">Launching Soon</span>
-        </div>
-        <div class="card-region">${t.region}</div>
-        <div class="card-country">${t.country}</div>
-        <div class="card-ambassador"><strong>Ambassador:</strong> ${t.ambassador.includes('<!--') ? 'Position open' : t.ambassador}</div>
-        <div class="card-apply-links" style="margin-top:1rem; display:flex; gap:.5rem; flex-wrap:wrap;">
-          <a href="../application/?country=${encodeURIComponent(t.country)}&role=researcher" style="font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:white; background:var(--accent); padding:.4rem .9rem; border-radius:4px; text-decoration:none;">Researcher ↗</a>
-          ${t.ambassador.includes('<!--') ? `<a href="../application/?country=${encodeURIComponent(t.country)}&role=ambassador" style="font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); border:1.5px solid var(--accent); padding:.4rem .9rem; border-radius:4px; text-decoration:none;">Ambassador ↗</a>` : ''}
-        </div>
-      `;
+      card.innerHTML = '<div class="card-top"><span class="card-flag">' + FLAGS[t.iso] + '</span><span class="card-status coming">Launching Soon</span></div><div class="card-region">' + t.region + '</div><div class="card-country">' + t.country + '</div><div class="card-ambassador"><strong>Ambassador:</strong> ' + (t.ambassador.includes('<!--') ? 'Position open' : t.ambassador) + '</div><div class="card-apply-links" style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;"><a href="../application/?country=' + encodeURIComponent(t.country) + '&role=researcher" style="font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:white;background:var(--accent);padding:.4rem .9rem;border-radius:4px;text-decoration:none;">Researcher &#x2197;</a>' + (t.ambassador.includes('<!--') ? '<a href="../application/?country=' + encodeURIComponent(t.country) + '&role=ambassador" style="font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);padding:.4rem .9rem;border-radius:4px;text-decoration:none;">Ambassador &#x2197;</a>' : '') + '</div>';
       grid.appendChild(card);
     });
-    // Re-observe new elements
     document.querySelectorAll('.team-card.reveal').forEach(el => revealObserver.observe(el));
   }
-
-  // Filter buttons
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -606,158 +390,59 @@
       renderCards(btn.dataset.filter);
     });
   });
-
-  // ── Scroll reveal ──────────────────────────────────────────────────────────
   const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
-    });
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
   renderCards('all');
-
-  // ── Navbar ──────────────────────────────────────────────────────────────────
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow = ''; });
-  });
-
-  // ── World Map (D3) ─────────────────────────────────────────────────────────
+  hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.classList.toggle('open', isOpen); document.body.style.overflow = isOpen ? 'hidden' : ''; });
+  document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow = ''; }); });
   const svgEl = document.getElementById('world-map');
   const W = 960, H = 500;
-
   const svg = d3.select('#world-map');
-  const g   = svg.append('g');
-
-  const projection = d3.geoNaturalEarth1()
-    .scale(153)
-    .translate([W / 2, H / 2]);
-
+  const g = svg.append('g');
+  const projection = d3.geoNaturalEarth1().scale(153).translate([W/2, H/2]);
   const path = d3.geoPath().projection(projection);
-
-  // Zoom behaviour
-  const zoom = d3.zoom()
-    .scaleExtent([1, 8])
-    .on('zoom', e => g.attr('transform', e.transform));
-
+  const zoom = d3.zoom().scaleExtent([1,8]).on('zoom', e => g.attr('transform', e.transform));
   svg.call(zoom);
-
   document.getElementById('zoomIn').addEventListener('click', () => svg.transition().duration(300).call(zoom.scaleBy, 1.5));
-  document.getElementById('zoomOut').addEventListener('click', () => svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.5));
+  document.getElementById('zoomOut').addEventListener('click', () => svg.transition().duration(300).call(zoom.scaleBy, 1/1.5));
   document.getElementById('zoomReset').addEventListener('click', () => svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity));
-
-  // Panel
-  const panel    = document.getElementById('teamPanel');
-  const panelClose = document.getElementById('panelClose');
-  panelClose.addEventListener('click', () => panel.classList.remove('visible'));
-
+  const panel = document.getElementById('teamPanel');
+  document.getElementById('panelClose').addEventListener('click', () => panel.classList.remove('visible'));
   function showPanel(team) {
-    document.getElementById('panelRegion').textContent   = team.region;
+    document.getElementById('panelRegion').textContent = team.region;
     document.getElementById('panelFlag').innerHTML = FLAGS[team.iso];
-    document.getElementById('panelCountry').textContent  = team.country;
-    const hasAmbassador = !team.ambassador.includes('<!--');
-    document.getElementById('panelAmbassador').innerHTML = '<strong>Ambassador:</strong> ' + (hasAmbassador ? team.ambassador : 'Position open');
+    document.getElementById('panelCountry').textContent = team.country;
+    const hasAmb = !team.ambassador.includes('<!--');
+    document.getElementById('panelAmbassador').innerHTML = '<strong>Ambassador:</strong> ' + (hasAmb ? team.ambassador : 'Position open');
     const c = encodeURIComponent(team.country);
-    let actions = `<a href="../application/?country=${c}&role=researcher" class="panel-btn panel-btn-primary">Apply as Researcher ↗</a>`;
-    if (!hasAmbassador) {
-      actions += `<a href="../application/?country=${c}&role=ambassador" class="panel-btn panel-btn-outline">Apply as Ambassador ↗</a>`;
-    }
+    let actions = '<a href="../application/?country=' + c + '&role=researcher" class="panel-btn panel-btn-primary">Apply as Researcher &#x2197;</a>';
+    if (!hasAmb) actions += '<a href="../application/?country=' + c + '&role=ambassador" class="panel-btn panel-btn-outline">Apply as Ambassador &#x2197;</a>';
     document.getElementById('panelActions').innerHTML = actions;
     panel.classList.add('visible');
   }
-
-  // Load world topojson
   d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
-
-    // Sphere (ocean background)
-    g.append('path')
-      .datum({ type: 'Sphere' })
-      .attr('d', path)
-      .attr('fill', 'rgba(59,130,246,0.07)')
-      .attr('stroke', 'none');
-
-    // Country fills
-    g.append('g')
-      .selectAll('path')
-      .data(topojson.feature(world, world.objects.countries).features)
-      .join('path')
-      .attr('d', path)
-      .attr('fill', 'rgba(255,255,255,0.06)')
-      .attr('stroke', 'rgba(255,255,255,0.12)')
-      .attr('stroke-width', 0.4);
-
-    // Graticule lines
-    g.append('path')
-      .datum(d3.geoGraticule()())
-      .attr('d', path)
-      .attr('fill', 'none')
-      .attr('stroke', 'rgba(255,255,255,0.04)')
-      .attr('stroke-width', 0.5);
-
-    // Team markers
-    const markers = g.append('g').attr('class', 'markers');
-
+    g.append('path').datum({type:'Sphere'}).attr('d',path).attr('fill','rgba(59,130,246,0.07)').attr('stroke','none');
+    g.append('g').selectAll('path').data(topojson.feature(world,world.objects.countries).features).join('path').attr('d',path).attr('fill','rgba(255,255,255,0.06)').attr('stroke','rgba(255,255,255,0.12)').attr('stroke-width',0.4);
+    g.append('path').datum(d3.geoGraticule()()).attr('d',path).attr('fill','none').attr('stroke','rgba(255,255,255,0.04)').attr('stroke-width',0.5);
+    const markers = g.append('g').attr('class','markers');
     TEAMS.forEach(team => {
       const coords = projection([team.lon, team.lat]);
       if (!coords) return;
-      const [x, y] = coords;
-
-      const isActive = team.status === 'active';
-      const color    = isActive ? '#3B82F6' : '#FBBF24';
-
-      const markerG = markers.append('g')
-        .attr('transform', 'translate(' + x + ',' + y + ')')
-        .style('cursor', 'pointer');
-
-      // Pulse ring for active teams — CSS keyframe via class
-      if (isActive) {
-        markerG.append('circle')
-          .attr('class', 'pulse-ring')
-          .attr('r', 5)
-          .attr('fill', 'none')
-          .attr('stroke', color)
-          .attr('stroke-width', 1.5)
-          .attr('opacity', 0.7);
-      }
-
-      // Main dot
-      const dot = markerG.append('circle')
-        .attr('r', 5)
-        .attr('fill', color)
-        .attr('stroke', 'rgba(11,42,74,0.7)')
-        .attr('stroke-width', 1.5)
-        .style('transition', 'r 0.15s ease');
-
-      // Hover
-      markerG
-        .on('mouseenter', function() { dot.attr('r', 8); })
-        .on('mouseleave', function() { dot.attr('r', 5); })
-        .on('click', function(event) {
-          event.stopPropagation();
-          showPanel(team);
-        });
+      const [x,y] = coords;
+      const color = '#FBBF24';
+      const markerG = markers.append('g').attr('transform','translate('+x+','+y+')').style('cursor','pointer');
+      const dot = markerG.append('circle').attr('r',5).attr('fill',color).attr('stroke','rgba(11,42,74,0.7)').attr('stroke-width',1.5).style('transition','r 0.15s ease');
+      markerG.on('mouseenter', function() { dot.attr('r',8); }).on('mouseleave', function() { dot.attr('r',5); }).on('click', function(event) { event.stopPropagation(); showPanel(team); });
     });
-
-    // Click map background to close panel
     svg.on('click', () => panel.classList.remove('visible'));
-
   }).catch(err => {
-    console.error('Map load error:', err);
-    g.append('text')
-      .attr('x', W / 2).attr('y', H / 2)
-      .attr('text-anchor', 'middle')
-      .attr('fill', 'rgba(255,255,255,0.35)')
-      .attr('font-size', '13px')
-      .text('Map could not be loaded. Please check your connection.');
+    g.append('text').attr('x',W/2).attr('y',H/2).attr('text-anchor','middle').attr('fill','rgba(255,255,255,0.35)').attr('font-size','13px').text('Map could not be loaded.');
   });
   </script>
 </body>
