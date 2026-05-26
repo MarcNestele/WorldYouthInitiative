@@ -18,7 +18,8 @@
   <meta name="twitter:title" content="About | World Youth Initiative" />
   <meta name="twitter:description" content="Learn about the World Youth Initiative — a youth-led global policy think tank founded in 2026, connecting young researchers across every continent." />
   <meta name="twitter:image" content="https://worldyouthinitiative.org/images/logo.png" />
-  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox='190%20-10%20300%20280'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='white'%20stroke='white'%20stroke-width='44'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='%230B2A4A'%20stroke='%230B2A4A'%20stroke-width='28'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C38%20437%2C109%20400%2C223%20280%2C223%20243%2C109'%20fill='none'%20stroke='white'%20stroke-width='3.5'%20stroke-linejoin='round'/%3E%3Cpath%20d='M340%2C52%20L343.5%2C62%20L355%2C66%20L343.5%2C70%20L340%2C80%20L336.5%2C70%20L325%2C66%20L336.5%2C62%20Z'%20fill='white'/%3E%3Crect%20x='284'%20y='108'%20width='112'%20height='11'%20rx='3'%20fill='white'/%3E%3Crect%20x='292'%20y='122'%20width='96'%20height='7'%20rx='2'%20fill='white'/%3E%3Crect%20x='288'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='316'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='353'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='382'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Cpath%20d='M327%2C214%20L327%2C202%20A12%2C12%200%200%201%20353%2C202%20L353%2C214%20Z'%20fill='white'/%3E%3Cpath%20d='M331%2C214%20L331%2C202%20A8%2C8%200%200%201%20349%2C202%20L349%2C214%20Z'%20fill='%230B2A4A'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
@@ -66,8 +67,7 @@
     }
     nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
     .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
-    .nav-logo-mark { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; }
-    .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
+    .nav-logo-mark { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
     .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
     .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
@@ -358,20 +358,13 @@
 
     /* founder card */
     .founders-cards {
-      display: grid;
-      grid-template-columns: minmax(0, 680px);
-      gap: clamp(1.5rem, 3vw, 2.5rem);
-    }
-
-    @media (max-width: 900px) {
-      .founder-body { padding: 1.25rem 1.25rem 1.5rem; }
-      .founder-message-text { font-size: .88rem; }
-    }
-    @media (max-width: 640px) {
-      .founders-cards { grid-template-columns: 1fr; }
+      display: block;
     }
 
     .founder-card {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
       border: 1.5px solid var(--border);
       border-radius: 16px;
       overflow: hidden;
@@ -379,15 +372,12 @@
     }
     .founder-card:hover { box-shadow: 0 12px 40px rgba(11,42,74,.08); }
 
-    /* image placeholder */
+    /* image */
     .founder-photo {
-      width: 100%;
-      aspect-ratio: 3 / 4;
+      width: clamp(200px, 28%, 300px);
+      flex-shrink: 0;
       background: var(--gray);
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
     }
     .founder-photo img {
@@ -398,7 +388,13 @@
       display: block;
     }
 
-    .founder-body { padding: 1.75rem 2rem 2rem; }
+    .founder-body {
+      flex: 1;
+      padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.75rem, 3vw, 2.75rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .founder-role {
       font-size: .7rem;
@@ -416,11 +412,20 @@
       margin-bottom: 1.25rem;
     }
 
-    /* message text */
+    /* message text — never truncated */
     .founder-message-text {
       font-size: .95rem;
       line-height: 1.8;
       color: #374151;
+    }
+    .founder-message-text p + p { margin-top: 1rem; }
+
+    @media (max-width: 700px) {
+      .founder-card { flex-direction: column; }
+      .founder-photo {
+        width: 100%;
+        height: clamp(260px, 55vw, 340px);
+      }
     }
 
     /* ── Story timeline ────────────────────────────────────────────── */
@@ -648,8 +653,7 @@
     footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
     .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
-    .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
+    .footer-logo-mark { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
     .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
     .footer-socials { display: flex; gap: 0.75rem; }
@@ -814,7 +818,19 @@
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
-        <img src="../images/logo.svg" alt="WYI Logo" style="width:42px;height:42px;object-fit:contain;">
+        <svg width="46" height="46" viewBox="202 2 276 252" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex-shrink:0;">
+          <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+          <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+          <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+          <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+          <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+          <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+          <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+          <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+        </svg>
       </div>
       <div>
         <span class="nav-logo-text">World Youth Initiative</span>
@@ -970,10 +986,8 @@
               <p class="founder-role">Founder</p>
               <h3 class="founder-name">Marc Nestele</h3>
               <div class="founder-message-text">
-                <p class="m-hide">I'm Marc, 18, and grew up near Munich. I'm finishing school this year, where I also serve as school president, and heading to the United States for university. My interests sit at the intersection of mathematics, economics, and politics, and I've always been drawn to understanding how systems work and, more importantly, how they can be changed.</p>
-                <p class="m-show">I'm Marc, 18, from Munich — founder of WYI, making young people's voices heard in global decisions.</p>
-                <p class="m-hide">I didn't start the World Youth Initiative with a grand blueprint. I started because I kept noticing the same absence: young people consistently left out of conversations that will define their futures. Not for lack of ideas, but for lack of a platform that takes those ideas seriously. WYI is my answer to that.</p>
-                <p class="m-show">I built WYI because no serious platform existed for young people to contribute real policy thinking globally.</p>
+                <p>I'm Marc, 18, and grew up near Munich. I'm finishing school this year, where I also serve as school president, and heading to the United States for university. My interests sit at the intersection of mathematics, economics, and politics, and I've always been drawn to understanding how systems work and, more importantly, how they can be changed.</p>
+                <p>I didn't start the World Youth Initiative with a grand blueprint. I started because I kept noticing the same absence: young people consistently left out of conversations that will define their futures. Not for lack of ideas, but for lack of a platform that takes those ideas seriously. WYI is my answer to that.</p>
               </div>
             </div>
           </div>
@@ -1094,7 +1108,22 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark"><img src="../images/logo.svg" alt="WYI Logo" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1);"></div>
+            <div class="footer-logo-mark">
+              <svg width="38" height="38" viewBox="190 -10 300 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;">
+                <polygon points="340,20 454,103 410,237 270,237 226,103" fill="white" stroke="white" stroke-width="44" stroke-linejoin="round"/>
+                <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+                <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+                <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+                <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+                <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+                <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+                <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+                <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+                <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+              </svg>
+            </div>
             <span class="footer-brand-name">World Youth Initiative</span>
           </div>
           <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
