@@ -4,644 +4,189 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | World Youth Initiative</title>
-  <meta name="description" content="Get in touch with the World Youth Initiative. Reach out for partnership inquiries, media requests, research submissions, or questions about joining our global youth policy network." />
+  <meta name="description" content="Get in touch with the World Youth Initiative." />
   <link rel="canonical" href="https://worldyouthinitiative.org/contact/" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://worldyouthinitiative.org/contact/" />
   <meta property="og:title" content="Contact | World Youth Initiative" />
-  <meta property="og:description" content="Get in touch with the World Youth Initiative — for partnerships, media, research submissions, or questions about joining our global youth policy network." />
   <meta property="og:image" content="https://worldyouthinitiative.org/images/logo.png" />
   <meta property="og:site_name" content="World Youth Initiative" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact | World Youth Initiative" />
-  <meta name="twitter:description" content="Reach out for partnerships, media, or research submissions." />
   <meta name="twitter:image" content="https://worldyouthinitiative.org/images/logo.png" />
-  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox='190%20-10%20300%20280'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='white'%20stroke='white'%20stroke-width='44'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='%230B2A4A'%20stroke='%230B2A4A'%20stroke-width='28'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C38%20437%2C109%20400%2C223%20280%2C223%20243%2C109'%20fill='none'%20stroke='white'%20stroke-width='3.5'%20stroke-linejoin='round'/%3E%3Cpath%20d='M340%2C52%20L343.5%2C62%20L355%2C66%20L343.5%2C70%20L340%2C80%20L336.5%2C70%20L325%2C66%20L336.5%2C62%20Z'%20fill='white'/%3E%3Crect%20x='284'%20y='108'%20width='112'%20height='11'%20rx='3'%20fill='white'/%3E%3Crect%20x='292'%20y='122'%20width='96'%20height='7'%20rx='2'%20fill='white'/%3E%3Crect%20x='288'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='316'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='353'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='382'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Cpath%20d='M327%2C214%20L327%2C202%20A12%2C12%200%200%201%20353%2C202%20L353%2C214%20Z'%20fill='white'/%3E%3Cpath%20d='M331%2C214%20L331%2C202%20A8%2C8%200%200%201%20349%2C202%20L349%2C214%20Z'%20fill='%230B2A4A'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
   <style>
-    /* ── Reset & Variables ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --blue:    #0B2A4A;
-      --navy:    #0B2A4A;
-      --gray:    #F5F5F5;
-      --light:   #F5F5F5;
-      --accent:  #3B82F6;
-      --white:   #ffffff;
-      --text:    #1a1a2e;
-      --muted:   #6b7280;
-      --border:  #e5e7eb;
-      --serif:   'DM Serif Display', Georgia, serif;
-      --sans:    'DM Sans', system-ui, sans-serif;
-      --max:     1575px;
-      --nav-h:   72px;
-      --pad:     clamp(1.5rem, 5vw, 5rem);
+      --blue:#0B2A4A; --navy:#0B2A4A; --gray:#F5F5F5; --light:#F5F5F5; --accent:#3B82F6;
+      --white:#ffffff; --text:#1a1a2e; --muted:#6b7280; --border:#e5e7eb;
+      --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+      --max:1575px; --nav-h:72px; --pad:clamp(1.5rem,5vw,5rem);
     }
-
     html { scroll-behavior: smooth; font-size: 20.25px; }
-
-    body {
-      font-family: var(--sans);
-      background: var(--white);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-
-    /* ── Navbar ────────────────────────────────────────────────────── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-      padding: 1.25rem clamp(1rem, 3vw, 5rem);
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1rem;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
-    .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
+    body { font-family:var(--sans); background:var(--white); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-wrap:break-word; word-break:break-word; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:999; padding:1.25rem clamp(1rem,3vw,5rem); display:flex; align-items:center; justify-content:space-between; gap:1rem; background:rgba(255,255,255,0.92); backdrop-filter:blur(12px); border-bottom:1px solid transparent; transition:border-color 0.3s,box-shadow 0.3s; }
+    nav.scrolled { border-color:var(--border); box-shadow:0 2px 24px rgba(11,42,74,0.06); }
+    .nav-logo { display:flex; align-items:center; gap:0.625rem; text-decoration:none; color:var(--navy); }
     .nav-logo-mark {
-      width: 34px; height: 34px;  
+      width: 46px; height: 46px;
       display: flex; align-items: center; justify-content: center;
-    }
-    .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
-    .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
-    .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
-    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); opacity: 0.7; transition: opacity 0.2s; }
-    .nav-links a:hover { opacity: 1; }
-    .nav-cta {
-      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-      text-decoration: none; color: white; background: var(--navy);
-      padding: 0.65rem 1.4rem; border-radius: 4px;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu {
-      position: fixed;
-      top: 0; right: 0;
-      z-index: 997;
-      background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(20px);
-      border-left: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      border-radius: 0 0 0 14px;
-      padding: calc(72px + 1.25rem) 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0;
-      min-width: 200px;
-      box-shadow: -4px 8px 24px rgba(11,42,74,0.08);
-      transform: translateY(-110%);
-      opacity: 0;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
-      pointer-events: none;
-    }
-    .mobile-menu.open {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: all;
-    }
-    .mobile-menu a {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--navy);
-      text-decoration: none;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      letter-spacing: 0.02em;
-      opacity: 0.65;
-      transition: opacity 0.2s;
-      width: 100%;
-      text-align: right;
-    }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { opacity: 1; }
-    .mobile-close { display: none; }
-
-    @media (max-width: 1100px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-    }
-
-    /* ── Dev Banner ────────────────────────────────────────────────── */
-    .dev-banner {
-      position: relative;
-      z-index: 101;
-      background: var(--blue);
-      padding: .6rem clamp(1.25rem, 5vw, 3rem);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: .75rem;
-      font-size: .72rem;
-      font-weight: 500;
-      letter-spacing: .06em;
-      color: rgba(255,255,255,.7);
-      text-align: center;
-    }
-    .dev-banner strong { color: white; font-weight: 700; letter-spacing: .08em; }
-    .dev-banner-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: #FBBF24;
-      display: inline-block;
-      animation: blinkDot 1.8s ease-in-out infinite;
       flex-shrink: 0;
     }
-    @keyframes blinkDot { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
-
-    /* ── Page wrapper ──────────────────────────────────────────────── */
-    main { padding-top: var(--nav-h); }
-
-    /* ── Page Hero ─────────────────────────────────────────────────── */
-    .contact-hero {
-      position: relative;
-      background: var(--blue);
-      color: var(--white);
-      overflow: hidden;
-      padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem);
-    }
-    .contact-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
-    }
-    .hero-orb {
-      position: absolute;
-      right: -6rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: clamp(280px, 38vw, 520px);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      border: 1px solid rgba(59,130,246,.2);
-      pointer-events: none;
-    }
-    .hero-orb::before {
-      content: '';
-      position: absolute;
-      inset: 2rem;
-      border-radius: 50%;
-      border: 1px solid rgba(59,130,246,.12);
-    }
-    .hero-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      position: relative;
-    }
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      font-size: .75rem;
-      font-weight: 600;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 28px; height: 1px;
-      background: var(--accent);
-    }
-    .contact-hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.75rem, 6vw, 5rem);
-      line-height: 1.08;
-      max-width: 16ch;
-      margin-bottom: 1.75rem;
-    }
-    .contact-hero p {
-      font-size: clamp(1rem, 2vw, 1.175rem);
-      font-weight: 300;
-      line-height: 1.75;
-      max-width: 54ch;
-      opacity: .8;
-    }
-
-    /* ── Section utility ───────────────────────────────────────────── */
-    .section {
-      padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem);
-    }
-    .section-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      font-size: .7rem;
-      font-weight: 600;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 22px; height: 1px;
-      background: var(--accent);
-    }
-
-    /* ── Scroll animations ─────────────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal-delay-1 { transition-delay: .12s; }
-    .reveal-delay-2 { transition-delay: .24s; }
-    .reveal-delay-3 { transition-delay: .36s; }
-
-    /* ── Container ─────────────────────────────────────────────────── */
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-
-    /* ── Contact Layout ────────────────────────────────────────────── */
-    .contact-section { background: var(--white); }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: clamp(3rem, 6vw, 7rem);
-      align-items: start;
-    }
-
-    /* ── Contact Form ──────────────────────────────────────────────── */
-    .form-header { margin-bottom: 2.5rem; }
-
-    .form-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.15;
-      color: var(--blue);
-      margin-bottom: .75rem;
-    }
-    .form-header p {
-      font-size: .95rem;
-      line-height: 1.75;
-      color: var(--muted);
-      max-width: 46ch;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-    }
-
-    .form-field {
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-    }
-
-    .form-field label {
-      font-size: .75rem;
-      font-weight: 600;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--blue);
-    }
-
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      font-family: var(--sans);
-      font-size: .9rem;
-      color: var(--text);
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      padding: .85rem 1.1rem;
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;
-      width: 100%;
-      resize: none;
-      appearance: none;
-    }
-
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: #9ca3af;
-    }
-
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(59,130,246,.12);
-    }
-
-    .form-field select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      padding-right: 2.5rem;
-      cursor: pointer;
-    }
-
-    .form-field textarea { min-height: 155px; line-height: 1.65; }
-
-    .form-submit {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      background: var(--blue);
-      color: var(--white);
-      font-family: var(--sans);
-      font-size: .875rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 6px;
-      padding: 1rem 2.25rem;
-      cursor: pointer;
-      transition: background .2s, transform .15s, box-shadow .2s;
-      box-shadow: 0 4px 20px rgba(11,42,74,.18);
-      align-self: flex-start;
-    }
-    .form-submit svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; transition: transform .2s; }
-    .form-submit:hover { background: #0d3360; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(11,42,74,.26); }
-    .form-submit:hover svg { transform: translateX(3px); }
-    .form-submit:disabled { opacity: .65; cursor: not-allowed; transform: none; box-shadow: none; }
-
-    .form-note {
-      font-size: .78rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-top: -.5rem;
-    }
-
-    /* success state */
-    .form-success {
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-      background: #f0fdf4;
-      border: 1.5px solid #bbf7d0;
-      border-radius: 12px;
-      padding: 2rem 2rem;
-      margin-top: 1rem;
-    }
-    .form-success.visible { display: flex; }
-    .success-icon {
-      width: 44px; height: 44px;
-      background: #dcfce7;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .success-icon svg { width: 22px; height: 22px; stroke: #16a34a; fill: none; stroke-width: 2.5; }
-    .form-success h3 {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      color: #15803d;
-    }
-    .form-success p {
-      font-size: .875rem;
-      color: #166534;
-      line-height: 1.65;
-    }
-
-    /* ── Contact Sidebar ───────────────────────────────────────────── */
-    .contact-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      position: sticky;
-      top: calc(var(--nav-h) + 2rem);
-    }
-
-    .sidebar-card {
-      border: 1.5px solid var(--border);
-      border-radius: 14px;
-      padding: 2rem 1.75rem;
-      transition: border-color .3s, box-shadow .3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .sidebar-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--accent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .35s;
-    }
-    .sidebar-card:hover::before { transform: scaleX(1); }
-    .sidebar-card:hover { border-color: rgba(59,130,246,.3); box-shadow: 0 10px 32px rgba(11,42,74,.08); }
-
-    .sidebar-card-icon {
-      width: 42px; height: 42px;
-      border-radius: 10px;
-      background: rgba(11,42,74,.07);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-    .sidebar-card-icon svg {
-      width: 20px; height: 20px;
-      stroke: var(--navy);
-      fill: none;
-      stroke-width: 1.8;
-    }
-
-    .sidebar-card h3 {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      color: var(--blue);
-      margin-bottom: .45rem;
-    }
-    .sidebar-card p {
-      font-size: .855rem;
-      line-height: 1.65;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    .sidebar-card a.card-link {
-      font-size: .855rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-decoration: none;
-      display: inline-flex;
-      word-break: break-all;
-      align-items: center;
-      gap: .35rem;
-      transition: gap .2s;
-    }
-    .sidebar-card a.card-link svg {
-      width: 13px; height: 13px;
-      stroke: var(--accent);
-      fill: none;
-      stroke-width: 2;
-      flex-shrink: 0;
-    }
-    .sidebar-card a.card-link:hover { gap: .55rem; }
-
-    /* dark card variant */
-    .sidebar-card.dark {
-      background: var(--navy);
-      border-color: transparent;
-    }
-    .sidebar-card.dark::before { background: rgba(59,130,246,.7); }
-    .sidebar-card.dark:hover { border-color: transparent; box-shadow: 0 10px 32px rgba(11,42,74,.22); }
-    .sidebar-card.dark .sidebar-card-icon { background: rgba(255,255,255,.1); }
-    .sidebar-card.dark .sidebar-card-icon svg { stroke: white; }
-    .sidebar-card.dark h3 { color: white; }
-    .sidebar-card.dark p { color: rgba(255,255,255,.55); }
-
-    /* social row */
-    .sidebar-socials {
-      display: flex;
-      gap: .75rem;
-      margin-top: .25rem;
-    }
-    .sidebar-social-btn {
-      width: 36px; height: 36px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 7px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      transition: background .2s;
-      text-decoration: none;
-    }
-    .sidebar-social-btn:hover { background: rgba(255,255,255,.18); }
-    .sidebar-social-btn svg { width: 15px; height: 15px; fill: rgba(255,255,255,.7); }
-
-    /* ── Footer ────────────────────────────────────────────────────── */
-    footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
-    .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
-    .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
-    .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
-    .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
-    .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
-    .footer-socials { display: flex; gap: 0.75rem; }
-    .social-btn { width: 34px; height: 34px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
-    .social-btn:hover { background: rgba(255,255,255,0.15); }
-    .social-btn svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.7); }
-    .footer-col-title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
-    .footer-col a:hover { color: white; }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
-    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-    .footer-bottom-links { display: flex; gap: 1.5rem; list-style: none; }
-    .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
-    @media (max-width: 1100px) {
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .footer-inner { grid-template-columns: 1fr; }
-    }
-
-    /* ── Responsive ────────────────────────────────────────────────── */
-    @media (max-width: 1100px) {
-      .contact-grid { grid-template-columns: 1fr; }
-      .contact-sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    @media (max-width: 680px) {
-      .form-row { grid-template-columns: 1fr; }
-      .contact-sidebar { grid-template-columns: 1fr; }
-    }
-
-    /* ── TEXT SWITCHING ─────────────────────────────────────── */
-    .m-hide { display: block; }
-    .m-show { display: none; }
-    span.m-hide { display: inline; }
-    span    @media (max-width: 1100px) {
-      .m-hide { display: none; }
-      .m-show { display: block; }
-      span.m-hide { display: none; }
-      span.m-show { display: inline; }
-    }
-
-    /* ── MOBILE FIXES ───────────────────────────────────────────── */
+    .nav-logo-text { font-family:'DM Serif Display',serif; font-size:1.05rem; letter-spacing:-0.01em; }
+    .nav-logo-sub { font-size:0.65rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); display:block; line-height:1; }
+    .nav-links { display:flex; align-items:center; gap:clamp(1rem,2vw,2.5rem); list-style:none; }
+    .nav-links a { text-decoration:none; font-size:0.875rem; font-weight:500; letter-spacing:0.02em; color:var(--navy); opacity:0.7; transition:opacity 0.2s; }
+    .nav-links a:hover { opacity:1; }
+    .nav-cta { font-size:0.8rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; text-decoration:none; color:white; background:var(--navy); padding:0.65rem 1.4rem; border-radius:4px; transition:background 0.2s,transform 0.2s; }
+    .nav-cta:hover { background:#0d3360; transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:11px 11px; }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--navy); border-radius:2px; transition:0.3s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-menu { position:fixed; top:0; right:0; z-index:997; background:rgba(255,255,255,0.97); backdrop-filter:blur(20px); border-left:1px solid var(--border); border-bottom:1px solid var(--border); border-radius:0 0 0 14px; padding:calc(72px + 1.25rem) 2rem 1.5rem; display:flex; flex-direction:column; align-items:flex-end; gap:0; min-width:200px; box-shadow:-4px 8px 24px rgba(11,42,74,0.08); transform:translateY(-110%); opacity:0; transition:transform 0.3s cubic-bezier(0.22,1,0.36,1),opacity 0.25s ease; pointer-events:none; }
+    .mobile-menu.open { transform:translateY(0); opacity:1; pointer-events:all; }
+    .mobile-menu a { font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; color:var(--navy); text-decoration:none; padding:0.6rem 0; border-bottom:1px solid rgba(0,0,0,0.06); letter-spacing:0.02em; opacity:0.65; transition:opacity 0.2s; width:100%; text-align:right; }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { opacity:1; }
+    .mobile-close { display:none; }
+    @media (max-width: 1100px) { .nav-links,.nav-cta { display:none; } .hamburger { display:flex; } }
+    .dev-banner { position:relative; z-index:101; background:var(--blue); padding:.6rem clamp(1.25rem,5vw,3rem); display:flex; align-items:center; justify-content:center; gap:.75rem; font-size:.72rem; font-weight:500; letter-spacing:.06em; color:rgba(255,255,255,.7); text-align:center; }
+    .dev-banner strong { color:white; font-weight:700; letter-spacing:.08em; }
+    .dev-banner-dot { width:6px; height:6px; border-radius:50%; background:#FBBF24; display:inline-block; animation:blinkDot 1.8s ease-in-out infinite; flex-shrink:0; }
+    @keyframes blinkDot { 0%,100% { opacity:.4; } 50% { opacity:1; } }
+    main { padding-top:var(--nav-h); }
+    .contact-hero { position:relative; background:var(--blue); color:var(--white); overflow:hidden; padding:clamp(5rem,12vw,9rem) clamp(1.25rem,5vw,3rem) clamp(4rem,9vw,7rem); }
+    .contact-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(59,130,246,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.07) 1px,transparent 1px); background-size:60px 60px; pointer-events:none; }
+    .hero-orb { position:absolute; right:-6rem; top:50%; transform:translateY(-50%); width:clamp(280px,38vw,520px); aspect-ratio:1; border-radius:50%; border:1px solid rgba(59,130,246,.2); pointer-events:none; }
+    .hero-orb::before { content:''; position:absolute; inset:2rem; border-radius:50%; border:1px solid rgba(59,130,246,.12); }
+    .hero-inner { max-width:var(--max); margin:0 auto; position:relative; }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:1.5rem; }
+    .hero-eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--accent); }
+    .contact-hero h1 { font-family:var(--serif); font-size:clamp(2.75rem,6vw,5rem); line-height:1.08; max-width:16ch; margin-bottom:1.75rem; }
+    .contact-hero p { font-size:clamp(1rem,2vw,1.175rem); font-weight:300; line-height:1.75; max-width:54ch; opacity:.8; }
+    .section { padding:clamp(4rem,9vw,7rem) clamp(1.25rem,5vw,3rem); }
+    .section-inner { max-width:var(--max); margin:0 auto; }
+    .section-label { display:inline-flex; align-items:center; gap:.5rem; font-size:.7rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+    .section-label::before { content:''; display:block; width:22px; height:1px; background:var(--accent); }
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:.12s; }
+    .reveal-delay-2 { transition-delay:.24s; }
+    .reveal-delay-3 { transition-delay:.36s; }
+    .container { max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+    .contact-section { background:var(--white); }
+    .contact-grid { display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(3rem,6vw,7rem); align-items:start; }
+    .form-header { margin-bottom:2.5rem; }
+    .form-header h2 { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); line-height:1.15; color:var(--blue); margin-bottom:.75rem; }
+    .form-header p { font-size:.95rem; line-height:1.75; color:var(--muted); max-width:46ch; }
+    .contact-form { display:flex; flex-direction:column; gap:1.5rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .form-field { display:flex; flex-direction:column; gap:.5rem; }
+    .form-field label { font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); }
+    .form-field input,.form-field select,.form-field textarea { font-family:var(--sans); font-size:.9rem; color:var(--text); background:var(--white); border:1.5px solid var(--border); border-radius:8px; padding:.85rem 1.1rem; outline:none; transition:border-color .2s,box-shadow .2s; width:100%; resize:none; appearance:none; }
+    .form-field input::placeholder,.form-field textarea::placeholder { color:#9ca3af; }
+    .form-field input:focus,.form-field select:focus,.form-field textarea:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(59,130,246,.12); }
+    .form-field select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.5rem; cursor:pointer; }
+    .form-field textarea { min-height:155px; line-height:1.65; }
+    .form-submit { display:inline-flex; align-items:center; gap:.6rem; background:var(--blue); color:var(--white); font-family:var(--sans); font-size:.875rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; border:none; border-radius:6px; padding:1rem 2.25rem; cursor:pointer; transition:background .2s,transform .15s,box-shadow .2s; box-shadow:0 4px 20px rgba(11,42,74,.18); align-self:flex-start; }
+    .form-submit svg { width:16px; height:16px; stroke:white; fill:none; stroke-width:2; transition:transform .2s; }
+    .form-submit:hover { background:#0d3360; transform:translateY(-2px); box-shadow:0 8px 28px rgba(11,42,74,.26); }
+    .form-submit:hover svg { transform:translateX(3px); }
+    .form-submit:disabled { opacity:.65; cursor:not-allowed; transform:none; box-shadow:none; }
+    .form-note { font-size:.78rem; color:var(--muted); line-height:1.6; margin-top:-.5rem; }
+    .form-success { display:none; flex-direction:column; align-items:flex-start; gap:1rem; background:#f0fdf4; border:1.5px solid #bbf7d0; border-radius:12px; padding:2rem; margin-top:1rem; }
+    .form-success.visible { display:flex; }
+    .success-icon { width:44px; height:44px; background:#dcfce7; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+    .success-icon svg { width:22px; height:22px; stroke:#16a34a; fill:none; stroke-width:2.5; }
+    .form-success h3 { font-family:var(--serif); font-size:1.3rem; color:#15803d; }
+    .form-success p { font-size:.875rem; color:#166534; line-height:1.65; }
+    .contact-sidebar { display:flex; flex-direction:column; gap:2rem; position:sticky; top:calc(var(--nav-h) + 2rem); }
+    .sidebar-card { border:1.5px solid var(--border); border-radius:14px; padding:2rem 1.75rem; transition:border-color .3s,box-shadow .3s; position:relative; overflow:hidden; }
+    .sidebar-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
+    .sidebar-card:hover::before { transform:scaleX(1); }
+    .sidebar-card:hover { border-color:rgba(59,130,246,.3); box-shadow:0 10px 32px rgba(11,42,74,.08); }
+    .sidebar-card-icon { width:42px; height:42px; border-radius:10px; background:rgba(11,42,74,.07); display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; }
+    .sidebar-card-icon svg { width:20px; height:20px; stroke:var(--navy); fill:none; stroke-width:1.8; }
+    .sidebar-card h3 { font-family:var(--serif); font-size:1.1rem; color:var(--blue); margin-bottom:.45rem; }
+    .sidebar-card p { font-size:.855rem; line-height:1.65; color:var(--muted); margin-bottom:1rem; }
+    .sidebar-card a.card-link { font-size:.855rem; font-weight:600; color:var(--accent); text-decoration:none; display:inline-flex; word-break:break-all; align-items:center; gap:.35rem; transition:gap .2s; }
+    .sidebar-card a.card-link svg { width:13px; height:13px; stroke:var(--accent); fill:none; stroke-width:2; flex-shrink:0; }
+    .sidebar-card a.card-link:hover { gap:.55rem; }
+    .sidebar-card.dark { background:var(--navy); border-color:transparent; }
+    .sidebar-card.dark::before { background:rgba(59,130,246,.7); }
+    .sidebar-card.dark:hover { border-color:transparent; box-shadow:0 10px 32px rgba(11,42,74,.22); }
+    .sidebar-card.dark .sidebar-card-icon { background:rgba(255,255,255,.1); }
+    .sidebar-card.dark .sidebar-card-icon svg { stroke:white; }
+    .sidebar-card.dark h3 { color:white; }
+    .sidebar-card.dark p { color:rgba(255,255,255,.55); }
+    .sidebar-socials { display:flex; gap:.75rem; margin-top:.25rem; }
+    .sidebar-social-btn { width:36px; height:36px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:7px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s; text-decoration:none; }
+    .sidebar-social-btn:hover { background:rgba(255,255,255,.18); }
+    .sidebar-social-btn svg { width:15px; height:15px; fill:rgba(255,255,255,.7); }
+    footer { background:var(--navy); color:white; padding:clamp(3.5rem,7vw,5.5rem) var(--pad) 2.5rem; }
+    .footer-inner { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:2rem; }
+    .footer-logo { display:flex; align-items:center; gap:0.6rem; margin-bottom:1.2rem; }
+    .footer-logo-mark { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .footer-brand-name { font-family:'DM Serif Display',serif; font-size:0.95rem; }
+    .footer-tagline { font-size:0.875rem; line-height:1.7; color:rgba(255,255,255,0.45); max-width:420px; margin-bottom:1.75rem; }
+    .footer-socials { display:flex; gap:0.75rem; }
+    .social-btn { width:34px; height:34px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.2s; }
+    .social-btn:hover { background:rgba(255,255,255,0.15); }
+    .social-btn svg { width:15px; height:15px; fill:rgba(255,255,255,0.7); }
+    .footer-col-title { font-size:0.68rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:1.25rem; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { font-size:0.875rem; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s; }
+    .footer-col a:hover { color:white; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; }
+    .footer-copy { font-size:0.8rem; color:rgba(255,255,255,0.3); }
+    .footer-bottom-links { display:flex; gap:1.5rem; list-style:none; }
+    .footer-bottom-links a { font-size:0.8rem; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-bottom-links a:hover { color:rgba(255,255,255,0.7); }
+    @media (max-width: 1100px) { .footer-inner { grid-template-columns:1fr 1fr; } .contact-grid { grid-template-columns:1fr; } .contact-sidebar { position:static; display:grid; grid-template-columns:1fr 1fr; } }
+    @media (max-width: 680px) { .form-row { grid-template-columns:1fr; } .contact-sidebar { grid-template-columns:1fr; } }
+    .m-hide { display:block; } .m-show { display:none; }
+    span.m-hide { display:inline; } span.m-show { display:none; }
+    @media (max-width: 1100px) { .m-hide { display:none; } .m-show { display:block; } span.m-hide { display:none; } span.m-show { display:inline; } }
     @media (max-width: 768px) {
-      html { font-size: 16px; }
-      .nav-logo-sub { display: none; }
-      /* Hero */
-      .contact-hero { padding: 5.5rem 1.25rem 4rem; }
-      .contact-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
-      .contact-hero p { font-size: 0.9rem; }
-      /* Form section padding */
-      .contact-section { padding: 3rem 1.25rem; }
-      /* Sidebar already stacks at 1100px */
-      .contact-sidebar { grid-template-columns: 1fr; }
-      /* Footer */
-      .footer-col { display: none; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
+      html { font-size:16px; } .nav-logo-sub { display:none; }
+      .contact-hero { padding:5.5rem 1.25rem 4rem; }
+      .contact-hero h1 { font-size:clamp(2rem,9vw,3rem); }
+      .contact-hero p { font-size:0.9rem; }
+      .contact-section { padding:3rem 1.25rem; }
+      .contact-sidebar { grid-template-columns:1fr; }
+      .footer-col { display:none; } .footer-inner { grid-template-columns:1fr; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:0.5rem; }
+      .footer-bottom-links { flex-wrap:wrap; gap:0.75rem 1.25rem; }
     }
-    @media (max-width: 670px) {
-      html { font-size: 15px; }
-      .contact-hero { padding: 4.5rem 1rem 3rem; }
-    }
-  
-    /* Coming-soon footer links */
-    .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
-    .footer-col a.coming-soon::after { content: ' ·'; }
-
-  
-    /* iOS zoom fix: inputs must be ≥ 16px to prevent auto-zoom */
-    @media (max-width: 768px) {
-      input, select, textarea { font-size: 16px !important; }
-    }
+    @media (max-width: 670px) { html { font-size:15px; } .contact-hero { padding:4.5rem 1rem 3rem; } }
+    .footer-col a.coming-soon { opacity:0.35; cursor:default; pointer-events:none; }
+    .footer-col a.coming-soon::after { content:' \00b7'; }
+    @media (max-width: 768px) { input,select,textarea { font-size:16px !important; } }
   </style>
 </head>
-
 <body>
-
-  <!-- ── Navbar ─────────────────────────────────────────────────── -->
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
-        <img src="../images/logo.svg" alt="WYI Logo" style="width:42px;height:42px;object-fit:contain;">
+        <svg width="46" height="46" viewBox="202 2 276 252" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex-shrink:0;">
+          <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+          <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+          <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+          <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+          <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+          <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+          <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+          <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+        </svg>
       </div>
       <div>
         <span class="nav-logo-text">World Youth Initiative</span>
@@ -655,24 +200,17 @@
       <li><a href="../policy/">Policy Briefs</a></li>
     </ul>
     <a href="../contact/" class="nav-cta">Contact</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
-
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" role="dialog">
-    <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
+    <button class="mobile-close" id="mobileClose" aria-label="Close">x</button>
     <a href="../about/" class="mobile-link">About</a>
     <a href="../research/" class="mobile-link">Research</a>
     <a href="../team/" class="mobile-link">Teams</a>
     <a href="../policy/" class="mobile-link">Policy Briefs</a>
     <a href="../contact/" class="mobile-link">Contact</a>
   </div>
-
   <main>
-
-    <!-- ── Hero ───────────────────────────────────────────────────── -->
     <section class="contact-hero">
       <div class="hero-orb"></div>
       <div class="hero-inner">
@@ -682,13 +220,9 @@
         <p class="m-show">Questions, partnerships, or getting involved — reach out.</p>
       </div>
     </section>
-
-    <!-- ── Contact Section ────────────────────────────────────────── -->
     <section class="section contact-section">
       <div class="section-inner">
         <div class="contact-grid">
-
-          <!-- Form Column -->
           <div>
             <div class="form-header reveal">
               <p class="section-label">Send a Message</p>
@@ -696,30 +230,13 @@
               <p class="m-hide">Use the form below to send us a message. Our team reviews all inquiries and typically responds within two to three business days.</p>
               <p class="m-show">We respond within two to three business days.</p>
             </div>
-
             <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
-
               <div class="form-row">
-                <div class="form-field">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required />
-                </div>
-                <div class="form-field">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Doe" autocomplete="family-name" required />
-                </div>
+                <div class="form-field"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required /></div>
+                <div class="form-field"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" placeholder="Doe" autocomplete="family-name" required /></div>
               </div>
-
-              <div class="form-field">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="jane.doe@example.com" autocomplete="email" required />
-              </div>
-
-              <div class="form-field">
-                <label for="organisation">Organisation <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);">(optional)</span></label>
-                <input type="text" id="organisation" name="organisation" placeholder="University, Think Tank, NGO…" autocomplete="organization" />
-              </div>
-
+              <div class="form-field"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane.doe@example.com" autocomplete="email" required /></div>
+              <div class="form-field"><label for="organisation">Organisation <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);">(optional)</span></label><input type="text" id="organisation" name="organisation" placeholder="University, Think Tank, NGO…" autocomplete="organization" /></div>
               <div class="form-field">
                 <label for="subject">Subject</label>
                 <select id="subject" name="subject" required>
@@ -732,113 +249,89 @@
                   <option value="other">Other</option>
                 </select>
               </div>
-
-              <div class="form-field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message here…" required></textarea>
-              </div>
-
-              <p class="form-note">By submitting this form you agree to our <a href="#" style="color:var(--accent);text-decoration:none;">Privacy Policy</a>. We do not share your information with third parties.</p>
-
-              <button type="submit" class="form-submit" id="submitBtn">
-                Send Message
-                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-
+              <div class="form-field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Write your message here…" required></textarea></div>
+              <p class="form-note">By submitting this form you agree to our <a href="../privacy/" style="color:var(--accent);text-decoration:none;">Privacy Policy</a>. We do not share your information with third parties.</p>
+              <button type="submit" class="form-submit" id="submitBtn">Send Message<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
             </form>
-
-            <!-- Success message -->
             <div class="form-success" id="formSuccess">
-              <div class="success-icon">
-                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
+              <div class="success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
               <h3>Message Sent</h3>
               <p>Thank you for reaching out. A member of our team will review your message and get back to you within two to three business days.</p>
             </div>
           </div>
-
-          <!-- Sidebar Column -->
           <div class="contact-sidebar">
-
-            <!-- Email -->
             <div class="sidebar-card reveal">
-              <div class="sidebar-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
+              <div class="sidebar-card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
               <h3>Email Us Directly</h3>
               <p class="m-hide">For general inquiries, reach out via email.</p>
               <p class="m-show">General inquiries via email.</p>
-              <!-- ✏️ EDIT: Replace with real WYI email address -->
-              <a href="mailto:contact@worldyouthinitiative.org" class="card-link">
-                contact@worldyouthinitiative.org
-                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
+              <a href="mailto:contact@worldyouthinitiative.org" class="card-link">contact@worldyouthinitiative.org<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             </div>
-
-            <!-- Applications -->
             <div class="sidebar-card reveal reveal-delay-1">
-              <div class="sidebar-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
+              <div class="sidebar-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
               <h3>Membership &amp; Applications</h3>
               <p class="m-hide">Interested in joining WYI as a researcher or national ambassador? Visit our application page to apply.</p>
               <p class="m-show">Join as a researcher or ambassador.</p>
-              <a href="../application/" class="card-link">
-                View open positions
-                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <a href="../application/" class="card-link">View open positions<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
-
-            <!-- Press -->
             <div class="sidebar-card reveal reveal-delay-2">
-              <div class="sidebar-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              </div>
+              <div class="sidebar-card-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
               <h3>Media &amp; Press</h3>
               <p class="m-hide">Journalists and media professionals can reach our press contact for statements, interviews, and research inquiries.</p>
               <p class="m-show">Statements, interviews, and research inquiries.</p>
-              <!-- ✏️ EDIT: Replace with real press email address -->
-              <a href="mailto:press@worldyouthinitiative.org" class="card-link">
-                press@worldyouthinitiative.org
-                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
+              <a href="mailto:press@worldyouthinitiative.org" class="card-link">press@worldyouthinitiative.org<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             </div>
-
-            <!-- Follow -->
             <div class="sidebar-card dark reveal reveal-delay-3">
               <div class="sidebar-card-icon">
-                <img src="../images/logo.svg" alt="WYI Logo" style="width:32px;height:32px;object-fit:contain;filter:brightness(0) invert(1);">
+                <svg width="28" height="28" viewBox="202 2 276 252" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;">
+                <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+                <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+                <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+                <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+                <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+                <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+                <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+                <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+                <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+              </svg>
               </div>
               <h3>Follow Our Work</h3>
               <p class="m-hide">Stay up to date with WYI research, events, and announcements across our social channels.</p>
               <p class="m-show">Follow us for updates and announcements.</p>
               <div class="sidebar-socials">
-                <a href="#" class="sidebar-social-btn" aria-label="Twitter / X">
-                  <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="#" class="sidebar-social-btn" aria-label="LinkedIn">
-                  <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
-                <a href="#" class="sidebar-social-btn" aria-label="Instagram">
-                  <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </a>
+                <a href="#" class="sidebar-social-btn" aria-label="Twitter / X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="#" class="sidebar-social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="#" class="sidebar-social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-
   </main>
-
-  <!-- ── Footer ─────────────────────────────────────────────────── -->
   <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark"><img src="../images/logo.svg" alt="WYI Logo" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1);"></div>
+          <div class="footer-logo-mark">
+            <svg width="38" height="38" viewBox="190 -10 300 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;">
+              <polygon points="340,20 454,103 410,237 270,237 226,103" fill="white" stroke="white" stroke-width="44" stroke-linejoin="round"/>
+              <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+              <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+              <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+              <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+              <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+              <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+              <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+              <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+              <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+              <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+            </svg>
+          </div>
             <span class="footer-brand-name">World Youth Initiative</span>
           </div>
           <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
@@ -848,133 +341,42 @@
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-              <div class="footer-col">
-        <div class="footer-col-title">Organization</div>
-        <ul>
-          <li><a href="../about/">About WYI</a></li>
-          <li><a href="../team/">Our Network</a></li>
-          <li><a href="#" class="coming-soon">Leadership</a></li>
-          <li><a href="#" class="coming-soon">Annual Report</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Research</div>
-        <ul>
-          <li><a href="../research/">Research Areas</a></li>
-          <li><a href="../policy/">Policy Briefs</a></li>
-          <li><a href="#" class="coming-soon">Events</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Get Involved</div>
-        <ul>
-          <li><a href="../application/">Join the Network</a></li>
-          <li><a href="../application/">Become Ambassador</a></li>
-          <li><a href="../team/">Research Teams</a></li>
-          <li><a href="../contact/">Contact</a></li>
-        </ul>
-      </div>
-
+        <div class="footer-col"><div class="footer-col-title">Organization</div><ul><li><a href="../about/">About WYI</a></li><li><a href="../team/">Our Network</a></li><li><a href="#" class="coming-soon">Leadership</a></li><li><a href="#" class="coming-soon">Annual Report</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Research</div><ul><li><a href="../research/">Research Areas</a></li><li><a href="../policy/">Policy Briefs</a></li><li><a href="#" class="coming-soon">Events</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Get Involved</div><ul><li><a href="../application/">Join the Network</a></li><li><a href="../application/">Become Ambassador</a></li><li><a href="../team/">Research Teams</a></li><li><a href="../contact/">Contact</a></li></ul></div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
-        <ul class="footer-bottom-links">
-          <li><a href="../privacy/">Privacy Policy</a></li>
-          <li><a href="../terms/">Terms of Use</a></li>
-          <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
-        </ul>
+        <p class="footer-copy">&#169; 2026 World Youth Initiative. All rights reserved.</p>
+        <ul class="footer-bottom-links"><li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Use</a></li><li><a href="../cookies/">Cookie Policy</a></li><li><a href="../impressum/">Legal Notice</a></li></ul>
       </div>
     </div>
   </footer>
-
-  <!-- ── JS ─────────────────────────────────────────────────────── -->
   <script>
-    // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const _mq = window.matchMedia('(max-width: 768px)');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: _mq.matches ? 0.04 : 0.12, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
-
-    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 30);
-    }, { passive: true });
-
-    // Mobile menu
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Contact form — frontend only, wire up to a backend or form service as needed
+    hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.classList.toggle('open', isOpen); document.body.style.overflow = isOpen ? 'hidden' : ''; });
+    document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow = ''; }); });
     const form = document.getElementById('contactForm');
     const successBox = document.getElementById('formSuccess');
     const submitBtn = document.getElementById('submitBtn');
-
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-
-      // Basic required-field check
       const required = form.querySelectorAll('[required]');
       let valid = true;
-      required.forEach(field => {
-        if (!field.value.trim()) {
-          valid = false;
-          field.style.borderColor = '#ef4444';
-          field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
-        }
-      });
+      required.forEach(field => { if (!field.value.trim()) { valid = false; field.style.borderColor = '#ef4444'; field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true }); } });
       if (!valid) return;
-
-      submitBtn.textContent = 'Sending…';
+      submitBtn.textContent = 'Sending\u2026';
       submitBtn.disabled = true;
-
-      const data = new FormData(form);
-
-      fetch('https://formspree.io/f/xdabzkzp', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        if (response.ok) {
-          form.style.display = 'none';
-          successBox.classList.add('visible');
-          successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        } else {
-          return response.json().then(data => {
-            submitBtn.textContent = 'Send Message';
-            submitBtn.disabled = false;
-            alert(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please try again.');
-          });
-        }
-      })
-      .catch(() => {
-        submitBtn.textContent = 'Send Message';
-        submitBtn.disabled = false;
-        alert('Network error. Please check your connection and try again.');
-      });
+      fetch('https://formspree.io/f/xdabzkzp', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(response => { if (response.ok) { form.style.display = 'none'; successBox.classList.add('visible'); successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } else { return response.json().then(data => { submitBtn.textContent = 'Send Message'; submitBtn.disabled = false; alert(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong.'); }); } })
+      .catch(() => { submitBtn.textContent = 'Send Message'; submitBtn.disabled = false; alert('Network error. Please check your connection and try again.'); });
     });
   </script>
-
 </body>
 </html>
