@@ -4,282 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Policy Briefs | World Youth Initiative</title>
-  <meta name="description" content="Evidence-based policy briefs by young researchers from the World Youth Initiative, covering global governance, AI regulation, climate finance, youth unemployment, and more. First briefs launching 2026." />
+  <meta name="description" content="Evidence-based policy briefs by young researchers from the World Youth Initiative." />
   <link rel="canonical" href="https://worldyouthinitiative.org/policy/" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://worldyouthinitiative.org/policy/" />
   <meta property="og:title" content="Policy Briefs | World Youth Initiative" />
-  <meta property="og:description" content="Evidence-based policy briefs by young researchers covering global governance, AI regulation, climate finance, and youth unemployment. First briefs launching 2026." />
   <meta property="og:image" content="https://worldyouthinitiative.org/images/logo.png" />
   <meta property="og:site_name" content="World Youth Initiative" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Policy Briefs | World Youth Initiative" />
-  <meta name="twitter:description" content="Evidence-based policy briefs by young researchers. First series launching 2026." />
   <meta name="twitter:image" content="https://worldyouthinitiative.org/images/logo.png" />
-  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox='190%20-10%20300%20280'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='white'%20stroke='white'%20stroke-width='44'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='%230B2A4A'%20stroke='%230B2A4A'%20stroke-width='28'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C38%20437%2C109%20400%2C223%20280%2C223%20243%2C109'%20fill='none'%20stroke='white'%20stroke-width='3.5'%20stroke-linejoin='round'/%3E%3Cpath%20d='M340%2C52%20L343.5%2C62%20L355%2C66%20L343.5%2C70%20L340%2C80%20L336.5%2C70%20L325%2C66%20L336.5%2C62%20Z'%20fill='white'/%3E%3Crect%20x='284'%20y='108'%20width='112'%20height='11'%20rx='3'%20fill='white'/%3E%3Crect%20x='292'%20y='122'%20width='96'%20height='7'%20rx='2'%20fill='white'/%3E%3Crect%20x='288'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='316'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='353'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='382'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Cpath%20d='M327%2C214%20L327%2C202%20A12%2C12%200%200%201%20353%2C202%20L353%2C214%20Z'%20fill='white'/%3E%3Cpath%20d='M331%2C214%20L331%2C202%20A8%2C8%200%200%201%20349%2C202%20L349%2C214%20Z'%20fill='%230B2A4A'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --blue:    #0B2A4A;
-      --navy:    #0B2A4A;
-      --gray:    #F5F5F5;
-      --light:   #F5F5F5;
-      --accent:  #3B82F6;
-      --white:   #ffffff;
-      --text:    #1a1a2e;
-      --muted:   #6b7280;
-      --border:  #e5e7eb;
-      --serif:   'DM Serif Display', Georgia, serif;
-      --sans:    'DM Sans', system-ui, sans-serif;
-      --max:     1575px;
-      --nav-h:   72px;
-      --pad:     clamp(1.5rem, 5vw, 5rem);
+      --blue:#0B2A4A; --navy:#0B2A4A; --gray:#F5F5F5; --light:#F5F5F5; --accent:#3B82F6;
+      --white:#ffffff; --text:#1a1a2e; --muted:#6b7280; --border:#e5e7eb;
+      --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+      --max:1575px; --nav-h:72px; --pad:clamp(1.5rem,5vw,5rem);
     }
-
     html { scroll-behavior: smooth; font-size: 20.25px; }
-    body { font-family: var(--sans); background: var(--white); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-    /* ── Navbar ────────────────────────────────────────────────────── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-      padding: 1.25rem clamp(1rem, 3vw, 5rem);
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s, box-shadow 0.3s;
+    body { font-family:var(--sans); background:var(--white); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:999; padding:1.25rem clamp(1rem,3vw,5rem); display:flex; align-items:center; justify-content:space-between; gap:1rem; background:rgba(255,255,255,0.92); backdrop-filter:blur(12px); border-bottom:1px solid transparent; transition:border-color 0.3s,box-shadow 0.3s; }
+    nav.scrolled { border-color:var(--border); box-shadow:0 2px 24px rgba(11,42,74,0.06); }
+    .nav-logo { display:flex; align-items:center; gap:0.625rem; text-decoration:none; color:var(--navy); }
+    .nav-logo-mark { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-logo-text { font-family:'DM Serif Display',serif; font-size:1.05rem; letter-spacing:-0.01em; }
+    .nav-logo-sub { font-size:0.65rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); display:block; line-height:1; }
+    .nav-links { display:flex; align-items:center; gap:clamp(1rem,2vw,2.5rem); list-style:none; }
+    .nav-links a { text-decoration:none; font-size:0.875rem; font-weight:500; letter-spacing:0.02em; color:var(--navy); opacity:0.7; transition:opacity 0.2s; }
+    .nav-links a:hover { opacity:1; }
+    .nav-links a.nav-active { opacity:1; border-bottom:2px solid var(--accent); padding-bottom:2px; }
+    .nav-cta { font-size:0.8rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; text-decoration:none; color:white; background:var(--navy); padding:0.65rem 1.4rem; border-radius:4px; transition:background 0.2s,transform 0.2s; }
+    .nav-cta:hover { background:#0d3360; transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--navy); border-radius:2px; transition:0.3s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-menu { position:fixed; top:0; right:0; z-index:997; background:rgba(255,255,255,0.97); backdrop-filter:blur(20px); border-left:1px solid var(--border); border-bottom:1px solid var(--border); border-radius:0 0 0 14px; padding:calc(72px + 1.25rem) 2rem 1.5rem; display:flex; flex-direction:column; align-items:flex-end; gap:0; min-width:200px; box-shadow:-4px 8px 24px rgba(11,42,74,0.08); transform:translateY(-110%); opacity:0; transition:transform 0.3s cubic-bezier(0.22,1,0.36,1),opacity 0.25s ease; pointer-events:none; }
+    .mobile-menu.open { transform:translateY(0); opacity:1; pointer-events:all; }
+    .mobile-menu a { font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; color:var(--navy); text-decoration:none; padding:0.6rem 0; border-bottom:1px solid rgba(0,0,0,0.06); letter-spacing:0.02em; opacity:0.65; transition:opacity 0.2s; width:100%; text-align:right; }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { opacity:1; }
+    .mobile-close { display:none; }
+    @media (max-width:1100px) { .nav-links,.nav-cta { display:none; } .hamburger { display:flex; } }
+    .container { max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+    main { padding-top:var(--nav-h); }
+    .section { padding:clamp(4rem,9vw,7rem) clamp(1.25rem,5vw,3rem); }
+    .section-inner { max-width:var(--max); margin:0 auto; }
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:.12s; }
+    .reveal-delay-2 { transition-delay:.24s; }
+    .reveal-delay-3 { transition-delay:.36s; }
+    @keyframes pulse { 0%,100% { opacity:.4; transform:scale(.85); } 50% { opacity:1; transform:scale(1); } }
+    .page-hero { position:relative; background:var(--navy); color:var(--white); overflow:hidden; padding:clamp(5rem,12vw,9rem) clamp(1.25rem,5vw,3rem) clamp(4rem,9vw,7rem); }
+    .page-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(59,130,246,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.07) 1px,transparent 1px); background-size:60px 60px; pointer-events:none; }
+    .hero-orb { position:absolute; right:-6rem; top:50%; transform:translateY(-50%); width:clamp(280px,38vw,520px); aspect-ratio:1; border-radius:50%; border:1px solid rgba(59,130,246,.2); pointer-events:none; }
+    .hero-orb::before { content:''; position:absolute; inset:2rem; border-radius:50%; border:1px solid rgba(59,130,246,.12); }
+    .hero-inner { max-width:var(--max); margin:0 auto; position:relative; }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:1.5rem; }
+    .hero-eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--accent); }
+    .page-hero h1 { font-family:var(--serif); font-size:clamp(2.75rem,6vw,5rem); line-height:1.08; max-width:18ch; margin-bottom:1.75rem; }
+    .page-hero p { font-size:clamp(1rem,2vw,1.175rem); font-weight:300; line-height:1.75; max-width:54ch; opacity:.8; }
+    .launch-banner { background:var(--light); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:1.1rem clamp(1.25rem,5vw,3rem); display:flex; align-items:center; justify-content:center; gap:.9rem; text-align:center; }
+    .launch-dot { width:8px; height:8px; border-radius:50%; background:var(--accent); flex-shrink:0; animation:pulse 2s ease-in-out infinite; }
+    .launch-banner p { font-size:.8rem; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+    .launch-banner strong { color:var(--navy); font-weight:700; }
+    .filter-bar { padding:2.25rem clamp(1.25rem,5vw,3rem) 0; border-bottom:1px solid var(--border); }
+    .filter-bar-inner { max-width:var(--max); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; padding-bottom:1.5rem; }
+    .filter-tags { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
+    .filter-tag { font-size:.72rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:.45rem 1rem; border-radius:99px; border:1.5px solid var(--border); color:var(--muted); cursor:default; }
+    .filter-tag.active { border-color:var(--navy); color:var(--navy); background:rgba(11,42,74,.05); }
+    .filter-count { font-size:.78rem; color:var(--muted); font-weight:400; white-space:nowrap; }
+    .briefs-section { background:var(--white); }
+    .briefs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:3rem; }
+    .brief-card { border:1.5px solid var(--border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:border-color .3s,box-shadow .3s,transform .3s; }
+    .brief-card:hover { border-color:rgba(11,42,74,.2); box-shadow:0 12px 40px rgba(11,42,74,.1); transform:translateY(-4px); }
+    .brief-cover { position:relative; height:200px; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .brief-cover-bg { position:absolute; inset:0; }
+    .brief-cover-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px); background-size:28px 28px; }
+    .brief-cover-blur { position:absolute; inset:0; backdrop-filter:blur(8px); background:rgba(11,42,74,.35); }
+    .brief-cover-content { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:.75rem; padding:1.5rem; }
+    .brief-cover-icon { width:48px; height:48px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:10px; display:flex; align-items:center; justify-content:center; }
+    .brief-cover-icon svg { width:22px; height:22px; fill:none; stroke:white; stroke-width:1.8; }
+    .brief-coming-badge { display:inline-flex; align-items:center; gap:.4rem; font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:white; background:rgba(59,130,246,.7); border:1px solid rgba(59,130,246,.9); padding:.3rem .85rem; border-radius:99px; }
+    .brief-coming-badge::before { content:''; width:5px; height:5px; border-radius:50%; background:white; animation:pulse 2s infinite; }
+    .brief-body { padding:1.75rem 1.75rem 1.5rem; display:flex; flex-direction:column; gap:.85rem; flex:1; }
+    .brief-meta { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+    .brief-topic { font-size:.65rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+    .brief-card h3 { font-family:var(--serif); font-size:clamp(1rem,1.5vw,1.2rem); line-height:1.3; color:var(--navy); filter:blur(4px); user-select:none; }
+    .brief-excerpt { font-size:.82rem; line-height:1.65; color:var(--muted); filter:blur(3.5px); user-select:none; }
+    .brief-footer { padding:1.1rem 1.75rem; border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brief-authors { display:flex; align-items:center; gap:.5rem; }
+    .brief-avatar-stack { display:flex; }
+    .brief-avatar { width:26px; height:26px; border-radius:50%; background:var(--light); border:2px solid white; margin-right:-8px; display:flex; align-items:center; justify-content:center; font-size:.55rem; font-weight:700; color:var(--muted); filter:blur(2px); }
+    .brief-author-label { font-size:.72rem; color:var(--muted); margin-left:14px; filter:blur(3px); user-select:none; }
+    .brief-cta-link { font-size:.72rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:.35rem; cursor:default; opacity:.6; }
+    .brief-cta-link svg { width:13px; height:13px; fill:none; stroke:currentColor; stroke-width:2; }
+    .featured-brief { border:1.5px solid var(--border); border-radius:16px; overflow:hidden; display:grid; grid-template-columns:1fr 1.6fr; margin-bottom:2rem; transition:border-color .3s,box-shadow .3s,transform .3s; }
+    .featured-brief:hover { border-color:rgba(11,42,74,.2); box-shadow:0 16px 48px rgba(11,42,74,.1); transform:translateY(-3px); }
+    .featured-cover { position:relative; min-height:320px; background:linear-gradient(160deg,#0B2A4A 0%,#1a3f6b 60%,#3B82F6 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .featured-cover-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:36px 36px; }
+    .featured-cover-blur { position:absolute; inset:0; backdrop-filter:blur(10px); background:rgba(11,42,74,.3); }
+    .featured-cover-content { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:1.25rem; padding:2rem; text-align:center; }
+    .featured-icon { width:64px; height:64px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); border-radius:14px; display:flex; align-items:center; justify-content:center; }
+    .featured-icon svg { width:30px; height:30px; fill:none; stroke:white; stroke-width:1.6; }
+    .featured-label { font-size:.65rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+    .featured-body { padding:2.5rem; display:flex; flex-direction:column; justify-content:center; gap:1rem; }
+    .featured-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+    .featured-eyebrow::before { content:''; display:block; width:18px; height:1px; background:var(--accent); }
+    .featured-body h2 { font-family:var(--serif); font-size:clamp(1.5rem,2.5vw,2.2rem); line-height:1.2; color:var(--navy); filter:blur(5px); user-select:none; }
+    .featured-body p { font-size:.9rem; line-height:1.75; color:var(--muted); max-width:52ch; filter:blur(3.5px); user-select:none; }
+    .featured-meta { display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap; padding-top:.5rem; border-top:1px solid var(--border); margin-top:.5rem; }
+    .featured-meta-item { display:flex; flex-direction:column; gap:.2rem; }
+    .featured-meta-label { font-size:.6rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+    .featured-meta-value { font-size:.8rem; font-weight:500; color:var(--navy); filter:blur(3px); user-select:none; }
+    .featured-cta { display:inline-flex; align-items:center; gap:.5rem; font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); cursor:default; opacity:.55; }
+    .featured-cta svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; }
+    footer { background:var(--navy); color:white; padding:clamp(3.5rem,7vw,5.5rem) var(--pad) 2.5rem; }
+    .footer-inner { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:2rem; }
+    .footer-logo { display:flex; align-items:center; gap:0.6rem; margin-bottom:1.2rem; }
+    .footer-logo-mark { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .footer-brand-name { font-family:'DM Serif Display',serif; font-size:0.95rem; }
+    .footer-tagline { font-size:0.875rem; line-height:1.7; color:rgba(255,255,255,0.45); max-width:420px; margin-bottom:1.75rem; }
+    .footer-socials { display:flex; gap:0.75rem; }
+    .social-btn { width:34px; height:34px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.2s; }
+    .social-btn:hover { background:rgba(255,255,255,0.15); }
+    .social-btn svg { width:15px; height:15px; fill:rgba(255,255,255,0.7); }
+    .footer-col-title { font-size:0.68rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:1.25rem; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { font-size:0.875rem; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s; }
+    .footer-col a:hover { color:white; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; }
+    .footer-copy { font-size:0.8rem; color:rgba(255,255,255,0.3); }
+    .footer-bottom-links { display:flex; gap:1.5rem; list-style:none; }
+    .footer-bottom-links a { font-size:0.8rem; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-bottom-links a:hover { color:rgba(255,255,255,0.7); }
+    @media (max-width:1100px) { .briefs-grid { grid-template-columns:1fr 1fr; } .featured-brief { grid-template-columns:1fr; } .featured-cover { min-height:220px; } .footer-inner { grid-template-columns:1fr 1fr; } }
+    @media (max-width:680px) { .briefs-grid { grid-template-columns:1fr; } .footer-inner { grid-template-columns:1fr; } }
+    .m-hide { display:block; } .m-show { display:none; }
+    span.m-hide { display:inline; } span.m-show { display:none; }
+    @media (max-width:1100px) { .m-hide { display:none; } .m-show { display:block; } span.m-hide { display:none; } span.m-show { display:inline; } }
+    @media (max-width:768px) {
+      html { font-size:16px; } .nav-logo-sub { display:none; }
+      .page-hero { padding:5.5rem 1.25rem 4rem; } .page-hero h1 { font-size:clamp(2rem,9vw,3rem); } .page-hero p { font-size:0.9rem; }
+      .launch-banner { flex-direction:column; align-items:flex-start; gap:0.75rem; padding:1rem 1.25rem; }
+      .filter-bar-inner { flex-direction:column; align-items:flex-start; gap:0.75rem; }
+      .brief-body { padding:1.25rem; } .featured-body { padding:1.5rem; } .featured-cover { min-height:160px; }
+      .footer-col { display:none; } .footer-inner { grid-template-columns:1fr; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:0.5rem; }
+      .footer-bottom-links { flex-wrap:wrap; gap:0.75rem 1.25rem; }
     }
-    nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
-    .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
-    .nav-logo-mark { width: 34px; height: 34px;   display: flex; align-items: center; justify-content: center; }
-    .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
-    .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
-    .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
-    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); opacity: 0.7; transition: opacity 0.2s; }
-    .nav-links a:hover { opacity: 1; }
-    .nav-links a.nav-active { opacity: 1; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
-    .nav-cta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: white; background: var(--navy); padding: 0.65rem 1.4rem; border-radius: 4px; transition: background 0.2s, transform 0.2s; }
-    .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu {
-      position: fixed; top: 0; right: 0; z-index: 997;
-      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
-      border-left: 1px solid var(--border); border-bottom: 1px solid var(--border); border-radius: 0 0 0 14px;
-      padding: calc(72px + 1.25rem) 2rem 1.5rem;
-      display: flex; flex-direction: column; align-items: flex-end; gap: 0; min-width: 200px;
-      box-shadow: -4px 8px 24px rgba(11,42,74,0.08);
-      transform: translateY(-110%); opacity: 0;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
-      pointer-events: none;
-    }
-    .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-menu a { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); letter-spacing: 0.02em; opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right; }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { opacity: 1; }
-    .mobile-close { display: none; }
-    @media (max-width: 1100px) { .nav-links, .nav-cta { display: none; } .hamburger { display: flex; } }
-
-    /* ── Utilities ─────────────────────────────────────────────────── */
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-    main { padding-top: var(--nav-h); }
-    .section { padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem); }
-    .section-inner { max-width: var(--max); margin: 0 auto; }
-
-    /* ── Scroll animations ─────────────────────────────────────────── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: .12s; }
-    .reveal-delay-2 { transition-delay: .24s; }
-    .reveal-delay-3 { transition-delay: .36s; }
-
-    /* ── Pulse ─────────────────────────────────────────────────────── */
-    @keyframes pulse { 0%, 100% { opacity: .4; transform: scale(.85); } 50% { opacity: 1; transform: scale(1); } }
-
-    /* ── Page Hero ─────────────────────────────────────────────────── */
-    .page-hero {
-      position: relative; background: var(--navy); color: var(--white); overflow: hidden;
-      padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem);
-    }
-    .page-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
-      background-size: 60px 60px; pointer-events: none;
-    }
-    .hero-orb { position: absolute; right: -6rem; top: 50%; transform: translateY(-50%); width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(59,130,246,.2); pointer-events: none; }
-    .hero-orb::before { content: ''; position: absolute; inset: 2rem; border-radius: 50%; border: 1px solid rgba(59,130,246,.12); }
-    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
-    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); }
-    .page-hero h1 { font-family: var(--serif); font-size: clamp(2.75rem, 6vw, 5rem); line-height: 1.08; max-width: 18ch; margin-bottom: 1.75rem; }
-    .page-hero p { font-size: clamp(1rem, 2vw, 1.175rem); font-weight: 300; line-height: 1.75; max-width: 54ch; opacity: .8; }
-
-    /* ── Launch Banner ─────────────────────────────────────────────── */
-    .launch-banner {
-      background: var(--light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      padding: 1.1rem clamp(1.25rem, 5vw, 3rem);
-      display: flex; align-items: center; justify-content: center; gap: .9rem; text-align: center;
-    }
-    .launch-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; animation: pulse 2s ease-in-out infinite; }
-    .launch-banner p { font-size: .8rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-    .launch-banner strong { color: var(--navy); font-weight: 700; }
-
-    /* ── Filter Bar ────────────────────────────────────────────────── */
-    .filter-bar { padding: 2.25rem clamp(1.25rem, 5vw, 3rem) 0; border-bottom: 1px solid var(--border); }
-    .filter-bar-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.5rem; }
-    .filter-tags { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
-    .filter-tag { font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .45rem 1rem; border-radius: 99px; border: 1.5px solid var(--border); color: var(--muted); cursor: default; }
-    .filter-tag.active { border-color: var(--navy); color: var(--navy); background: rgba(11,42,74,.05); }
-    .filter-count { font-size: .78rem; color: var(--muted); font-weight: 400; white-space: nowrap; }
-
-    /* ── Briefs Section ────────────────────────────────────────────── */
-    .briefs-section { background: var(--white); }
-    .briefs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-
-    /* ── Brief Card ────────────────────────────────────────────────── */
-    .brief-card { border: 1.5px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .3s, box-shadow .3s, transform .3s; }
-    .brief-card:hover { border-color: rgba(11,42,74,.2); box-shadow: 0 12px 40px rgba(11,42,74,.1); transform: translateY(-4px); }
-    .brief-cover { position: relative; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .brief-cover-bg { position: absolute; inset: 0; }
-    .brief-cover-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 28px 28px; }
-    .brief-cover-blur { position: absolute; inset: 0; backdrop-filter: blur(8px); background: rgba(11,42,74,.35); }
-    .brief-cover-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: .75rem; padding: 1.5rem; }
-    .brief-cover-icon { width: 48px; height: 48px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-    .brief-cover-icon svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 1.8; }
-    .brief-coming-badge { display: inline-flex; align-items: center; gap: .4rem; font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: white; background: rgba(59,130,246,.7); border: 1px solid rgba(59,130,246,.9); padding: .3rem .85rem; border-radius: 99px; }
-    .brief-coming-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: white; animation: pulse 2s infinite; }
-    .brief-body { padding: 1.75rem 1.75rem 1.5rem; display: flex; flex-direction: column; gap: .85rem; flex: 1; }
-    .brief-meta { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
-    .brief-topic { font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
-    .brief-card h3 { font-family: var(--serif); font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.3; color: var(--navy); filter: blur(4px); user-select: none; }
-    .brief-excerpt { font-size: .82rem; line-height: 1.65; color: var(--muted); filter: blur(3.5px); user-select: none; }
-    .brief-footer { padding: 1.1rem 1.75rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .brief-authors { display: flex; align-items: center; gap: .5rem; }
-    .brief-avatar-stack { display: flex; }
-    .brief-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--light); border: 2px solid white; margin-right: -8px; display: flex; align-items: center; justify-content: center; font-size: .55rem; font-weight: 700; color: var(--muted); filter: blur(2px); }
-    .brief-author-label { font-size: .72rem; color: var(--muted); margin-left: 14px; filter: blur(3px); user-select: none; }
-    .brief-cta-link { font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: .35rem; cursor: default; opacity: .6; }
-    .brief-cta-link svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2; }
-
-    /* ── Featured Brief ────────────────────────────────────────────── */
-    .featured-brief { border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.6fr; margin-bottom: 2rem; transition: border-color .3s, box-shadow .3s, transform .3s; }
-    .featured-brief:hover { border-color: rgba(11,42,74,.2); box-shadow: 0 16px 48px rgba(11,42,74,.1); transform: translateY(-3px); }
-    .featured-cover { position: relative; min-height: 320px; background: linear-gradient(160deg, #0B2A4A 0%, #1a3f6b 60%, #3B82F6 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .featured-cover-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 36px 36px; }
-    .featured-cover-blur { position: absolute; inset: 0; backdrop-filter: blur(10px); background: rgba(11,42,74,.3); }
-    .featured-cover-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2rem; text-align: center; }
-    .featured-icon { width: 64px; height: 64px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; display: flex; align-items: center; justify-content: center; }
-    .featured-icon svg { width: 30px; height: 30px; fill: none; stroke: white; stroke-width: 1.6; }
-    .featured-label { font-size: .65rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.5); }
-    .featured-body { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; }
-    .featured-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
-    .featured-eyebrow::before { content: ''; display: block; width: 18px; height: 1px; background: var(--accent); }
-    .featured-body h2 { font-family: var(--serif); font-size: clamp(1.5rem, 2.5vw, 2.2rem); line-height: 1.2; color: var(--navy); filter: blur(5px); user-select: none; }
-    .featured-body p { font-size: .9rem; line-height: 1.75; color: var(--muted); max-width: 52ch; filter: blur(3.5px); user-select: none; }
-    .featured-meta { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; padding-top: .5rem; border-top: 1px solid var(--border); margin-top: .5rem; }
-    .featured-meta-item { display: flex; flex-direction: column; gap: .2rem; }
-    .featured-meta-label { font-size: .6rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-    .featured-meta-value { font-size: .8rem; font-weight: 500; color: var(--navy); filter: blur(3px); user-select: none; }
-    .featured-cta { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); cursor: default; opacity: .55; }
-    .featured-cta svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; }
-
-    /* ── Footer ────────────────────────────────────────────────────── */
-    footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
-    .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
-    .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
-    .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
-    .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
-    .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
-    .footer-socials { display: flex; gap: 0.75rem; }
-    .social-btn { width: 34px; height: 34px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
-    .social-btn:hover { background: rgba(255,255,255,0.15); }
-    .social-btn svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.7); }
-    .footer-col-title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
-    .footer-col a:hover { color: white; }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
-    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-    .footer-bottom-links { display: flex; gap: 1.5rem; list-style: none; }
-    .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* ── Responsive ────────────────────────────────────────────────── */
-    @media (max-width: 1100px) {
-      .briefs-grid { grid-template-columns: 1fr 1fr; }
-      .featured-brief { grid-template-columns: 1fr; }
-      .featured-cover { min-height: 220px; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 680px) {
-      .briefs-grid { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr; }
-    }
-
-    /* ── TEXT SWITCHING ─────────────────────────────────────── */
-    .m-hide { display: block; }
-    .m-show { display: none; }
-    span.m-hide { display: inline; }
-    span.m-show { display: none; }
-    @media (max-width: 1100px) {
-      .m-hide { display: none; }
-      .m-show { display: block; }
-      span.m-hide { display: none; }
-      span.m-show { display: inline; }
-    }
-
-    /* ── MOBILE FIXES ───────────────────────────────────────────── */
-    @media (max-width: 768px) {
-      html { font-size: 16px; }
-      .nav-logo-sub { display: none; }
-      /* Hero */
-      .page-hero { padding: 5.5rem 1.25rem 4rem; }
-      .page-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
-      .page-hero p { font-size: 0.9rem; }
-      /* Launch banner */
-      .launch-banner { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1rem 1.25rem; }
-      /* Filter bar */
-      .filter-bar-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-      /* Brief cards — reduce padding */
-      .brief-body { padding: 1.25rem; }
-      .featured-body { padding: 1.5rem; }
-      .featured-cover { min-height: 160px; }
-      /* Footer */
-      .footer-col { display: none; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
-    }
-    @media (max-width: 670px) {
-      html { font-size: 15px; }
-      .page-hero { padding: 4.5rem 1rem 3rem; }
-    }
-  
-    /* Coming-soon footer links */
-    .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
-    .footer-col a.coming-soon::after { content: ' ·'; }
-
+    @media (max-width:670px) { html { font-size:15px; } .page-hero { padding:4.5rem 1rem 3rem; } }
+    .footer-col a.coming-soon { opacity:0.35; cursor:default; pointer-events:none; }
+    .footer-col a.coming-soon::after { content:' \00b7'; }
   </style>
 </head>
-
 <body>
-
-  <!-- ── Navbar ─────────────────────────────────────────────────── -->
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
-        <img src="../images/logo.svg" alt="WYI Logo" style="width:42px;height:42px;object-fit:contain;">
+        <svg width="46" height="46" viewBox="202 2 276 252" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex-shrink:0;">
+          <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+          <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+          <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+          <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+          <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+          <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+          <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+          <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+        </svg>
       </div>
       <div>
         <span class="nav-logo-text">World Youth Initiative</span>
@@ -293,272 +196,131 @@
       <li><a href="../policy/" class="nav-active">Policy Briefs</a></li>
     </ul>
     <a href="../contact/" class="nav-cta">Contact</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
-
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" role="dialog">
-    <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
+    <button class="mobile-close" id="mobileClose" aria-label="Close">x</button>
     <a href="../about/" class="mobile-link">About</a>
     <a href="../research/" class="mobile-link">Research</a>
     <a href="../team/" class="mobile-link">Teams</a>
     <a href="../policy/" class="mobile-link">Policy Briefs</a>
     <a href="../contact/" class="mobile-link">Contact</a>
   </div>
-
   <main>
-
-    <!-- ── Hero ───────────────────────────────────────────────────── -->
     <section class="page-hero">
       <div class="hero-orb"></div>
       <div class="hero-inner">
         <p class="hero-eyebrow">Publications</p>
-        <h1>Policy Briefs &<br>Research Papers</h1>
-        <p class="m-hide">Evidence-based policy analysis produced by young researchers from around the world — addressing the issues that will define the next generation of global governance.</p>
+        <h1>Policy Briefs &amp;<br>Research Papers</h1>
+        <p class="m-hide">Evidence-based policy analysis produced by young researchers from around the world &#8212; addressing the issues that will define the next generation of global governance.</p>
         <p class="m-show">Youth-led policy analysis. Global governance challenges.</p>
       </div>
     </section>
-
-    <!-- ── Launch Banner ──────────────────────────────────────────── -->
     <div class="launch-banner">
       <span class="launch-dot"></span>
-      <p class="m-hide"><strong>Launching Soon</strong> — Our first cohort of policy briefs is currently under review. Publications will be released in the coming months.</p>
-      <p class="m-show"><strong>Launching Soon</strong> — First briefs under review.</p>
+      <p class="m-hide"><strong>Launching Soon</strong> &#8212; Our first cohort of policy briefs is currently under review. Publications will be released in the coming months.</p>
+      <p class="m-show"><strong>Launching Soon</strong> &#8212; First briefs under review.</p>
     </div>
-
-    <!-- ── Filter Bar ─────────────────────────────────────────────── -->
     <div class="filter-bar">
       <div class="filter-bar-inner">
-        <div class="filter-tags">
-          <span class="filter-tag active">All Topics</span>
-        </div>
+        <div class="filter-tags"><span class="filter-tag active">All Topics</span></div>
         <span class="filter-count">Publications coming soon</span>
       </div>
     </div>
-
-    <!-- ── Briefs Section ──────────────────────────────────────────── -->
     <section class="section briefs-section">
       <div class="section-inner">
-
-        <!-- Featured Brief -->
         <div class="featured-brief reveal">
           <div class="featured-cover">
             <div class="featured-cover-grid"></div>
             <div class="featured-cover-blur"></div>
             <div class="featured-cover-content">
-              <div class="featured-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              </div>
-              <span class="brief-coming-badge">Featured · Coming Soon</span>
+              <div class="featured-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+              <span class="brief-coming-badge">Featured &#183; Coming Soon</span>
               <span class="featured-label">WYI Policy Brief No. 01</span>
             </div>
           </div>
           <div class="featured-body">
             <span class="featured-eyebrow">First Publication</span>
-            <h2>██████████ ████ ██████<br>████ ████ ██████████</h2>
-            <p>████████████ ████ ██ ██████████ ████ ██████ ████████ ██████████ ████ ██ ██████ ████████ ████ ██████████ ████ ██ ██████████ ████ ██████ ████████ ████</p>
+            <h2>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;<br>&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</h2>
+            <p>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</p>
             <div class="featured-meta">
-              <div class="featured-meta-item">
-                <span class="featured-meta-label">Authors</span>
-                <span class="featured-meta-value">████████ · ████████</span>
-              </div>
-              <div class="featured-meta-item">
-                <span class="featured-meta-label">Pages</span>
-                <span class="featured-meta-value">██</span>
-              </div>
-              <div class="featured-meta-item">
-                <span class="featured-meta-label">Status</span>
-                <span style="font-size:.8rem;font-weight:600;color:var(--accent);">Under Review</span>
-              </div>
+              <div class="featured-meta-item"><span class="featured-meta-label">Authors</span><span class="featured-meta-value">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#183; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></div>
+              <div class="featured-meta-item"><span class="featured-meta-label">Pages</span><span class="featured-meta-value">&#9608;&#9608;</span></div>
+              <div class="featured-meta-item"><span class="featured-meta-label">Status</span><span style="font-size:.8rem;font-weight:600;color:var(--accent);">Under Review</span></div>
             </div>
-            <span class="featured-cta">
-              Read Brief
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+            <span class="featured-cta">Read Brief<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
         </div>
-
-        <!-- Grid — 3 cards -->
         <div class="briefs-grid">
-
           <div class="brief-card reveal reveal-delay-1">
-            <div class="brief-cover">
-              <div class="brief-cover-bg" style="background: linear-gradient(135deg,#0B2A4A,#2d6a4f);"></div>
-              <div class="brief-cover-grid"></div>
-              <div class="brief-cover-blur"></div>
-              <div class="brief-cover-content">
-                <div class="brief-cover-icon">
-                  <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                </div>
-                <span class="brief-coming-badge">Coming Soon</span>
-              </div>
-            </div>
-            <div class="brief-body">
-              <div class="brief-meta"><span class="brief-topic">Policy Brief No. 02</span></div>
-              <h3>██████████ ████ ████████████ ████ ██████████ ████</h3>
-              <p class="brief-excerpt">████████████ ████ ██ ██████████ ████ ██████ ████████ ██████████ ████ ██ ██████ ████████ ████ ██████ ████</p>
-            </div>
-            <div class="brief-footer">
-              <div class="brief-authors">
-                <div class="brief-avatar-stack">
-                  <div class="brief-avatar">AB</div>
-                  <div class="brief-avatar">CD</div>
-                </div>
-                <span class="brief-author-label">████████ et al.</span>
-              </div>
-              <span class="brief-cta-link">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
+            <div class="brief-cover"><div class="brief-cover-bg" style="background:linear-gradient(135deg,#0B2A4A,#2d6a4f);"></div><div class="brief-cover-grid"></div><div class="brief-cover-blur"></div><div class="brief-cover-content"><div class="brief-cover-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="brief-coming-badge">Coming Soon</span></div></div>
+            <div class="brief-body"><div class="brief-meta"><span class="brief-topic">Policy Brief No. 02</span></div><h3>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;</h3><p class="brief-excerpt">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;</p></div>
+            <div class="brief-footer"><div class="brief-authors"><div class="brief-avatar-stack"><div class="brief-avatar">AB</div><div class="brief-avatar">CD</div></div><span class="brief-author-label">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; et al.</span></div><span class="brief-cta-link">Read<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
           </div>
-
           <div class="brief-card reveal reveal-delay-2">
-            <div class="brief-cover">
-              <div class="brief-cover-bg" style="background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"></div>
-              <div class="brief-cover-grid"></div>
-              <div class="brief-cover-blur"></div>
-              <div class="brief-cover-content">
-                <div class="brief-cover-icon">
-                  <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                </div>
-                <span class="brief-coming-badge">Coming Soon</span>
-              </div>
-            </div>
-            <div class="brief-body">
-              <div class="brief-meta"><span class="brief-topic">Policy Brief No. 03</span></div>
-              <h3>██████████ ████ ████████ ████████████ ██████████</h3>
-              <p class="brief-excerpt">████████████ ████ ██ ██████████ ████ ██████ ████████ ██████████ ████ ██ ██████ ████████ ████ ██████ ████</p>
-            </div>
-            <div class="brief-footer">
-              <div class="brief-authors">
-                <div class="brief-avatar-stack">
-                  <div class="brief-avatar">EF</div>
-                  <div class="brief-avatar">GH</div>
-                </div>
-                <span class="brief-author-label">████████ et al.</span>
-              </div>
-              <span class="brief-cta-link">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
+            <div class="brief-cover"><div class="brief-cover-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"></div><div class="brief-cover-grid"></div><div class="brief-cover-blur"></div><div class="brief-cover-content"><div class="brief-cover-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="brief-coming-badge">Coming Soon</span></div></div>
+            <div class="brief-body"><div class="brief-meta"><span class="brief-topic">Policy Brief No. 03</span></div><h3>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</h3><p class="brief-excerpt">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;</p></div>
+            <div class="brief-footer"><div class="brief-authors"><div class="brief-avatar-stack"><div class="brief-avatar">EF</div><div class="brief-avatar">GH</div></div><span class="brief-author-label">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; et al.</span></div><span class="brief-cta-link">Read<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
           </div>
-
           <div class="brief-card reveal reveal-delay-3">
-            <div class="brief-cover">
-              <div class="brief-cover-bg" style="background: linear-gradient(135deg,#0B2A4A,#7c3aed,#3B82F6);"></div>
-              <div class="brief-cover-grid"></div>
-              <div class="brief-cover-blur"></div>
-              <div class="brief-cover-content">
-                <div class="brief-cover-icon">
-                  <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                </div>
-                <span class="brief-coming-badge">Coming Soon</span>
-              </div>
-            </div>
-            <div class="brief-body">
-              <div class="brief-meta"><span class="brief-topic">Policy Brief No. 04</span></div>
-              <h3>██████████ ████ ████████ ██████████ ████ ████████</h3>
-              <p class="brief-excerpt">████████████ ████ ██ ██████████ ████ ██████ ████████ ██████████ ████ ██ ██████ ████████ ████ ██████ ████</p>
-            </div>
-            <div class="brief-footer">
-              <div class="brief-authors">
-                <div class="brief-avatar-stack">
-                  <div class="brief-avatar">IJ</div>
-                </div>
-                <span class="brief-author-label">████████</span>
-              </div>
-              <span class="brief-cta-link">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </div>
+            <div class="brief-cover"><div class="brief-cover-bg" style="background:linear-gradient(135deg,#0B2A4A,#7c3aed,#3B82F6);"></div><div class="brief-cover-grid"></div><div class="brief-cover-blur"></div><div class="brief-cover-content"><div class="brief-cover-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="brief-coming-badge">Coming Soon</span></div></div>
+            <div class="brief-body"><div class="brief-meta"><span class="brief-topic">Policy Brief No. 04</span></div><h3>&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</h3><p class="brief-excerpt">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608; &#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;</p></div>
+            <div class="brief-footer"><div class="brief-authors"><div class="brief-avatar-stack"><div class="brief-avatar">IJ</div></div><span class="brief-author-label">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span></div><span class="brief-cta-link">Read<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
           </div>
-
-        </div><!-- /briefs-grid -->
+        </div>
       </div>
     </section>
-
   </main>
-
-  <!-- ── Footer ─────────────────────────────────────────────────── -->
-   <footer>
+  <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark"><img src="../images/logo.svg" alt="WYI Logo" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1);"></div>
+          <div class="footer-logo-mark">
+            <svg width="38" height="38" viewBox="190 -10 300 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;">
+              <polygon points="340,20 454,103 410,237 270,237 226,103" fill="white" stroke="white" stroke-width="44" stroke-linejoin="round"/>
+              <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+              <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+              <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+              <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+              <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+              <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+              <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+              <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+              <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+              <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+            </svg>
+          </div>
             <span class="footer-brand-name">World Youth Initiative</span>
           </div>
-          <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
+          <p class="footer-tagline">World Youth Initiative &#8212; A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
           <div class="footer-socials">
             <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
             <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-              <div class="footer-col">
-        <div class="footer-col-title">Organization</div>
-        <ul>
-          <li><a href="../about/">About WYI</a></li>
-          <li><a href="../team/">Our Network</a></li>
-          <li><a href="#" class="coming-soon">Leadership</a></li>
-          <li><a href="#" class="coming-soon">Annual Report</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Research</div>
-        <ul>
-          <li><a href="../research/">Research Areas</a></li>
-          <li><a href="../policy/">Policy Briefs</a></li>
-          <li><a href="#" class="coming-soon">Events</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Get Involved</div>
-        <ul>
-          <li><a href="../application/">Join the Network</a></li>
-          <li><a href="../application/">Become Ambassador</a></li>
-          <li><a href="../team/">Research Teams</a></li>
-          <li><a href="../contact/">Contact</a></li>
-        </ul>
-      </div>
-
+        <div class="footer-col"><div class="footer-col-title">Organization</div><ul><li><a href="../about/">About WYI</a></li><li><a href="../team/">Our Network</a></li><li><a href="#" class="coming-soon">Leadership</a></li><li><a href="#" class="coming-soon">Annual Report</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Research</div><ul><li><a href="../research/">Research Areas</a></li><li><a href="../policy/">Policy Briefs</a></li><li><a href="#" class="coming-soon">Events</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Get Involved</div><ul><li><a href="../application/">Join the Network</a></li><li><a href="../application/">Become Ambassador</a></li><li><a href="../team/">Research Teams</a></li><li><a href="../contact/">Contact</a></li></ul></div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
-        <ul class="footer-bottom-links">
-          <li><a href="../privacy/">Privacy Policy</a></li>
-          <li><a href="../terms/">Terms of Use</a></li>
-          <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
-        </ul>
+        <p class="footer-copy">&#169; 2026 World Youth Initiative. All rights reserved.</p>
+        <ul class="footer-bottom-links"><li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Use</a></li><li><a href="../cookies/">Cookie Policy</a></li><li><a href="../impressum/">Legal Notice</a></li></ul>
       </div>
     </div>
   </footer>
-
-
   <script>
     const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
-
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
-
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+    hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.classList.toggle('open', isOpen); document.body.style.overflow = isOpen ? 'hidden' : ''; });
+    document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow = ''; }); });
   </script>
-
 </body>
 </html>
