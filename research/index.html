@@ -4,377 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | World Youth Initiative</title>
-  <meta name="description" content="Explore WYI's six research focus areas: global governance, economic development, technology &amp; society, climate policy, democracy &amp; institutions, and international security — all powered by young researchers worldwide." />
+  <meta name="description" content="Explore WYI's five research output formats: policy briefs, comparative youth issue reports, youth impact assessments, position papers, and data snapshots." />
   <link rel="canonical" href="https://worldyouthinitiative.org/research/" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://worldyouthinitiative.org/research/" />
   <meta property="og:title" content="Research | World Youth Initiative" />
-  <meta property="og:description" content="Explore WYI's six research focus areas: global governance, economic development, technology &amp; society, climate policy, democracy &amp; institutions, and international security." />
   <meta property="og:image" content="https://worldyouthinitiative.org/images/logo.png" />
   <meta property="og:site_name" content="World Youth Initiative" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Research | World Youth Initiative" />
-  <meta name="twitter:description" content="Six research focus areas — all powered by young researchers worldwide." />
   <meta name="twitter:image" content="https://worldyouthinitiative.org/images/logo.png" />
-  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox='190%20-10%20300%20280'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='white'%20stroke='white'%20stroke-width='44'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C20%20454%2C103%20410%2C237%20270%2C237%20226%2C103'%20fill='%230B2A4A'%20stroke='%230B2A4A'%20stroke-width='28'%20stroke-linejoin='round'/%3E%3Cpolygon%20points='340%2C38%20437%2C109%20400%2C223%20280%2C223%20243%2C109'%20fill='none'%20stroke='white'%20stroke-width='3.5'%20stroke-linejoin='round'/%3E%3Cpath%20d='M340%2C52%20L343.5%2C62%20L355%2C66%20L343.5%2C70%20L340%2C80%20L336.5%2C70%20L325%2C66%20L336.5%2C62%20Z'%20fill='white'/%3E%3Crect%20x='284'%20y='108'%20width='112'%20height='11'%20rx='3'%20fill='white'/%3E%3Crect%20x='292'%20y='122'%20width='96'%20height='7'%20rx='2'%20fill='white'/%3E%3Crect%20x='288'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='316'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='353'%20y='132'%20width='11'%20height='82'%20rx='2'%20fill='white'/%3E%3Crect%20x='382'%20y='132'%20width='14'%20height='82'%20rx='2'%20fill='white'/%3E%3Cpath%20d='M327%2C214%20L327%2C202%20A12%2C12%200%200%201%20353%2C202%20L353%2C214%20Z'%20fill='white'/%3E%3Cpath%20d='M331%2C214%20L331%2C202%20A8%2C8%200%200%201%20349%2C202%20L349%2C214%20Z'%20fill='%230B2A4A'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
-
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --blue:    #0B2A4A;
-      --navy:    #0B2A4A;
-      --gray:    #F5F5F5;
-      --light:   #F5F5F5;
-      --accent:  #3B82F6;
-      --white:   #ffffff;
-      --text:    #1a1a2e;
-      --muted:   #6b7280;
-      --border:  #e5e7eb;
-      --serif:   'DM Serif Display', Georgia, serif;
-      --sans:    'DM Sans', system-ui, sans-serif;
-      --max:     1575px;
-      --nav-h:   72px;
-      --pad:     clamp(1.5rem, 5vw, 5rem);
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --blue:#0B2A4A; --navy:#0B2A4A; --gray:#F5F5F5; --light:#F5F5F5; --accent:#3B82F6; --white:#ffffff; --text:#1a1a2e; --muted:#6b7280; --border:#e5e7eb; --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif; --max:1575px; --nav-h:72px; --pad:clamp(1.5rem,5vw,5rem); }
+    html { scroll-behavior:smooth; font-size:20.25px; }
+    body { font-family:var(--sans); background:var(--white); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-wrap:break-word; word-break:break-word; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:999; padding:1.25rem clamp(1rem,3vw,5rem); display:flex; align-items:center; justify-content:space-between; gap:1rem; background:rgba(255,255,255,0.92); backdrop-filter:blur(12px); border-bottom:1px solid transparent; transition:border-color 0.3s,box-shadow 0.3s; }
+    nav.scrolled { border-color:var(--border); box-shadow:0 2px 24px rgba(11,42,74,0.06); }
+    .nav-logo { display:flex; align-items:center; gap:0.625rem; text-decoration:none; color:var(--navy); }
+    .nav-logo-mark { width:46px; height:46px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-logo-text { font-family:'DM Serif Display',serif; font-size:1.05rem; letter-spacing:-0.01em; }
+    .nav-logo-sub { font-size:0.65rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); display:block; line-height:1; }
+    .nav-links { display:flex; align-items:center; gap:clamp(1rem,2vw,2.5rem); list-style:none; }
+    .nav-links a { text-decoration:none; font-size:0.875rem; font-weight:500; letter-spacing:0.02em; color:var(--navy); opacity:0.7; transition:opacity 0.2s; }
+    .nav-links a:hover,.nav-links a.active { opacity:1; }
+    .nav-links a.nav-active { opacity:1; border-bottom:2px solid var(--accent); padding-bottom:2px; }
+    .nav-cta { font-size:0.8rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; text-decoration:none; color:white; background:var(--navy); padding:0.65rem 1.4rem; border-radius:4px; transition:background 0.2s,transform 0.2s; }
+    .nav-cta:hover { background:#0d3360; transform:translateY(-1px); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:11px 11px; }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--navy); border-radius:2px; transition:0.3s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-menu { position:fixed; top:0; right:0; z-index:997; background:rgba(255,255,255,0.97); backdrop-filter:blur(20px); border-left:1px solid var(--border); border-bottom:1px solid var(--border); border-radius:0 0 0 14px; padding:calc(72px + 1.25rem) 2rem 1.5rem; display:flex; flex-direction:column; align-items:flex-end; gap:0; min-width:200px; box-shadow:-4px 8px 24px rgba(11,42,74,0.08); transform:translateY(-110%); opacity:0; transition:transform 0.3s cubic-bezier(0.22,1,0.36,1),opacity 0.25s ease; pointer-events:none; }
+    .mobile-menu.open { transform:translateY(0); opacity:1; pointer-events:all; }
+    .mobile-menu a { font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; color:var(--navy); text-decoration:none; padding:0.6rem 0; border-bottom:1px solid rgba(0,0,0,0.06); letter-spacing:0.02em; opacity:0.65; transition:opacity 0.2s; width:100%; text-align:right; }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { opacity:1; }
+    .mobile-close { display:none; }
+    @media (max-width:1100px) { .nav-links,.nav-cta { display:none; } .hamburger { display:flex; } }
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:.1s; } .reveal-delay-2 { transition-delay:.2s; } .reveal-delay-3 { transition-delay:.3s; } .reveal-delay-4 { transition-delay:.4s; } .reveal-delay-5 { transition-delay:.5s; }
+    @keyframes pulse { 0%,100% { opacity:.4; transform:scale(.85); } 50% { opacity:1; transform:scale(1); } }
+    main { padding-top:var(--nav-h); }
+    .container { max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+    .section { padding:clamp(4rem,9vw,7rem) clamp(1.25rem,5vw,3rem); }
+    .section-inner { max-width:var(--max); margin:0 auto; }
+    .section-label { display:inline-flex; align-items:center; gap:.5rem; font-size:.7rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+    .section-label::before { content:''; display:block; width:22px; height:1px; background:var(--accent); }
+    .page-hero { position:relative; background:var(--navy); color:var(--white); overflow:hidden; padding:clamp(5rem,12vw,9rem) clamp(1.25rem,5vw,3rem) clamp(4rem,9vw,7rem); }
+    .page-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(59,130,246,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.07) 1px,transparent 1px); background-size:60px 60px; pointer-events:none; }
+    .hero-orb { position:absolute; right:-6rem; top:50%; transform:translateY(-50%); width:clamp(280px,38vw,520px); aspect-ratio:1; border-radius:50%; border:1px solid rgba(59,130,246,.2); pointer-events:none; }
+    .hero-orb::before { content:''; position:absolute; inset:2rem; border-radius:50%; border:1px solid rgba(59,130,246,.12); }
+    .hero-inner { max-width:var(--max); margin:0 auto; position:relative; }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:1.5rem; }
+    .hero-eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--accent); }
+    .page-hero h1 { font-family:var(--serif); font-size:clamp(2.75rem,6vw,5rem); line-height:1.08; max-width:18ch; margin-bottom:1.75rem; }
+    .page-hero p { font-size:clamp(1rem,2vw,1.175rem); font-weight:300; line-height:1.75; max-width:54ch; opacity:.8; }
+    .intro-strip { background:var(--light); border-bottom:1px solid var(--border); padding:clamp(3rem,6vw,5rem) clamp(1.25rem,5vw,3rem); }
+    .intro-strip-inner { max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:clamp(3rem,6vw,7rem); align-items:center; }
+    .intro-strip h2 { font-family:var(--serif); font-size:clamp(1.75rem,3vw,2.6rem); line-height:1.2; color:var(--navy); margin-bottom:1rem; }
+    .intro-strip p { font-size:.95rem; line-height:1.8; color:var(--muted); }
+    .intro-stats { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .intro-stat { background:var(--white); border:1.5px solid var(--border); border-radius:12px; padding:1.5rem 1.5rem 1.25rem; }
+    .intro-stat-number { font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.5rem); color:var(--navy); line-height:1; margin-bottom:.35rem; }
+    .intro-stat-label { font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+    .outputs-section { background:var(--white); }
+    .outputs-header { margin-bottom:clamp(2.5rem,5vw,4rem); }
+    .outputs-header h2 { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); line-height:1.15; color:var(--navy); margin-bottom:.85rem; max-width:28ch; }
+    .outputs-header p { font-size:.95rem; line-height:1.8; color:var(--muted); max-width:58ch; }
+    .output-card { display:grid; grid-template-columns:1fr 1.5fr; gap:0; border:1.5px solid var(--border); border-radius:16px; overflow:hidden; margin-bottom:1.75rem; transition:border-color .3s,box-shadow .3s,transform .3s; }
+    .output-card:hover { border-color:rgba(11,42,74,.18); box-shadow:0 12px 40px rgba(11,42,74,.08); transform:translateY(-3px); }
+    .output-card-left { background:var(--navy); padding:2.5rem 2rem; display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem; position:relative; overflow:hidden; }
+    .output-card-left::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(59,130,246,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.07) 1px,transparent 1px); background-size:32px 32px; pointer-events:none; }
+    .output-card-left-top { position:relative; z-index:1; }
+    .output-type-icon { width:48px; height:48px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem; }
+    .output-type-icon svg { width:22px; height:22px; fill:none; stroke:white; stroke-width:1.7; }
+    .output-type-tag { display:inline-flex; align-items:center; gap:.4rem; font-size:.62rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-bottom:.6rem; }
+    .output-card-left h3 { font-family:var(--serif); font-size:clamp(1.2rem,2vw,1.6rem); color:white; line-height:1.2; position:relative; z-index:1; }
+    .output-page-badge { position:relative; z-index:1; display:inline-flex; align-items:center; gap:.5rem; font-size:.65rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.45); background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); padding:.4rem .9rem; border-radius:99px; width:fit-content; }
+    .output-card-right { padding:2.5rem 2.25rem; display:flex; flex-direction:column; gap:1.5rem; background:var(--white); }
+    .output-purpose { font-size:.85rem; line-height:1.75; color:var(--muted); font-style:italic; padding-bottom:1.25rem; border-bottom:1px solid var(--border); }
+    .output-purpose strong { color:var(--navy); font-style:normal; }
+    .output-structure-label { font-size:.65rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:.4rem; }
+    .output-structure-label::before { content:''; display:block; width:14px; height:1px; background:var(--accent); }
+    .output-structure { display:flex; flex-direction:column; gap:.5rem; }
+    .structure-item { display:flex; align-items:center; gap:.75rem; padding:.6rem .85rem; border-radius:8px; background:var(--light); transition:background .2s; }
+    .structure-item:hover { background:#eef2f7; }
+    .structure-num { width:20px; height:20px; border-radius:50%; background:var(--navy); color:white; font-size:.6rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .structure-item span { font-size:.82rem; color:var(--text); font-weight:500; }
+    .output-card.color-blue .output-card-left { background:linear-gradient(160deg,#0B2A4A 0%,#1e4a7a 100%); }
+    .output-card.color-teal .output-card-left { background:linear-gradient(160deg,#0B2A4A 0%,#0d4f4f 100%); }
+    .output-card.color-indigo .output-card-left { background:linear-gradient(160deg,#1e1b4b 0%,#0B2A4A 100%); }
+    .output-card.color-slate .output-card-left { background:linear-gradient(160deg,#1e293b 0%,#0B2A4A 100%); }
+    .output-card.color-amber .output-card-left { background:linear-gradient(160deg,#0B2A4A 0%,#3b2800 100%); }
+    .process-section { background:var(--light); border-top:1px solid var(--border); }
+    .process-header { margin-bottom:clamp(2.5rem,5vw,4rem); }
+    .process-header h2 { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); line-height:1.15; color:var(--navy); margin-bottom:.85rem; }
+    .process-header p { font-size:.95rem; line-height:1.8; color:var(--muted); max-width:54ch; }
+    .process-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+    .process-step { background:var(--white); border:1.5px solid var(--border); border-radius:14px; padding:2rem 1.75rem; transition:border-color .3s,box-shadow .3s; }
+    .process-step:hover { border-color:rgba(11,42,74,.18); box-shadow:0 8px 28px rgba(11,42,74,.07); }
+    .process-step-num { font-family:var(--serif); font-size:2.5rem; color:var(--border); line-height:1; margin-bottom:1.25rem; }
+    .process-step-icon { width:40px; height:40px; background:var(--light); border:1.5px solid var(--border); border-radius:9px; display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; }
+    .process-step-icon svg { width:18px; height:18px; fill:none; stroke:var(--navy); stroke-width:1.8; }
+    .process-step h4 { font-family:var(--serif); font-size:clamp(.95rem,1.5vw,1.15rem); color:var(--navy); margin-bottom:.6rem; line-height:1.25; }
+    .process-step p { font-size:.82rem; line-height:1.7; color:var(--muted); }
+    .cta-section { background:var(--navy); color:white; padding:clamp(4rem,8vw,6rem) clamp(1.25rem,5vw,3rem); position:relative; overflow:hidden; }
+    .cta-section::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(59,130,246,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.06) 1px,transparent 1px); background-size:48px 48px; pointer-events:none; }
+    .cta-inner { max-width:var(--max); margin:0 auto; position:relative; display:flex; align-items:center; justify-content:space-between; gap:3rem; flex-wrap:wrap; }
+    .cta-text h2 { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); line-height:1.15; margin-bottom:.85rem; }
+    .cta-text p { font-size:.95rem; line-height:1.8; color:rgba(255,255,255,.6); max-width:46ch; }
+    .cta-btns { display:flex; gap:1rem; flex-wrap:wrap; flex-shrink:0; }
+    .cta-btn-primary { display:inline-flex; align-items:center; gap:.55rem; font-family:var(--sans); font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; color:var(--navy); background:white; padding:.9rem 1.75rem; border-radius:6px; transition:background .2s,transform .15s; }
+    .cta-btn-primary:hover { background:#f0f4ff; transform:translateY(-2px); }
+    .cta-btn-primary svg { width:15px; height:15px; fill:none; stroke:var(--navy); stroke-width:2; transition:transform .2s; }
+    .cta-btn-primary:hover svg { transform:translateX(3px); }
+    .cta-btn-secondary { display:inline-flex; align-items:center; gap:.55rem; font-family:var(--sans); font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; color:white; border:1.5px solid rgba(255,255,255,.3); padding:.9rem 1.75rem; border-radius:6px; transition:border-color .2s,transform .15s; }
+    .cta-btn-secondary:hover { border-color:rgba(255,255,255,.7); transform:translateY(-2px); }
+    footer { background:var(--navy); color:white; padding:clamp(3.5rem,7vw,5.5rem) var(--pad) 2.5rem; }
+    .footer-inner { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:2rem; }
+    .footer-logo { display:flex; align-items:center; gap:0.6rem; margin-bottom:1.2rem; }
+    .footer-logo-mark { width:40px; height:40px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .footer-brand-name { font-family:'DM Serif Display',serif; font-size:0.95rem; }
+    .footer-tagline { font-size:0.875rem; line-height:1.7; color:rgba(255,255,255,0.45); max-width:420px; margin-bottom:1.75rem; }
+    .footer-socials { display:flex; gap:0.75rem; }
+    .social-btn { width:34px; height:34px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.2s; }
+    .social-btn:hover { background:rgba(255,255,255,0.15); }
+    .social-btn svg { width:15px; height:15px; fill:rgba(255,255,255,0.7); }
+    .footer-col-title { font-size:0.68rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:1.25rem; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { font-size:0.875rem; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s; }
+    .footer-col a:hover { color:white; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; }
+    .footer-copy { font-size:0.8rem; color:rgba(255,255,255,0.3); }
+    .footer-bottom-links { display:flex; gap:1.5rem; list-style:none; }
+    .footer-bottom-links a { font-size:0.8rem; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+    .footer-bottom-links a:hover { color:rgba(255,255,255,0.7); }
+    .footer-col a.coming-soon { opacity:0.35; cursor:default; pointer-events:none; }
+    @media (max-width:1100px) { .footer-inner { grid-template-columns:1fr 1fr; } }
+    @media (max-width:480px) { .footer-inner { grid-template-columns:1fr; } }
+    @media (max-width:1100px) { .output-card { grid-template-columns:1fr; } .output-card-left { padding:2rem; min-height:0; } .intro-strip-inner { grid-template-columns:1fr; } .process-steps { grid-template-columns:1fr 1fr; } .cta-inner { flex-direction:column; align-items:flex-start; } }
+    @media (max-width:680px) { .process-steps { grid-template-columns:1fr; } .intro-stats { grid-template-columns:1fr 1fr; } .cta-btns { flex-direction:column; } }
+    .m-hide { display:block; } .m-show { display:none; }
+    span.m-hide { display:inline; } span.m-show { display:none; }
+    @media (max-width:1100px) { .m-hide { display:none; } .m-show { display:block; } span.m-hide { display:none; } span.m-show { display:inline; } }
+    @media (max-width:768px) {
+      html { font-size:16px; } .nav-logo-sub { display:none; }
+      .page-hero { padding:5.5rem 1.25rem 4rem; } .page-hero h1 { font-size:clamp(2rem,9vw,3rem); } .page-hero p { font-size:0.9rem; }
+      .output-card-left { padding:1.5rem 1.25rem; } .output-card-right { padding:1.5rem 1.25rem; }
+      .footer-col { display:none; } .footer-inner { grid-template-columns:1fr; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:0.5rem; }
+      .footer-bottom-links { flex-wrap:wrap; gap:0.75rem 1.25rem; }
     }
-
-    html { scroll-behavior: smooth; font-size: 20.25px; }
-    body { font-family: var(--sans); background: var(--white); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-
-    /* ── Navbar ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-      padding: 1.25rem clamp(1rem, 3vw, 5rem);
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid transparent; transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
-    .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
-    .nav-logo-mark { width: 34px; height: 34px;   display: flex; align-items: center; justify-content: center; }
-    .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
-    .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
-    .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
-    .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; color: var(--navy); opacity: 0.7; transition: opacity 0.2s; }
-    .nav-links a:hover, .nav-links a.active { opacity: 1; }
-    .nav-links a.nav-active { opacity: 1; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
-    .nav-cta { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: white; background: var(--navy); padding: 0.65rem 1.4rem; border-radius: 4px; transition: background 0.2s, transform 0.2s; }
-    .nav-cta:hover { background: #0d3360; transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 11px 11px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .mobile-menu {
-      position: fixed; top: 0; right: 0; z-index: 997;
-      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
-      border-left: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      border-radius: 0 0 0 14px; padding: calc(72px + 1.25rem) 2rem 1.5rem;
-      display: flex; flex-direction: column; align-items: flex-end; gap: 0; min-width: 200px;
-      box-shadow: -4px 8px 24px rgba(11,42,74,0.08);
-      transform: translateY(-110%); opacity: 0;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
-      pointer-events: none;
-    }
-    .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-menu a { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--navy); text-decoration: none; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); letter-spacing: 0.02em; opacity: 0.65; transition: opacity 0.2s; width: 100%; text-align: right; }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { opacity: 1; }
-    .mobile-close { display: none; }
-    @media (max-width: 1100px) { .nav-links, .nav-cta { display: none; } .hamburger { display: flex; } }
-
-    /* ── Animations ── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: .1s; }
-    .reveal-delay-2 { transition-delay: .2s; }
-    .reveal-delay-3 { transition-delay: .3s; }
-    .reveal-delay-4 { transition-delay: .4s; }
-    .reveal-delay-5 { transition-delay: .5s; }
-
-    @keyframes pulse { 0%, 100% { opacity: .4; transform: scale(.85); } 50% { opacity: 1; transform: scale(1); } }
-
-    /* ── Layout ── */
-    main { padding-top: var(--nav-h); }
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-    .section { padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 3rem); }
-    .section-inner { max-width: var(--max); margin: 0 auto; }
-    .section-label { display: inline-flex; align-items: center; gap: .5rem; font-size: .7rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-    .section-label::before { content: ''; display: block; width: 22px; height: 1px; background: var(--accent); }
-
-    /* ── Hero ── */
-    .page-hero {
-      position: relative; background: var(--navy); color: var(--white); overflow: hidden;
-      padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 9vw, 7rem);
-    }
-    .page-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
-      background-size: 60px 60px; pointer-events: none;
-    }
-    .hero-orb { position: absolute; right: -6rem; top: 50%; transform: translateY(-50%); width: clamp(280px, 38vw, 520px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(59,130,246,.2); pointer-events: none; }
-    .hero-orb::before { content: ''; position: absolute; inset: 2rem; border-radius: 50%; border: 1px solid rgba(59,130,246,.12); }
-    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
-    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); }
-    .page-hero h1 { font-family: var(--serif); font-size: clamp(2.75rem, 6vw, 5rem); line-height: 1.08; max-width: 18ch; margin-bottom: 1.75rem; }
-    .page-hero p { font-size: clamp(1rem, 2vw, 1.175rem); font-weight: 300; line-height: 1.75; max-width: 54ch; opacity: .8; }
-
-    /* ── Intro strip ── */
-    .intro-strip {
-      background: var(--light); border-bottom: 1px solid var(--border);
-      padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
-    }
-    .intro-strip-inner {
-      max-width: var(--max); margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 7rem); align-items: center;
-    }
-    .intro-strip h2 { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.6rem); line-height: 1.2; color: var(--navy); margin-bottom: 1rem; }
-    .intro-strip p { font-size: .95rem; line-height: 1.8; color: var(--muted); }
-    .intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    .intro-stat {
-      background: var(--white); border: 1.5px solid var(--border); border-radius: 12px;
-      padding: 1.5rem 1.5rem 1.25rem;
-    }
-    .intro-stat-number { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--navy); line-height: 1; margin-bottom: .35rem; }
-    .intro-stat-label { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-
-    /* ── Output types section ── */
-    .outputs-section { background: var(--white); }
-    .outputs-header { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-    .outputs-header h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: var(--navy); margin-bottom: .85rem; max-width: 28ch; }
-    .outputs-header p { font-size: .95rem; line-height: 1.8; color: var(--muted); max-width: 58ch; }
-
-    /* ── Output type cards ── */
-    .output-card {
-      display: grid; grid-template-columns: 1fr 1.5fr; gap: 0;
-      border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden;
-      margin-bottom: 1.75rem;
-      transition: border-color .3s, box-shadow .3s, transform .3s;
-    }
-    .output-card:hover { border-color: rgba(11,42,74,.18); box-shadow: 0 12px 40px rgba(11,42,74,.08); transform: translateY(-3px); }
-
-    .output-card-left {
-      background: var(--navy); padding: 2.5rem 2rem;
-      display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem;
-      position: relative; overflow: hidden;
-    }
-    .output-card-left::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(59,130,246,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.07) 1px, transparent 1px);
-      background-size: 32px 32px; pointer-events: none;
-    }
-    .output-card-left-top { position: relative; z-index: 1; }
-    .output-type-icon {
-      width: 48px; height: 48px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
-      border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
-    }
-    .output-type-icon svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 1.7; }
-    .output-type-tag {
-      display: inline-flex; align-items: center; gap: .4rem;
-      font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-      color: rgba(255,255,255,.55); margin-bottom: .6rem;
-    }
-    .output-card-left h3 { font-family: var(--serif); font-size: clamp(1.2rem, 2vw, 1.6rem); color: white; line-height: 1.2; position: relative; z-index: 1; }
-    .output-page-badge {
-      position: relative; z-index: 1;
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-      color: rgba(255,255,255,.45); background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.12); padding: .4rem .9rem; border-radius: 99px;
-      width: fit-content;
-    }
-
-    .output-card-right { padding: 2.5rem 2.25rem; display: flex; flex-direction: column; gap: 1.5rem; background: var(--white); }
-    .output-purpose { font-size: .85rem; line-height: 1.75; color: var(--muted); font-style: italic; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
-    .output-purpose strong { color: var(--navy); font-style: normal; }
-
-    .output-structure-label {
-      font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
-      display: flex; align-items: center; gap: .4rem;
-    }
-    .output-structure-label::before { content: ''; display: block; width: 14px; height: 1px; background: var(--accent); }
-
-    .output-structure {
-      display: flex; flex-direction: column; gap: .5rem;
-    }
-    .structure-item {
-      display: flex; align-items: center; gap: .75rem;
-      padding: .6rem .85rem; border-radius: 8px; background: var(--light);
-      transition: background .2s;
-    }
-    .structure-item:hover { background: #eef2f7; }
-    .structure-num {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: var(--navy); color: white;
-      font-size: .6rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .structure-item span { font-size: .82rem; color: var(--text); font-weight: 500; }
-
-    /* ── Accent colours per card ── */
-    .output-card.color-blue  .output-card-left { background: linear-gradient(160deg, #0B2A4A 0%, #1e4a7a 100%); }
-    .output-card.color-teal  .output-card-left { background: linear-gradient(160deg, #0B2A4A 0%, #0d4f4f 100%); }
-    .output-card.color-indigo .output-card-left { background: linear-gradient(160deg, #1e1b4b 0%, #0B2A4A 100%); }
-    .output-card.color-slate .output-card-left { background: linear-gradient(160deg, #1e293b 0%, #0B2A4A 100%); }
-    .output-card.color-amber .output-card-left { background: linear-gradient(160deg, #0B2A4A 0%, #3b2800 100%); }
-
-    /* ── Process section ── */
-    .process-section { background: var(--light); border-top: 1px solid var(--border); }
-    .process-header { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
-    .process-header h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: var(--navy); margin-bottom: .85rem; }
-    .process-header p { font-size: .95rem; line-height: 1.8; color: var(--muted); max-width: 54ch; }
-    .process-steps {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-    }
-    .process-step {
-      background: var(--white); border: 1.5px solid var(--border); border-radius: 14px;
-      padding: 2rem 1.75rem;
-      transition: border-color .3s, box-shadow .3s;
-    }
-    .process-step:hover { border-color: rgba(11,42,74,.18); box-shadow: 0 8px 28px rgba(11,42,74,.07); }
-    .process-step-num {
-      font-family: var(--serif); font-size: 2.5rem; color: var(--border);
-      line-height: 1; margin-bottom: 1.25rem;
-    }
-    .process-step-icon {
-      width: 40px; height: 40px; background: var(--light); border: 1.5px solid var(--border);
-      border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;
-    }
-    .process-step-icon svg { width: 18px; height: 18px; fill: none; stroke: var(--navy); stroke-width: 1.8; }
-    .process-step h4 { font-family: var(--serif); font-size: clamp(.95rem, 1.5vw, 1.15rem); color: var(--navy); margin-bottom: .6rem; line-height: 1.25; }
-    .process-step p { font-size: .82rem; line-height: 1.7; color: var(--muted); }
-
-    /* ── CTA strip ── */
-    .cta-section {
-      background: var(--navy); color: white;
-      padding: clamp(4rem, 8vw, 6rem) clamp(1.25rem, 5vw, 3rem);
-      position: relative; overflow: hidden;
-    }
-    .cta-section::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(59,130,246,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.06) 1px, transparent 1px);
-      background-size: 48px 48px; pointer-events: none;
-    }
-    .cta-inner { max-width: var(--max); margin: 0 auto; position: relative; display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
-    .cta-text h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; margin-bottom: .85rem; }
-    .cta-text p { font-size: .95rem; line-height: 1.8; color: rgba(255,255,255,.6); max-width: 46ch; }
-    .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; flex-shrink: 0; }
-    .cta-btn-primary {
-      display: inline-flex; align-items: center; gap: .55rem;
-      font-family: var(--sans); font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-      text-decoration: none; color: var(--navy); background: white;
-      padding: .9rem 1.75rem; border-radius: 6px;
-      transition: background .2s, transform .15s;
-    }
-    .cta-btn-primary:hover { background: #f0f4ff; transform: translateY(-2px); }
-    .cta-btn-primary svg { width: 15px; height: 15px; fill: none; stroke: var(--navy); stroke-width: 2; transition: transform .2s; }
-    .cta-btn-primary:hover svg { transform: translateX(3px); }
-    .cta-btn-secondary {
-      display: inline-flex; align-items: center; gap: .55rem;
-      font-family: var(--sans); font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-      text-decoration: none; color: white;
-      border: 1.5px solid rgba(255,255,255,.3); padding: .9rem 1.75rem; border-radius: 6px;
-      transition: border-color .2s, transform .15s;
-    }
-    .cta-btn-secondary:hover { border-color: rgba(255,255,255,.7); transform: translateY(-2px); }
-
-    /* ── Footer ── */
-    footer { background: var(--navy); color: white; padding: clamp(3.5rem, 7vw, 5.5rem) var(--pad) 2.5rem; }
-    .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
-    .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
-    .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
-    .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
-    .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
-    .footer-socials { display: flex; gap: 0.75rem; }
-    .social-btn { width: 34px; height: 34px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
-    .social-btn:hover { background: rgba(255,255,255,0.15); }
-    .social-btn svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.7); }
-    .footer-col-title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a { font-size: 0.875rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
-    .footer-col a:hover { color: white; }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
-    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-    .footer-bottom-links { display: flex; gap: 1.5rem; list-style: none; }
-    .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* ── Responsive ── */
-    @media (max-width: 1100px) {
-      .output-card { grid-template-columns: 1fr; }
-      .output-card-left { padding: 2rem; min-height: 0; }
-      .intro-strip-inner { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: 1fr 1fr; }
-      .cta-inner { flex-direction: column; align-items: flex-start; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 680px) {
-      .process-steps { grid-template-columns: 1fr; }
-      .intro-stats { grid-template-columns: 1fr 1fr; }
-      .cta-btns { flex-direction: column; }
-      .footer-inner { grid-template-columns: 1fr; }
-    }
-
-    /* ── TEXT SWITCHING ─────────────────────────────────────── */
-    .m-hide { display: block; }
-    .m-show { display: none; }
-    span.m-hide { display: inline; }
-    span    @media (max-width: 1100px) {
-      .m-hide { display: none; }
-      .m-show { display: block; }
-      span.m-hide { display: none; }
-      span.m-show { display: inline; }
-    }
-
-    /* ── MOBILE FIXES ───────────────────────────────────────────── */
-    @media (max-width: 768px) {
-      html { font-size: 16px; }
-      .nav-logo-sub { display: none; }
-      /* Hero */
-      .page-hero { padding: 5.5rem 1.25rem 4rem; }
-      .page-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
-      .page-hero p { font-size: 0.9rem; }
-      /* Output cards — reduce padding */
-      .output-card-left { padding: 1.5rem 1.25rem; }
-      .output-card-right { padding: 1.5rem 1.25rem; }
-      /* Process steps already 1 col at 680px */
-      /* Footer */
-      .footer-col { display: none; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      .footer-bottom-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
-    }
-    @media (max-width: 670px) {
-      html { font-size: 15px; }
-      .page-hero { padding: 4.5rem 1rem 3rem; }
-    }
-  
-    /* Coming-soon footer links */
-    .footer-col a.coming-soon { opacity: 0.35; cursor: default; pointer-events: none; }
-    .footer-col a.coming-soon::after { content: ' ·'; }
-
+    @media (max-width:670px) { html { font-size:15px; } .page-hero { padding:4.5rem 1rem 3rem; } }
   </style>
 </head>
-
 <body>
-
-  <!-- ── Navbar ── -->
   <nav id="navbar">
     <a href="../" class="nav-logo" aria-label="World Youth Initiative">
       <div class="nav-logo-mark">
-        <img src="../images/logo.svg" alt="WYI Logo" style="width:42px;height:42px;object-fit:contain;">
+        <svg width="46" height="46" viewBox="202 2 276 252" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex-shrink:0;">
+          <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+          <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+          <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+          <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+          <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+          <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+          <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+          <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+          <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+        </svg>
       </div>
       <div>
         <span class="nav-logo-text">World Youth Initiative</span>
@@ -388,34 +196,26 @@
       <li><a href="../policy/">Policy Briefs</a></li>
     </ul>
     <a href="../contact/" class="nav-cta">Contact</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
-
   <div class="mobile-menu" id="mobileMenu" role="dialog">
-    <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
+    <button class="mobile-close" id="mobileClose" aria-label="Close">x</button>
     <a href="../about/" class="mobile-link">About</a>
     <a href="../research/" class="mobile-link">Research</a>
     <a href="../team/" class="mobile-link">Teams</a>
     <a href="../policy/" class="mobile-link">Policy Briefs</a>
     <a href="../contact/" class="mobile-link">Contact</a>
   </div>
-
   <main>
-
-    <!-- ── Hero ── -->
     <section class="page-hero">
       <div class="hero-orb"></div>
       <div class="hero-inner">
         <p class="hero-eyebrow">Research</p>
         <h1>How WYI<br>Produces Knowledge</h1>
-        <p class="m-hide">WYI publishes five distinct output formats — each designed for a specific audience, purpose, and depth of analysis. From rapid policy responses to in-depth comparative studies, our work is structured to have real-world impact.</p>
+        <p class="m-hide">WYI publishes five distinct output formats &#8212; each designed for a specific audience, purpose, and depth of analysis. From rapid policy responses to in-depth comparative studies, our work is structured to have real-world impact.</p>
         <p class="m-show">Five output formats. Built for real-world impact.</p>
       </div>
     </section>
-
-    <!-- ── Intro strip ── -->
     <div class="intro-strip">
       <div class="intro-strip-inner">
         <div class="reveal">
@@ -425,51 +225,27 @@
           <p class="m-show">Academic standards. Policy relevance at the centre.</p>
         </div>
         <div class="intro-stats reveal reveal-delay-1">
-          <div class="intro-stat">
-            <div class="intro-stat-number">5</div>
-            <div class="intro-stat-label">Output Formats</div>
-          </div>
-          <div class="intro-stat">
-            <div class="intro-stat-number">2–15</div>
-            <div class="intro-stat-label">Pages per Format</div>
-          </div>
-          <div class="intro-stat">
-            <div class="intro-stat-number">Open</div>
-            <div class="intro-stat-label">Access Always</div>
-          </div>
-          <div class="intro-stat">
-            <div class="intro-stat-number">Global</div>
-            <div class="intro-stat-label">Research Teams</div>
-          </div>
+          <div class="intro-stat"><div class="intro-stat-number">5</div><div class="intro-stat-label">Output Formats</div></div>
+          <div class="intro-stat"><div class="intro-stat-number">2&#8211;15</div><div class="intro-stat-label">Pages per Format</div></div>
+          <div class="intro-stat"><div class="intro-stat-number">Open</div><div class="intro-stat-label">Access Always</div></div>
+          <div class="intro-stat"><div class="intro-stat-number">Global</div><div class="intro-stat-label">Research Teams</div></div>
         </div>
       </div>
     </div>
-
-    <!-- ── Output Types ── -->
     <section class="section outputs-section">
       <div class="section-inner">
-
         <div class="outputs-header reveal">
           <p class="section-label">Output Formats</p>
           <h2>Five formats for five<br>different purposes.</h2>
-          
-          
         </div>
-
-        <!-- 1 — Policy Brief -->
         <div class="output-card color-blue reveal">
           <div class="output-card-left">
             <div class="output-card-left-top">
-              <div class="output-type-icon">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              </div>
+              <div class="output-type-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
               <div class="output-type-tag">Format 01</div>
               <h3>Policy Brief</h3>
             </div>
-            <div class="output-page-badge">
-              <svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>
-              4 – 6 pages
-            </div>
+            <div class="output-page-badge"><svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>4 &#8211; 6 pages</div>
           </div>
           <div class="output-card-right">
             <p class="output-purpose m-hide"><strong>Purpose:</strong> Influence policymakers and political organisations with concise, evidence-based recommendations on a specific issue.</p>
@@ -478,31 +254,24 @@
             <div class="output-structure">
               <div class="structure-item"><div class="structure-num">1</div><span>Executive Summary</span></div>
               <div class="structure-item"><div class="structure-num">2</div><span>Problem Definition</span></div>
-              <div class="structure-item"><div class="structure-num">3</div><span>Evidence & Comparative Analysis</span></div>
+              <div class="structure-item"><div class="structure-num">3</div><span>Evidence &amp; Comparative Analysis</span></div>
               <div class="structure-item"><div class="structure-num">4</div><span>Policy Options</span></div>
               <div class="structure-item"><div class="structure-num">5</div><span>Clear Recommendations</span></div>
-              <div class="structure-item"><div class="structure-num">6</div><span>Risks & Trade-offs</span></div>
+              <div class="structure-item"><div class="structure-num">6</div><span>Risks &amp; Trade-offs</span></div>
             </div>
           </div>
         </div>
-
-        <!-- 2 — Comparative Youth Issue Report -->
         <div class="output-card color-teal reveal">
           <div class="output-card-left">
             <div class="output-card-left-top">
-              <div class="output-type-icon">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              </div>
+              <div class="output-type-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
               <div class="output-type-tag">Format 02</div>
               <h3>Comparative Youth Issue Report</h3>
             </div>
-            <div class="output-page-badge">
-              <svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>
-              10 – 15 pages
-            </div>
+            <div class="output-page-badge"><svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>10 &#8211; 15 pages</div>
           </div>
           <div class="output-card-right">
-            <p class="output-purpose m-hide"><strong>Purpose:</strong> Examine how differences in policy design and institutional frameworks across countries shape divergent youth outcomes — providing in-depth cross-national analysis.</p>
+            <p class="output-purpose m-hide"><strong>Purpose:</strong> Examine how differences in policy design and institutional frameworks across countries shape divergent youth outcomes.</p>
             <p class="output-purpose m-show"><strong>Purpose:</strong> Cross-national analysis of youth policy outcomes.</p>
             <span class="output-structure-label">Document Structure</span>
             <div class="output-structure">
@@ -515,24 +284,17 @@
             </div>
           </div>
         </div>
-
-        <!-- 3 — Youth Impact Assessment -->
         <div class="output-card color-amber reveal">
           <div class="output-card-left">
             <div class="output-card-left-top">
-              <div class="output-type-icon">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
+              <div class="output-type-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
               <div class="output-type-tag">Format 03</div>
               <h3>Youth Impact<br>Assessment</h3>
             </div>
-            <div class="output-page-badge">
-              <svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>
-              Variable length
-            </div>
+            <div class="output-page-badge"><svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>Variable length</div>
           </div>
           <div class="output-card-right">
-            <p class="output-purpose m-hide"><strong>Purpose:</strong> Evaluate how proposed or existing policies specifically affect young people — surfacing both intended effects and risks of unintended consequences.</p>
+            <p class="output-purpose m-hide"><strong>Purpose:</strong> Evaluate how proposed or existing policies specifically affect young people &#8212; surfacing both intended effects and risks of unintended consequences.</p>
             <p class="output-purpose m-show"><strong>Purpose:</strong> Evaluate policy impact on young people.</p>
             <span class="output-structure-label">Document Structure</span>
             <div class="output-structure">
@@ -543,25 +305,18 @@
             </div>
           </div>
         </div>
-
-        <!-- 4 — Position Paper -->
         <div class="output-card color-indigo reveal">
           <div class="output-card-left">
             <div class="output-card-left-top">
-              <div class="output-type-icon">
-                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </div>
+              <div class="output-type-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
               <div class="output-type-tag">Format 04</div>
-              <h3>Position Paper &<br>Statement</h3>
+              <h3>Position Paper &amp;<br>Statement</h3>
             </div>
-            <div class="output-page-badge">
-              <svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>
-              2 – 3 pages
-            </div>
+            <div class="output-page-badge"><svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>2 &#8211; 3 pages</div>
           </div>
           <div class="output-card-right">
-            <p class="output-purpose m-hide"><strong>Purpose:</strong> Provide rapid, structured responses to current political developments — articulating WYI's normative stance and a focused policy ask on behalf of youth.</p>
-            <p class="output-purpose m-show"><strong>Purpose:</strong> Rapid responses articulating WYI's stance on current developments.</p>
+            <p class="output-purpose m-hide"><strong>Purpose:</strong> Provide rapid, structured responses to current political developments &#8212; articulating WYI&#8217;s normative stance and a focused policy ask on behalf of youth.</p>
+            <p class="output-purpose m-show"><strong>Purpose:</strong> Rapid responses articulating WYI&#8217;s stance on current developments.</p>
             <span class="output-structure-label">Document Structure</span>
             <div class="output-structure">
               <div class="structure-item"><div class="structure-num">1</div><span>Context</span></div>
@@ -571,38 +326,28 @@
             </div>
           </div>
         </div>
-
-        <!-- 5 — Data Snapshot -->
         <div class="output-card color-slate reveal">
           <div class="output-card-left">
             <div class="output-card-left-top">
-              <div class="output-type-icon">
-                <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              </div>
+              <div class="output-type-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
               <div class="output-type-tag">Format 05</div>
               <h3>Data Snapshot</h3>
             </div>
-            <div class="output-page-badge">
-              <svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>
-              2 – 4 pages
-            </div>
+            <div class="output-page-badge"><svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;"><path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/></svg>2 &#8211; 4 pages</div>
           </div>
           <div class="output-card-right">
-            <p class="output-purpose m-hide"><strong>Purpose:</strong> Make complex issues digestible for a broad audience through data visualisations and plain-language explanations — without normative recommendations.</p>
+            <p class="output-purpose m-hide"><strong>Purpose:</strong> Make complex issues digestible for a broad audience through data visualisations and plain-language explanations &#8212; without normative recommendations.</p>
             <p class="output-purpose m-show"><strong>Purpose:</strong> Clear data visualisations for a broad audience.</p>
             <span class="output-structure-label">Document Structure</span>
             <div class="output-structure">
-              <div class="structure-item"><div class="structure-num">1</div><span>Charts & Visual Data</span></div>
+              <div class="structure-item"><div class="structure-num">1</div><span>Charts &amp; Visual Data</span></div>
               <div class="structure-item"><div class="structure-num">2</div><span>Short Contextual Explanations</span></div>
-              <div class="structure-item"><div class="structure-num">—</div><span style="color:var(--muted);font-style:italic;">Facts only — no recommendations</span></div>
+              <div class="structure-item"><div class="structure-num">&#8212;</div><span style="color:var(--muted);font-style:italic;">Facts only &#8212; no recommendations</span></div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
-
-    <!-- ── Process ── -->
     <section class="section process-section">
       <div class="section-inner">
         <div class="process-header reveal">
@@ -613,33 +358,25 @@
         </div>
         <div class="process-steps">
           <div class="process-step reveal reveal-delay-1">
-            <div class="process-step-icon">
-              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </div>
+            <div class="process-step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
             <div class="process-step-num">01</div>
             <h4>Topic Selection</h4>
             <p>Research teams identify issues with clear youth relevance and policy salience. Topics are reviewed and approved by WYI editorial leadership.</p>
           </div>
           <div class="process-step reveal reveal-delay-2">
-            <div class="process-step-icon">
-              <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
+            <div class="process-step-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
             <div class="process-step-num">02</div>
-            <h4>Research & Writing</h4>
-            <p>Authors conduct structured research using academic sources, official data, and comparative case analysis following the format's methodology.</p>
+            <h4>Research &amp; Writing</h4>
+            <p>Authors conduct structured research using academic sources, official data, and comparative case analysis following the format&#8217;s methodology.</p>
           </div>
           <div class="process-step reveal reveal-delay-3">
-            <div class="process-step-icon">
-              <svg viewBox="0 0 24 24"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
-            </div>
+            <div class="process-step-icon"><svg viewBox="0 0 24 24"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
             <div class="process-step-num">03</div>
             <h4>Editorial Review</h4>
             <p>Every submission undergoes a structured peer review for factual accuracy, analytical rigour, and clarity before proceeding to publication.</p>
           </div>
           <div class="process-step reveal reveal-delay-4">
-            <div class="process-step-icon">
-              <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </div>
+            <div class="process-step-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
             <div class="process-step-num">04</div>
             <h4>Open Publication</h4>
             <p>Approved outputs are published open-access on the WYI website and distributed to relevant policy networks and partner organisations.</p>
@@ -647,116 +384,72 @@
         </div>
       </div>
     </section>
-
-    <!-- ── CTA ── -->
     <section class="cta-section">
       <div class="cta-inner">
         <div class="cta-text reveal">
           <p class="section-label" style="color:rgba(255,255,255,.5);">Get Involved</p>
           <h2>Contribute to<br>WYI research.</h2>
-          <p class="m-hide">Whether you want to author a brief, join a national research team, or submit a topic proposal — we want to hear from you.</p>
+          <p class="m-hide">Whether you want to author a brief, join a national research team, or submit a topic proposal &#8212; we want to hear from you.</p>
           <p class="m-show">Author a brief, join a team, or propose a topic.</p>
         </div>
         <div class="cta-btns reveal reveal-delay-1">
-          <a href="../application/" class="cta-btn-primary">
-            Apply to Research
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <a href="../application/" class="cta-btn-primary">Apply to Research<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="../contact/" class="cta-btn-secondary">Get in Touch</a>
         </div>
       </div>
     </section>
-
   </main>
-
-  <!-- ── Footer ── -->
-   <footer>
+  <footer>
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-brand">
+    <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-mark"><img src="../images/logo.svg" alt="WYI Logo" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1);"></div>
+            <div class="footer-logo-mark">
+              <svg width="38" height="38" viewBox="190 -10 300 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;">
+                <polygon points="340,20 454,103 410,237 270,237 226,103" fill="white" stroke="white" stroke-width="44" stroke-linejoin="round"/>
+                <polygon points="340,20 454,103 410,237 270,237 226,103" fill="#0B2A4A" stroke="#0B2A4A" stroke-width="28" stroke-linejoin="round"/>
+                <polygon points="340,38 437,109 400,223 280,223 243,109" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+                <path d="M340,52 L343.5,62 L355,66 L343.5,70 L340,80 L336.5,70 L325,66 L336.5,62 Z" fill="white"/>
+                <rect x="284" y="108" width="112" height="11" rx="3" fill="white"/>
+                <rect x="292" y="122" width="96" height="7" rx="2" fill="white"/>
+                <rect x="288" y="132" width="14" height="82" rx="2" fill="white"/>
+                <rect x="316" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="353" y="132" width="11" height="82" rx="2" fill="white"/>
+                <rect x="382" y="132" width="14" height="82" rx="2" fill="white"/>
+                <path d="M327,214 L327,202 A12,12 0 0 1 353,202 L353,214 Z" fill="white"/>
+                <path d="M331,214 L331,202 A8,8 0 0 1 349,202 L349,214 Z" fill="#0B2A4A"/>
+              </svg>
+            </div>
             <span class="footer-brand-name">World Youth Initiative</span>
           </div>
-          <p class="footer-tagline">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
+          <p class="footer-tagline">World Youth Initiative &#8212; A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
           <div class="footer-socials">
             <div class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
             <div class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
             <div class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           </div>
         </div>
-              <div class="footer-col">
-        <div class="footer-col-title">Organization</div>
-        <ul>
-          <li><a href="../about/">About WYI</a></li>
-          <li><a href="../team/">Our Network</a></li>
-          <li><a href="#" class="coming-soon">Leadership</a></li>
-          <li><a href="#" class="coming-soon">Annual Report</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Research</div>
-        <ul>
-          <li><a href="../research/">Research Areas</a></li>
-          <li><a href="../policy/">Policy Briefs</a></li>
-          <li><a href="#" class="coming-soon">Events</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Get Involved</div>
-        <ul>
-          <li><a href="../application/">Join the Network</a></li>
-          <li><a href="../application/">Become Ambassador</a></li>
-          <li><a href="../team/">Research Teams</a></li>
-          <li><a href="../contact/">Contact</a></li>
-        </ul>
-      </div>
-
+        <div class="footer-col"><div class="footer-col-title">Organization</div><ul><li><a href="../about/">About WYI</a></li><li><a href="../team/">Our Network</a></li><li><a href="#" class="coming-soon">Leadership</a></li><li><a href="#" class="coming-soon">Annual Report</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Research</div><ul><li><a href="../research/">Research Areas</a></li><li><a href="../policy/">Policy Briefs</a></li><li><a href="#" class="coming-soon">Events</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Get Involved</div><ul><li><a href="../application/">Join the Network</a></li><li><a href="../application/">Become Ambassador</a></li><li><a href="../team/">Research Teams</a></li><li><a href="../contact/">Contact</a></li></ul></div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 World Youth Initiative. All rights reserved.</p>
-        <ul class="footer-bottom-links">
-          <li><a href="../privacy/">Privacy Policy</a></li>
-          <li><a href="../terms/">Terms of Use</a></li>
-          <li><a href="../cookies/">Cookie Policy</a></li>
-          <li><a href="../impressum/">Legal Notice</a></li>
-        </ul>
+        <p class="footer-copy">&#169; 2026 World Youth Initiative. All rights reserved.</p>
+        <ul class="footer-bottom-links"><li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Use</a></li><li><a href="../cookies/">Cookie Policy</a></li><li><a href="../impressum/">Legal Notice</a></li></ul>
       </div>
     </div>
   </footer>
-
-
   <script>
     const reveals = document.querySelectorAll('.reveal');
     const _mq = window.matchMedia('(max-width: 768px)');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: _mq.matches ? 0.04 : 0.08, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: _mq.matches ? 0.04 : 0.08, rootMargin: _mq.matches ? '0px' : '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
-
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
-
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+    hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.classList.toggle('open', isOpen); document.body.style.overflow = isOpen ? 'hidden' : ''; });
+    document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow = ''; }); });
   </script>
-
 </body>
 </html>
