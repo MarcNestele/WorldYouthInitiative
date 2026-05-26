@@ -6,6 +6,8 @@
   <title>World Youth Initiative | Youth-Led Global Policy Think Tank</title>
   <meta name="description" content="The World Youth Initiative connects young researchers worldwide to develop evidence-based policy solutions. Join our global network of future policy leaders." />
   <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
   <link rel="canonical" href="https://worldyouthinitiative.org/" />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -73,10 +75,12 @@
     nav.scrolled { border-color: var(--border); box-shadow: 0 2px 24px rgba(11,42,74,0.06); }
     .nav-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: var(--navy); }
     .nav-logo-mark {
-      width: 34px; height: 34px;
+      width: 46px; height: 46px;
       display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
     .nav-logo-mark svg { width: 18px; height: 18px; fill: none; stroke: white; stroke-width: 1.8; }
+    .nav-logo-mark img { width: 46px; height: 46px; object-fit: contain; display: block; }
     .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 1.05rem; letter-spacing: -0.01em; }
     .nav-logo-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; }
     .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2.5rem); list-style: none; }
@@ -413,8 +417,9 @@
     }
     .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
-    .footer-logo-mark { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
+    .footer-logo-mark { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 8px; padding: 4px; flex-shrink: 0; }
     .footer-logo-mark svg { width: 15px; height: 15px; fill: none; stroke: white; stroke-width: 2; }
+    .footer-logo-mark img { width: 32px; height: 32px; object-fit: contain; display: block; }
     .footer-brand-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; }
     .footer-tagline { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 420px; margin-bottom: 1.75rem; }
     .footer-socials { display: flex; gap: 0.75rem; }
@@ -581,7 +586,7 @@
 <nav id="navbar">
   <a href="index.html" class="nav-logo" aria-label="World Youth Initiative">
     <div class="nav-logo-mark">
-      <img src="/images/logo.svg" alt="WYI Logo" style="width:42px;height:42px;object-fit:contain;">
+      <img src="/images/logo.svg" alt="WYI Logo" style="width:46px;height:46px;object-fit:contain;display:block;">
     </div>
     <div>
       <span class="nav-logo-text">World Youth Initiative</span>
@@ -1024,7 +1029,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">
-          <div class="footer-logo-mark"><img src="/images/logo.svg" alt="WYI Logo" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1);"></div>
+          <div class="footer-logo-mark"><img src="/images/logo.svg" alt="WYI Logo" style="width:32px;height:32px;object-fit:contain;display:block;"></div>
           <span class="footer-brand-name">World Youth Initiative</span>
         </div>
         <p class="footer-tagline m-hide">World Youth Initiative — A global youth-driven policy initiative connecting young researchers to shape tomorrow's decisions.</p>
